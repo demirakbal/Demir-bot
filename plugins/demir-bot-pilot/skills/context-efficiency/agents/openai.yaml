@@ -1,0 +1,12 @@
+interface:
+  display_name: Context Efficiency
+  short_description: Reuse evidence and reduce unnecessary context
+  default_prompt: Use $demir-bot-pilot:context-efficiency to reduce repeated reading and tool output
+    while preserving the evidence needed for this task.
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

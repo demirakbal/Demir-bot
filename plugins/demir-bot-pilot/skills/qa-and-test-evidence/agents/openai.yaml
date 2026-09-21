@@ -1,0 +1,12 @@
+interface:
+  display_name: QA and Test Evidence
+  short_description: Risk-based tests and trustworthy execution evidence
+  default_prompt: Use $demir-bot-pilot:qa-and-test-evidence to assess test coverage, run relevant
+    checks and report only supported results.
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

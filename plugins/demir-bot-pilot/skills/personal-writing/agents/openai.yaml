@@ -1,0 +1,6 @@
+interface:
+  display_name: "Personal Writing"
+  short_description: "Write with shared approved facts and voice examples"
+  default_prompt: "Use $demir-bot-pilot:personal-writing for this request, respecting approved facts, voice and action permissions."
+policy:
+  allow_implicit_invocation: true

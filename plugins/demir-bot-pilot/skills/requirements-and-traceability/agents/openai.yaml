@@ -1,0 +1,12 @@
+interface:
+  display_name: Requirements and Traceability
+  short_description: Measurable requirements, coverage links and change impact
+  default_prompt: Use $demir-bot-pilot:requirements-and-traceability to clarify these requirements
+    and check their acceptance criteria, traceability and change impact.
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Demir LinkedIn"
+  short_description: "Research, write and grow with approved LinkedIn actions"
+  default_prompt: "Use $demir-bot-pilot:demir-linkedin for this request, respecting approved facts, voice and action permissions."
+policy:
+  allow_implicit_invocation: true

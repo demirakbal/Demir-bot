@@ -1,0 +1,12 @@
+interface:
+  display_name: Architecture Review
+  short_description: Evidence-based boundaries, risks and design trade-offs
+  default_prompt: Use $demir-bot-pilot:architecture-review to assess this architecture and recommend
+    proportionate improvements grounded in evidence.
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

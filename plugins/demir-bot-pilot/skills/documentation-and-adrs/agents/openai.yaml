@@ -1,0 +1,12 @@
+interface:
+  display_name: Documentation Officer — Docs and ADRs
+  short_description: Maintain accurate docs, decisions and project traceability
+  default_prompt: Use $demir-bot-pilot:documentation-and-adrs to maintain these documents and decision
+    records using current project evidence.
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

@@ -1,0 +1,12 @@
+interface:
+  display_name: Demir Bot
+  short_description: Choose relevant tools and preserve useful context
+  default_prompt: Use $demir-bot-pilot:demir-bot to handle this task with relevant tools and focused
+    context.
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

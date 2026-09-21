@@ -1,0 +1,6 @@
+interface:
+  display_name: "Privacy Review"
+  short_description: "Review data handling and reuse existing security workflows"
+  default_prompt: "Use $demir-bot-pilot:privacy-review to assess this data flow and identify concrete privacy gaps."
+policy:
+  allow_implicit_invocation: true

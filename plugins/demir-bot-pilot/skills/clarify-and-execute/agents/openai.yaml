@@ -1,0 +1,12 @@
+interface:
+  display_name: Clarify and Execute
+  short_description: Turn rough requests into focused tasks and execute
+  default_prompt: Use $demir-bot-pilot:clarify-and-execute to clarify my request with useful multiple-choice
+    questions, then carry out the task.
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

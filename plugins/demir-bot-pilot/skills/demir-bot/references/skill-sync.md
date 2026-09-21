@@ -1,0 +1,7 @@
+# Local maintenance and optional cloud synchronization
+
+Resolve the actual installed skill packages and the active private profile via profile-loading.md. Use private local-setup.md for environment-specific working roots, QMD commands, backup location and any confirmed cloud identities. Do not assume Desktop downloads, a fixed home directory, a binary or cloud account exists.
+
+After an authorized edit preserve the affected package's references/metadata, inspect the saved changes and keep scoped private rollback copies. Refresh only the existing configured skill collection when available; never expand it to private profile data. Use configured commands and distinguish indexing from testing/retrieval evaluation. If unavailable, report refresh pending; do not install tools just to maintain the index.
+
+Honor the active user's cloud deferral before any access attempt. When synchronization is explicitly active and supported, read the EXISTING cloud skill, reconcile independent edits, preserve identity/ownership/sharing, save and read back the affected content. An upload attempt is not verified synchronization. Do not create duplicates, widen access, publish or grant permissions. If unsupported, report pending; create an export only when requested. Private profiles, account/runtime history, credentials and rollback copies are never included automatically. No watcher or background retry.

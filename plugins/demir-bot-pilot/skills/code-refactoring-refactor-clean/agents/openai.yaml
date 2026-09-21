@@ -1,0 +1,12 @@
+interface:
+  display_name: Code Refactoring — Refactor Clean
+  short_description: Safe refactoring, quality checks and honest test evidence
+  default_prompt: Use $demir-bot-pilot:code-refactoring-refactor-clean to review and improve this
+    code while preserving behavior and verifying changes.
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
