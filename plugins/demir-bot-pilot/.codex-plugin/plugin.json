@@ -1,7 +1,7 @@
 {
   "name": "demir-bot-pilot",
-  "version": "0.1.0+codex.20260921175831",
-  "description": "Private skills-only pilot of the Demir Bot coordinator and 20 specialist skills.",
+  "version": "0.1.0+codex.20260924125059",
+  "description": "Private skills-only pilot of the Demir Bot coordinator and 21 specialist skills.",
   "author": {
     "name": "Local developer"
   },
@@ -9,7 +9,7 @@
   "interface": {
     "displayName": "Demir Bot \u2014 Private Pilot",
     "shortDescription": "Coordinate tasks with a modular, private-profile-aware skill bundle.",
-    "longDescription": "Private local pilot. Includes 21 instruction skills and retained upstream notices. Personal facts, voice calibration, accounts, credentials, runtime code and backups are excluded. External plugins are optional and require their own installation, access and action authorization. No background service or automatic testing. Not reviewed for public redistribution.",
+    "longDescription": "Private local pilot. Includes 22 instruction skills and retained upstream notices. Personal facts, voice calibration, accounts, credentials, runtime code and backups are excluded. External plugins are optional and require their own installation, access and action authorization. No background service or automatic testing. Not reviewed for public redistribution.",
     "developerName": "Local developer",
     "category": "Productivity",
     "capabilities": [],

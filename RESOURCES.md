@@ -96,6 +96,14 @@ This inventory links the actual reference files and retained notices. Private pr
 - [agents/openai.yaml](plugins/demir-bot-pilot/skills/frontend-quality-and-accessibility/agents/openai.yaml)
 - [references/provenance.md](plugins/demir-bot-pilot/skills/frontend-quality-and-accessibility/references/provenance.md)
 
+## git-and-github-workflow
+
+- [LICENSE.upstream](plugins/demir-bot-pilot/skills/git-and-github-workflow/LICENSE.upstream)
+- [SKILL.md](plugins/demir-bot-pilot/skills/git-and-github-workflow/SKILL.md)
+- [agents/openai.yaml](plugins/demir-bot-pilot/skills/git-and-github-workflow/agents/openai.yaml)
+- [references/recovery.md](plugins/demir-bot-pilot/skills/git-and-github-workflow/references/recovery.md)
+- [references/provenance.md](plugins/demir-bot-pilot/skills/git-and-github-workflow/references/provenance.md)
+
 ## jurisdiction-specific-legal-feasibility
 
 - [SKILL.md](plugins/demir-bot-pilot/skills/jurisdiction-specific-legal-feasibility/SKILL.md)

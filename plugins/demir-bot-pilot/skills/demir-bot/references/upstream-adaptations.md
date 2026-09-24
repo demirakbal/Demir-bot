@@ -89,3 +89,8 @@ User-requested refactor of existing local instructions; no new upstream import. 
 
 ## Private plugin pilot packaging — 2026-09-21
 Local refactored skill packages retained with upstream sources and license notices. Added namespaced routing, preserved sibling layout and excluded private profile, account history, credentials, runtime and backups. Detailed private course examples resolve outside the bundle. Based on the installed plugin-creator manifest/spec and scaffold guidance; no external plugins bundled, authentication performed, tests/validators run or public licensing approval asserted.
+
+
+## Git and GitHub workflow / 2026-09-21
+
+See git-and-github-workflow/references/provenance.md for the inspected Superpowers 6.4.1 candidates, reviewed hashes, retained MIT notice and current official Git/GitHub sources. Adapted worktree awareness and explicit integration outcomes; replaced automatic tests, pull, cleanup and repeated approval menus with the user-authorized scoped workflow. Reuses existing maintenance, privacy and release guidance. Source inspection is not Git-operation testing, authentication or public redistribution approval.

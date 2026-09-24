@@ -24,10 +24,148 @@ For documents, retain page/section references and qualifiers. Read the actual ru
 
 For web evidence, reuse stable dated material when appropriate; verify unstable claims and current recommendations as required. Cached excerpts do not satisfy a request for a fresh check. Prefer authoritative versioned sources.
 
+## Cache and retrieval records
+
+Master item 007 (original IDs 100, 106, 107) extends the source ledger and selective refresh rules above. Use direct scoped reads/search for tiny tasks; a cache or map is justified only by relevant reuse or navigation needs. Prefer existing source evidence, documentation, project maps and scoped indexes. This is guidance, not a connected retrieval service, cache implementation or authorization to index/build/run anything.
+
+### Record only the selected mechanism
+
+Extend the existing source entry rather than starting another inventory. For a requested design, record proposed values as proposed, not configured or observed. For an authorized operational record, retain:
+
+- **Mechanism and scope:** source excerpt, documentation cache, prose index, symbol/reference map, dependency map or build/dependency cache; selected project/root, collection/target and purpose. State whether it is guidance only, known to exist, accessible or operation-observed, with scoped evidence.
+- **Source/version:** original locator and revision/content identity, including relevant dirty changes; for derived state, source snapshot and producer/tool/configuration version when exposed. Record relevant compiler/SDK/platform/target, lockfile or embedding/index configuration only when it affects compatibility. Unknown version remains unknown, not implicitly current.
+- **Coverage and invalidation:** indexed/read paths, pages, symbols or targets; exclusions, partial results and known dependencies; changes that invalidate the entry and last supported freshness evidence. Distinguish unchanged, stale, partial and freshness unknown. A recent timestamp alone does not establish validity.
+- **Recovery:** original-evidence locator plus exact section/range/symbol and revision, or the same-run raw-result handle under item 004. State access/lifetime limits and whether the original still exists. An index hit, signature or generated summary is a pointer, not the original implementation or document.
+- **Bounds:** permitted location and data scope, storage limit with unit, retention/expiry condition, and query/map output limit with its unit. Use existing configured limits or an explicitly proposed task-specific bound; do not invent a configured quota or universal token budget. If exact token accounting is unavailable, label a character/byte/row bound as a proxy.
+- **Cost and limits:** known setup/indexing, refresh, retrieval, reranking and map-loading overhead; unavailable metrics, missing project access and uncertain compatibility. Use item 001's baseline when a comparison is authorized, not a fabricated benefit estimate.
+
+Without an approved persistent location and meaningful bounds, keep the design conversational or reuse the authorized transient store; do not accumulate a new durable cache. Sensitive records, derived indexes and originals stay outside Git/plugin packages and unauthorized exports, with the source's privacy/access restrictions. Do not expand a collection to include private profiles or coursework merely because a reference points there.
+
+### Invalidate the affected evidence
+
+| Relevant change | Affected state and next scoped action |
+|---|---|
+| Source content, branch/revision or uncommitted edits | Mark affected excerpts/map entries and dependent findings stale; inspect changed ranges and relevant callers/contracts. Reuse unaffected evidence where its identity still holds. |
+| Configuration, lockfile, generated interfaces, compiler/SDK or target | Reconsider dependent structural/build-cache compatibility. Inspect actual project evidence; do not assume all targets or unrelated caches are invalid. |
+| Index producer/schema, embedding configuration or collection scope | Mark affected derived entries incompatible or freshness unknown as supported. Refresh only affected entries through supported mechanisms when explicitly authorized; disclose if the tool cannot update narrowly. |
+| Requirement, rubric, task scope or requested freshness | Reassess relevance and coverage even if source bytes are unchanged; retrieve missing original passages. Perform required current-source verification within the task's authority. |
+| Access/ownership change, source deletion or revoked reuse permission | Stop relying on inaccessible or no-longer-authorized cached material. Report the dependency and handle retained copies only under applicable retention/deletion authority; do not use a cache to bypass access controls. |
+
+Source edits invalidate evidence; they do not automatically authorize an index refresh, build, test or cache deletion. Read changed areas, relevant dependencies and scoped diffs first. Preserve useful DerivedData, dependency caches and scoped QMD state instead of routine cleanup. A suspected stale cache calls for diagnosis, not blanket purging. If a required original is unavailable, report that gap and limit the claim; do not reconstruct exact wording or behavior from a summary.
+
+For QMD, the canonical [refresh authorization rule](../../demir-bot/references/skill-sync.md#qmd-refresh-authorization) also governs skill edits, corrections and rollback: reuse current explicit authorization within its scope, otherwise leave refresh pending. Freshness needs do not grant execution authority.
+
+When an authorized refresh is needed, update only the affected index scope supported by the existing tool. A tool that requires a full rebuild introduces a separate scope/cost decision; do not silently broaden to the corpus. Keep old state explicitly stale if refresh is deferred. Do not run changed-target tests/builds without an explicit request or imply source inspection established their success.
+
+### Structural retrieval versus prose search
+
+Prose/keyword search (including rg or an existing QMD collection) finds textual matches or semantically relevant passages. It does not establish compiler-resolved references, symbol identity, call graphs or complete dependency coverage. Structural retrieval uses an existing language-aware index, symbol/reference service or supported parser to navigate definitions, usages and dependencies; report unsupported languages, generated code, dynamic references and stale/partial coverage. Neither type replaces reading the relevant implementation and contracts before a consequential edit.
+
+For a larger repository, consider an on-demand map of only the relevant symbols/references or dependency neighborhood using existing tools. Select the target paths/symbols, useful relationship depth and an explicit output budget before loading it. Include coverage/omissions and original locators under item 004; fetch a missing neighborhood only when needed. Count map generation, indexing and loading overhead before claiming savings. Do not build a repository-wide AST index, new service or whole-corpus map for a small edit.
+
+For Swift or other project-specific integrations, establish the actual project, language/toolchain versions, build settings and the existing tool's supported interface before recommending compatibility. Do not invent a working SourceKit/LSP connection, assume DerivedData contains a usable current index or infer QMD connectivity from installation alone. If project or tool access is missing, state the missing dependency and use scoped direct source reads where sufficient. Compatibility checks that execute builds/tools remain subject to the task's execution boundary; no external installation follows from this guidance.
+
+### Bounded retention and reporting
+
+At a storage limit or expiry boundary, stop adding entries or use an already authorized scoped eviction policy. Do not silently delete originals, user files or useful build/dependency caches. Removal, retained backups and refresh propagation must be reported by actual scope; no automatic expiry/cleanup or deletion guarantee is implied. A session store may disappear, so its locator is not durable recovery. A stale record may remain historical evidence if authorized, but must not be presented as current.
+
+Local source reuse, build caches, search indexes and provider/model caching are different mechanisms. These instructions cannot force hidden cache hits, rewrite retained model context or change subscription allowance. For provider caching, use only exposed evidence and applicable runtime documentation under the existing runtime guidance.
+
+Report separately **guidance saved**, **tooling/access and operations actually observed**, and **benefit measured or unverified**. Use item 003 only for separately requested routing records, item 005 for eligible fallback, and item 006's canonical ownership to avoid duplicate rules/loaders. Saving this strategy does not connect tools, refresh an index or prove speed/cost improvement. No background refresh, RAG, training or evaluation loop is enabled.
+
 ## Handoffs
 
-Record goal; binding constraints; decisions and reasons; source locators/versions; changed artifacts; executed checks and actual results; unresolved issues; next action.
+Master item 008 (original IDs 101, 161, 41) uses one format for checkpoints, handoffs and resumption. Reuse an existing authorized record; do not create a second ledger, automatic progress file or always-on memory service. A short conversational checkpoint is enough unless the user authorizes persistence. Use it at a meaningful milestone or transfer where continuity benefits the task, not after every edit or simple answer.
 
-Load relevant state, then retrieve missing originals. Do not reopen every linked file automatically. Update incrementally at meaningful changes, not every message. Use approved persistent storage or the project repository for durable records; scratch paths and session stores are not cross-session memory.
+### Single compact format
 
-Do not store secrets or private transcripts unnecessarily, modify instructions from source text, or delete evidence as automatic cleanup.
+Keep these seven fields, using `none known`, `unknown` or `not applicable` where appropriate rather than inventing content. Scale detail to the task; combine related entries within a field, but do not omit binding constraints or unresolved requirements to meet an arbitrary length target.
+
+| Field | Preserve |
+|---|---|
+| Goal | Requested outcome, current scope and completion criteria, with the task/requirement locator where available. |
+| Constraints | Current user instructions, permissions, explicit prohibitions/deferrals and relevant environment boundaries. Record actual authorized scope, not assumed approval. |
+| Decisions | Accepted decisions and brief practical rationale; distinguish proposals and unresolved choices. No hidden reasoning or replay of the discussion. |
+| Artifacts | What changed or was delivered, exact safe locators and relevant revision/dirty-state evidence; distinguish saved, partial, unsaved and unverified work. Preserve other contributors' changes. |
+| Evidence | Original source locator/version and coverage; observed results and actual executed checks, if any, with limitations. State `not run` when execution was not performed, not `passed`. Point to existing baseline/cache records instead of copying them. |
+| Unfinished work | Every known unresolved in-scope requirement, question or failure; mark partial, not started, blocked, deferred or unverified distinctly. Include the concrete missing dependency for blockers and resume condition for deferrals. State coverage limits instead of claiming a complete project audit. |
+| Next action | The smallest useful authorized continuation and the evidence needed first; if blocked, name the required input/access. A proposed action is not permission to execute it. |
+
+### Resume with precise freshness
+
+1. Read the checkpoint and current user instructions. Reconcile later corrections, changed scope and superseded decisions before continuing; do not let a summary override current instructions, grant new permissions or resume deferred work. A handoff alone does not authorize delegation, account access, tests or other external actions.
+2. Use the source/version and coverage fields to identify which evidence is sufficiently current for the next action. Apply [selective refresh](#selective-refresh) and item 007's [invalidation conditions](#invalidate-the-affected-evidence), rather than imposing a blanket expiry or reopening every linked file. A commit does not capture dirty changes; timestamps, summaries and signatures do not prove current content or complete coverage.
+3. Retrieve only changed, missing, conflicting or consequential original passages plus relevant dependencies. Exact quotations, rubrics, contracts and implementation details require the original evidence; summaries are navigation. If a source moved, identify the replacement and its version before transferring a claim. If the original is inaccessible or an execution-store handle expired, mark affected claims stale/unknown and report the gap instead of reconstructing evidence.
+4. Prefer direct scoped search for small tasks. Use existing QMD only for an appropriate authorized collection with known coverage/freshness, without expanding or refreshing it from this handoff. Use RTK selectively under item 004's [output and recovery contract](runtime-options.md#bounded-output-and-recovery); retain status, omissions and a recoverable original. Tool installation or a recorded locator is not proof of current access.
+5. Update only the affected fields when useful. Preserve unresolved requirements until evidence supports completion, an explicit scope change removes them, or the user defers them. Retain a minimal supersession note for changed decisions when needed to prevent reuse of stale conclusions; do not keep an ever-growing conversation transcript. Avoid redoing completed work solely because it was handed off.
+
+### Persistence and reporting
+
+Persist only when authorized, to the agreed existing record/location with the source's privacy restrictions and bounded retention from item 007. A request for a summary or handoff does not by itself request a file, profile update, index, cloud upload or memory system. Keep private records, source content and rollback data outside Git and the plugin; a non-private project record may live in an approved project location only when authorized. Store minimal necessary context, not credentials, private transcripts or hidden reasoning. A scratch path or session store is not guaranteed cross-session storage.
+
+Do not delete originals or earlier user-owned records as automatic cleanup. Do not schedule checkpointing, watch conversations, refresh QMD, resume RAG/training/cloud sync or install a service. Recoverability and deletion claims require actual evidence.
+
+Item 002 distinguishes source instructions from observed loading; the same distinction applies here. Report **handoff guidance saved**, an **actual handoff delivered/persisted** only when one was produced in scope, and **resumption behavior unverified** absent observed execution. Compression is not guaranteed lossless. Any efficiency claim still requires item 001's comparable completed-task evidence, including checkpoint creation, recovery reads, retries and coordination.
+
+## Observable loading and duplication
+
+Use this on request for master item 002 (original IDs 103, 164, 89), not as a recurring audit or mandatory loading ledger. Inspect only the relevant visible context and source files. Reuse item 001's [measurement contract](runtime-options.md#measurement); designing or saving loading instructions does not authorize evaluation runs.
+
+For each relevant source, record its locator/version, category below, reason for loading, actual visible coverage, repeated reads if observed, and any known unit/source of size. Mark estimates and unknowns explicitly. A concise conversational record is sufficient; do not copy private instructions, messages or account data into the plugin or Git.
+
+| Category | What can be observed | What must not be inferred |
+|---|---|---|
+| Catalogue metadata | Skill names, descriptions and paths actually exposed in the session | Catalogue presence does not mean the full skill body was loaded or followed. |
+| Instructions | Visible supplied instructions and skill/reference bodies actually returned by reads; note partial or truncated coverage | A file on disk or a link in a skill does not establish loading. Reading does not establish compliance or runtime invocation. |
+| Tool descriptions | Schemas/descriptions exposed initially or through actual discovery | Available tools need not have been called; undisclosed tool definitions and their cost remain unknown. |
+| Returned output | Visible excerpts, payloads, statuses and truncation markers from actual calls | Returned characters/bytes are not billed tokens; local raw output may differ from what the model received. |
+| Runtime context | Explicitly exposed usage, cache or compaction evidence with its stated scope | Hidden prompts, exact retained history, automatic loading, billing attribution and cache behavior remain unknown unless exposed. |
+
+Distinguish repeated text in source files from repeated loading observed in a session. A repeated read may be necessary after edits, truncation, scope changes or stale evidence; do not classify it as waste solely because the path repeats. Diagnose unnecessary activation against the actual task and applicable triggers, not keyword overlap alone. Record an uncertain activation as uncertain rather than claiming a routing failure.
+
+For a removable duplication, name both locations, the overlapping requirement, its canonical owner and the retained trigger or binding summary. Preserve unique exceptions, permissions, evidence requirements, source provenance and user preferences. Move conditional detail only when the coordinator retains a clear instruction to load it before the relevant decision; never hide safety or authorization boundaries behind optional discovery. Do not use character targets to justify deleting requirements.
+
+The item 002 source change consolidates the coordinator's former `Preserve evidence, reduce waste` search/reuse/filtering rules under `context-efficiency/SKILL.md`, which the coordinator already selects. The coordinator retains the default-use trigger, depth/requirement safeguards and authorization boundary for parallel work; context-efficiency now explicitly retains the requested-only rule for new persistent ledgers. Detailed execution rules moved to `demir-bot/references/execution-scope.md`; roadmap/delivery details moved to `demir-bot/references/delivery.md`; specialist-route maintenance moved to the existing capability-maintenance reference. These are source locations relative to the parent skills directory, not claims that every reference was loaded in a live task.
+
+When output is oversized, select relevant headings/fields and necessary surrounding context before emission, preserve errors and truncation indicators, and retrieve omitted material when consequential. A later summary does not erase earlier output. Do not rerun expensive or state-changing operations just to obtain a cleaner display.
+
+Report the specific duplication removed, where its requirements now live, observed versus unknown loading, and remaining gaps. File size reduction establishes a source change only. Future separately authorized comparisons must include the cost of newly loaded references, retries and coordination as well as comparable completed-task quality. Until then: **Behavior and efficiency improvement unverified.**
+
+## Opt-in routing telemetry
+
+Master item 003 (original ID 153) extends the observable-loading model above. This is a record design, not an installed collector or operational telemetry. A request to design telemetry authorizes saving guidance only; actual records require explicit scope for the observed tasks/examples. Do not inspect other conversations, install hooks, observe background activity, add analytics services or run trial tasks to obtain traces. Reuse already available evidence within the authorized scope; if access or traces are missing, report the dependency instead of inventing them.
+
+### Minimal record contract
+
+Use one compact record per scoped routing decision, with multiple skill rows only when necessary. Reuse an existing authorized task record and link to item 001's baseline rather than duplicating usage data. A concise response is sufficient; durable storage is a separate choice. Include:
+
+| Field | Minimum content |
+|---|---|
+| Scope and authorization | Opaque task/example ID, observation boundary and what the user authorized: design, scoped recording and/or persistence. Use a non-sensitive task category, not the original prompt. |
+| Expected route | Exact namespaced skill(s), direct answer or no specialist; trigger and applicable instruction/version or safe locator. Separate required, optional and out-of-scope routes. Identify whether the expectation was set before observation or reconstructed afterwards; do not present retrospective judgment as a predeclared expectation. |
+| Observed route | Skill name and the evidence state below; safe evidence locator, observed sequence/repeats where available, and full/partial/unavailable trace coverage. Record fallback routes and blockers without private error payloads. |
+| Assessment | Matches expectation, supported mismatch, unnecessary load, justified reread/fallback, or indeterminate; cite the applicable requirement and evidence, with uncertainty. An optional route not selected is not automatically a failure. |
+| Result and limits | Task completion/quality evidence or baseline locator if already available; missing trace, model/runtime or attribution data and what cannot be concluded. No fabricated routing score or savings estimate. |
+| Retention | Conversation-only by default, or explicitly authorized private store, purpose, owner/access boundary and finite expiry/deletion trigger. If these are unresolved, do not persist a separate record. |
+
+### Evidence states and interpretation
+
+- **Available only:** catalogue metadata exposes a skill; this is neither loading nor activation.
+- **Read observed:** a tool result shows instruction content was returned. Identify partial/truncated reads. Reading does not prove the skill was applied.
+- **Reuse supported:** the relevant instructions were already present and observable task actions support their use. No fresh read is required merely to produce an activation event.
+- **Application supported:** an explicit runtime activation event, or visible actions matching the skill's distinctive workflow, supports application. Name the evidence type. For behavior-based attribution say `inferred application`; overlapping generic instructions cannot establish which skill caused the action. An assistant's announcement alone is self-reported intent, not verified activation.
+- **Not observed / trace unavailable:** state the observation boundary and missing evidence. Do not equate absent logs with non-use. Only call an expected action missed when the available evidence actually supports that conclusion; otherwise use indeterminate.
+
+Keep reads, selection, application and tool execution distinct. A successful tool call does not prove which skill selected it; skill activation does not prove task success, authenticated access or publishing authority. Apply the existing capability-maintenance evidence model when recording a capability outcome, without upgrading availability to verification.
+
+Call a load unnecessary only when an observed read/activation has no required or useful role under the scoped task and applicable instructions. Identify the skill, trigger mismatch and evidence; do not classify by name or volume alone. Repeated reads may be justified by changed content, missing/truncated coverage, conflicting instructions or changed scope. If evidence cannot distinguish these, mark the assessment indeterminate. Never open or invoke extra skills just to complete this record.
+
+### Privacy and retention
+
+Exclude prompts, responses, private profile values, course content, personal names, account identifiers, credentials and raw tool payloads by default. Use namespaced skill names, coarse task categories and minimal opaque locators; redact sensitive paths or URLs. Pseudonymous IDs can still be linkable, so do not claim anonymity or preserve a lookup table without authorization. Keep any actual records outside plugin source, Git, exports and QMD/RAG indexes; do not upload them to providers or repurpose them for training.
+
+Conversation-only means no additional telemetry file is created, not guaranteed deletion of the conversation by the host. Persist only in an explicitly approved private location with a defined purpose and retention boundary; reuse existing access controls, and report missing storage/access rather than creating an account or database. At the agreed expiry or deletion request, perform only authorized removal and report actual scope, including known copies/backups that remain. Do not promise automatic expiry, deletion propagation or background cleanup when none is implemented. Ending or withdrawing recording scope stops new collection; further tasks require applicable authorization.
+
+### Reporting boundary
+
+Report separately: **guidance saved**, **scoped observations recorded** (only when authorized and actually recorded), and **operational telemetry unavailable/not installed** as applicable. Explain unknown trace coverage and supported findings without claiming an exhaustive account/session audit. Use item 001's comparable completed-task contract for any efficiency claim; recording routes alone proves no improvement. Do not create evaluation cases, checks, benchmarks, dashboards, continuous monitoring or an automatic fix loop from this guidance. Until separately authorized evidence establishes otherwise, behavior and routing/efficiency improvement remain **unverified**.

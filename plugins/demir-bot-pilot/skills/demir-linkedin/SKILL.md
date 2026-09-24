@@ -38,7 +38,7 @@ After approval, use a supported authenticated publishing tool if available and w
 
 Keep the ready-to-use artifact separate from concise source notes and approval details. Use a social-post writing block where supported. Cite sources for external claims; don't clutter the copy with internal review notes. Before approval, inspect claims and wording without running unsolicited checks. Only store new facts or voice samples in the shared reference when the user approves reuse; publishing one draft does not authorize reusing all its private details elsewhere.
 
-Use Demir Bot's visual feedback for a substantive multi-item status update, not as a replacement for the actual post. State actual action status: draft, awaiting approval, blocked by access, published with evidence, or outcome unconfirmed. Never label queued or attempted publication as published.
+Follow Demir Bot's [proportional delivery guidance](../demir-bot/references/delivery.md#deliver-clearly): use visuals only when explicitly requested or materially helpful, not merely because a status update has multiple items, and never as a replacement for the actual post. State actual action status: draft, awaiting approval, blocked by access, published with evidence, or outcome unconfirmed. Never label queued or attempted publication as published.
 
 Adaptation sources and inspected dependencies: `references/sources.md`.
 

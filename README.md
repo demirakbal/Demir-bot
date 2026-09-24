@@ -1,6 +1,6 @@
 # Demir Bot
 
-Demir Bot is an instruction-based personal assistant workflow for Codex. It selects relevant skills and available tools for coding, university work, research, writing and LinkedIn. The plugin bundles the coordinator and 20 specialist skills in one package.
+Demir Bot is an instruction-based personal assistant workflow for Codex. It selects relevant skills and available tools for coding, university work, research, writing and LinkedIn. The plugin bundles the coordinator and 21 specialist skills in one package.
 
 It is not an always-running service, a trained model, or an account-access mechanism. Installing it does not install Gmail, Firecrawl, Higgsfield or other external plugins, authenticate accounts, or grant permission to send or publish.
 
@@ -27,6 +27,7 @@ Most of the source is Markdown and YAML, not executable application code. The ex
 | Skill | When to use it |
 |---|---|
 | [demir-bot](plugins/demir-bot-pilot/skills/demir-bot/SKILL.md) | Coordinate tasks, select specialists and preserve scope and user preferences. |
+| [git-and-github-workflow](plugins/demir-bot-pilot/skills/git-and-github-workflow/SKILL.md) | Inspect Git state, make scoped commits/PRs and recover safely within authorization. |
 | [context-efficiency](plugins/demir-bot-pilot/skills/context-efficiency/SKILL.md) | Reuse evidence, read selectively and keep tool output focused. |
 | [clarify-and-execute](plugins/demir-bot-pilot/skills/clarify-and-execute/SKILL.md) | Resolve material ambiguity through useful choices, then execute. |
 | [requirements-and-traceability](plugins/demir-bot-pilot/skills/requirements-and-traceability/SKILL.md) | Define requirements, acceptance criteria and evidence links. |
@@ -71,17 +72,17 @@ RTK and QMD are optional local helpers. Neither is included. The plugin contains
 ## Development workflow
 
 1. Clone this repository and open that checkout as the Codex project. Use its `AGENTS.md` instructions.
-2. Pull current changes before starting; preserve unrelated local edits. Use a focused branch for substantial work.
+2. Inspect branch, remote, upstream and local edits first. Fetch/integrate only within the requested scope, choosing an explicit strategy after reviewing divergence. Use the bundled Git workflow guidance and a focused branch when appropriate.
 3. Edit `plugins/demir-bot-pilot/skills/<name>/` and relevant references. Keep the plugin ID stable to preserve existing skill names.
 4. Inspect the diff and staged files. Run tests or evaluations only when explicitly requested. Retain upstream notices and provenance.
-5. Commit and push the intended change; use a pull request when appropriate. Merging and publishing follow the task's authorization.
+5. Commit, push and create or merge pull requests only within the task's authorization. Inspect focused staged changes and the full outgoing range; preserve unrelated work. Ordinary edits do not authorize publication or history rewriting.
 6. Updating repository files does not automatically update an installed plugin cache. Use the current supported plugin installation/update workflow to point the local marketplace at this checkout, then reinstall the local plugin and verify the client catalogue. Do not edit cache files directly or reinstall standalone duplicates.
 
-The existing installation initially points to an older local source directory. After cloning, connect the checkout through the supported local-plugin setup workflow; do not assume that cloning alone changes that pointer. Keep private profile paths outside the checkout and preserve rollback during that transition. QMD collection paths, if used, need an explicit scoped update; do not index private data or Git history.
+Resolve the actual marketplace source before refreshing an installation; do not assume that cloning alone changes that pointer. The supported update flow preserves plugin identity, updates the source manifest cachebuster and reinstalls from the confirmed local marketplace. Keep private profile paths outside the checkout and preserve rollback during that transition. QMD collection paths, if used, need an explicit scoped update; do not index private data or Git history.
 
 ## Current status and limitations
 
-The private pilot's 21 namespaced skills have been exposed in the client catalogue without standalone duplicates. Core saved instructions were compared with the previous skill setup, and private course evidence was retained separately. This is not proof of full runtime parity or every provider operation.
+The original 21 namespaced skills have been exposed in the client catalogue without standalone duplicates. The bundle now includes a 22nd skill, Git and GitHub workflow; its saved guidance and routing are source-inspected, with behavior and fresh-task discovery untested. Core saved instructions were compared with the previous skill setup, and private course evidence was retained separately. This is not proof of full runtime parity or every provider operation.
 
 Default-icon overrides were removed, but actual icon appearance remains unverified. The standalone manifest validator previously could not run because PyYAML was absent. Public redistribution and licensing compatibility have not been fully reviewed. No CI, automated test campaign, model training, deployment or cloud synchronization is configured by this repository.
 
