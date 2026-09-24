@@ -2,6 +2,11 @@
 
 This inventory links the actual reference files and retained notices. Private profile files and third-party plugin packages are intentionally excluded. Upstream URLs and adaptation notes are inside the linked provenance files.
 
+## Project documentation
+
+- [Current specification and roadmap](docs/roadmap/demir-bot-master-roadmap.md)
+- [Roadmap PDF](docs/roadmap/demir-bot-master-roadmap.pdf)
+
 ## agent-configuration-review
 
 - [SKILL.md](plugins/demir-bot-pilot/skills/agent-configuration-review/SKILL.md)
@@ -51,6 +56,7 @@ This inventory links the actual reference files and retained notices. Private pr
 - [SKILL.md](plugins/demir-bot-pilot/skills/deep-research-and-idea-validation/SKILL.md)
 - [agents/openai.yaml](plugins/demir-bot-pilot/skills/deep-research-and-idea-validation/agents/openai.yaml)
 - [references/provenance.md](plugins/demir-bot-pilot/skills/deep-research-and-idea-validation/references/provenance.md)
+- [references/academic-review.md](plugins/demir-bot-pilot/skills/deep-research-and-idea-validation/references/academic-review.md)
 
 ## demir-bot
 
@@ -64,6 +70,8 @@ This inventory links the actual reference files and retained notices. Private pr
 - [references/routes.md](plugins/demir-bot-pilot/skills/demir-bot/references/routes.md)
 - [references/skill-sync.md](plugins/demir-bot-pilot/skills/demir-bot/references/skill-sync.md)
 - [references/upstream-adaptations.md](plugins/demir-bot-pilot/skills/demir-bot/references/upstream-adaptations.md)
+- [references/delivery.md](plugins/demir-bot-pilot/skills/demir-bot/references/delivery.md)
+- [references/execution-scope.md](plugins/demir-bot-pilot/skills/demir-bot/references/execution-scope.md)
 
 ## demir-linkedin
 
@@ -103,6 +111,7 @@ This inventory links the actual reference files and retained notices. Private pr
 - [agents/openai.yaml](plugins/demir-bot-pilot/skills/git-and-github-workflow/agents/openai.yaml)
 - [references/recovery.md](plugins/demir-bot-pilot/skills/git-and-github-workflow/references/recovery.md)
 - [references/provenance.md](plugins/demir-bot-pilot/skills/git-and-github-workflow/references/provenance.md)
+- [references/github-operations.md](plugins/demir-bot-pilot/skills/git-and-github-workflow/references/github-operations.md)
 
 ## jurisdiction-specific-legal-feasibility
 
@@ -126,6 +135,7 @@ This inventory links the actual reference files and retained notices. Private pr
 - [SKILL.md](plugins/demir-bot-pilot/skills/personal-writing/SKILL.md)
 - [agents/openai.yaml](plugins/demir-bot-pilot/skills/personal-writing/agents/openai.yaml)
 - [references/facts-and-voice.md](plugins/demir-bot-pilot/skills/personal-writing/references/facts-and-voice.md)
+- [references/content-repurposing.md](plugins/demir-bot-pilot/skills/personal-writing/references/content-repurposing.md)
 
 ## privacy-review
 
@@ -142,6 +152,10 @@ This inventory links the actual reference files and retained notices. Private pr
 - [references/evidence.md](plugins/demir-bot-pilot/skills/qa-and-test-evidence/references/evidence.md)
 - [references/sources.md](plugins/demir-bot-pilot/skills/qa-and-test-evidence/references/sources.md)
 - [references/test-design.md](plugins/demir-bot-pilot/skills/qa-and-test-evidence/references/test-design.md)
+- [checks/README.md](plugins/demir-bot-pilot/skills/qa-and-test-evidence/checks/README.md)
+- [behavioral/README.md](plugins/demir-bot-pilot/skills/qa-and-test-evidence/behavioral/README.md)
+- [behavioral/cases.md](plugins/demir-bot-pilot/skills/qa-and-test-evidence/behavioral/cases.md)
+- [behavioral/manual/README.md](plugins/demir-bot-pilot/skills/qa-and-test-evidence/behavioral/manual/README.md)
 
 ## release-readiness-and-observability
 

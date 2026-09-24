@@ -1,6 +1,6 @@
 # Demir Bot
 
-Demir Bot is an instruction-based personal assistant workflow for Codex. It selects relevant skills and available tools for coding, university work, research, writing and LinkedIn. The plugin bundles the coordinator and 21 specialist skills in one package.
+Demir Bot is an instruction-based personal assistant workflow for Codex. It selects relevant skills and available tools for coding, university work, research, writing and LinkedIn. The plugin bundles 22 skills: one coordinator and 21 specialists. This repository is the development source, with opt-in QA assets and a maintained roadmap.
 
 It is not an always-running service, a trained model, or an account-access mechanism. Installing it does not install Gmail, Firecrawl, Higgsfield or other external plugins, authenticate accounts, or grant permission to send or publish.
 
@@ -16,11 +16,12 @@ plugins/demir-bot-pilot/
       references/              Supporting guidance and provenance, where present
       agents/openai.yaml       Client metadata, where present
       LICENSE*                 Retained upstream notices, where present
+docs/roadmap/                  Current specification, roadmap source and PDF
 AGENTS.md                      Instructions for working on this repository
 RESOURCES.md                   Linked inventory of bundled reference resources
 ```
 
-Most of the source is Markdown and YAML, not executable application code. The existing local publishing runtime, credentials and user records are deliberately not bundled. The `plugins/` directory can hold additional first-party plugins later; unrelated third-party packages should remain external dependencies.
+Most of the source is Markdown and YAML. The QA skill also includes opt-in Python structural checks and synthetic tests, while docs/roadmap contains the PDF renderer. The existing local publishing runtime, credentials and user records are deliberately not bundled. The `plugins/` directory can hold additional first-party plugins later; unrelated third-party packages should remain external dependencies.
 
 ## Included skills
 
@@ -30,8 +31,8 @@ Most of the source is Markdown and YAML, not executable application code. The ex
 | [git-and-github-workflow](plugins/demir-bot-pilot/skills/git-and-github-workflow/SKILL.md) | Inspect Git state, make scoped commits/PRs and recover safely within authorization. |
 | [context-efficiency](plugins/demir-bot-pilot/skills/context-efficiency/SKILL.md) | Reuse evidence, read selectively and keep tool output focused. |
 | [clarify-and-execute](plugins/demir-bot-pilot/skills/clarify-and-execute/SKILL.md) | Resolve material ambiguity through useful choices, then execute. |
-| [requirements-and-traceability](plugins/demir-bot-pilot/skills/requirements-and-traceability/SKILL.md) | Define requirements, acceptance criteria and evidence links. |
-| [architecture-review](plugins/demir-bot-pilot/skills/architecture-review/SKILL.md) | Examine boundaries, dependencies and architectural trade-offs. |
+| [requirements-and-traceability](plugins/demir-bot-pilot/skills/requirements-and-traceability/SKILL.md) | Map user jobs, MVP scope, ownership, acceptance criteria and evidence links. |
+| [architecture-review](plugins/demir-bot-pilot/skills/architecture-review/SKILL.md) | Orient to repositories and examine boundaries, dependencies and architectural trade-offs. |
 | [code-refactoring-refactor-clean](plugins/demir-bot-pilot/skills/code-refactoring-refactor-clean/SKILL.md) | Perform requested or concretely justified behavior-preserving refactoring. |
 | [documentation-and-adrs](plugins/demir-bot-pilot/skills/documentation-and-adrs/SKILL.md) | Maintain requested documentation and architectural decisions. |
 | [qa-and-test-evidence](plugins/demir-bot-pilot/skills/qa-and-test-evidence/SKILL.md) | Plan, write or run tests only within the explicitly requested scope. |
@@ -40,7 +41,7 @@ Most of the source is Markdown and YAML, not executable application code. The ex
 | [personal-writing](plugins/demir-bot-pilot/skills/personal-writing/SKILL.md) | Route writing to the relevant channel tone and approved facts. |
 | [linkedin-tone](plugins/demir-bot-pilot/skills/linkedin-tone/SKILL.md) | Apply the user's privately stored LinkedIn calibration. |
 | [email-tone](plugins/demir-bot-pilot/skills/email-tone/SKILL.md) | Apply audience-specific email language and approved signatures. |
-| [deep-research-and-idea-validation](plugins/demir-bot-pilot/skills/deep-research-and-idea-validation/SKILL.md) | Compare evidence, alternatives, feasibility and demand. |
+| [deep-research-and-idea-validation](plugins/demir-bot-pilot/skills/deep-research-and-idea-validation/SKILL.md) | Review academic evidence, alternatives, feasibility and demand. |
 | [frontend-quality-and-accessibility](plugins/demir-bot-pilot/skills/frontend-quality-and-accessibility/SKILL.md) | Implement semantic, keyboard-accessible and responsive interfaces. |
 | [release-readiness-and-observability](plugins/demir-bot-pilot/skills/release-readiness-and-observability/SKILL.md) | Assess deployment prerequisites, rollback, health signals and recovery. |
 | [swiftui-performance-and-concurrency](plugins/demir-bot-pilot/skills/swiftui-performance-and-concurrency/SKILL.md) | Handle SwiftUI state, identity, task lifecycle and actor isolation. |
@@ -82,9 +83,16 @@ Resolve the actual marketplace source before refreshing an installation; do not 
 
 ## Current status and limitations
 
-The original 21 namespaced skills have been exposed in the client catalogue without standalone duplicates. The bundle now includes a 22nd skill, Git and GitHub workflow; its saved guidance and routing are source-inspected, with behavior and fresh-task discovery untested. Core saved instructions were compared with the previous skill setup, and private course evidence was retained separately. This is not proof of full runtime parity or every provider operation.
+Status recorded on 24 September 2026:
 
-Default-icon overrides were removed, but actual icon appearance remains unverified. The standalone manifest validator previously could not run because PyYAML was absent. Public redistribution and licensing compatibility have not been fully reviewed. No CI, automated test campaign, model training, deployment or cloud synchronization is configured by this repository.
+- **Installed:** version `0.1.0+codex.20260924171748`; all 137 package files matched the development source at installation. Later source edits still require an explicit installation update.
+- **Guidance saved:** product discovery, repository onboarding, error/type review, academic review, content repurposing, broader GitHub operations, learning controls, on-demand lesson discovery and bounded improvement comparisons. Lesson proposals stay inactive until their persistence scope is authorized.
+- **QA evidence:** the recorded structural campaign passed 24/24 cases on its historical source snapshot. Behavioral regression is completed under the user's accepted ten-case manual scope. Neither result establishes universal reliability or measured improvement.
+- **Remaining limits:** no before/after effectiveness or cost result is established. Provider operations, full lifecycle coverage and redistribution compatibility remain separately assessed work. No CI, cloud synchronization, university RAG, training or background service is activated by this repository.
+
+See the [current specification and roadmap](docs/roadmap/demir-bot-master-roadmap.md) or its [PDF](docs/roadmap/demir-bot-master-roadmap.pdf) for scoped evidence and the 113 remaining entries. Completed capabilities are recorded separately from future work. Use each entry's current number and title together; older skill references may retain historical identifiers.
+
+The [structural-check guide](plugins/demir-bot-pilot/skills/qa-and-test-evidence/checks/README.md), [behavioral cases](plugins/demir-bot-pilot/skills/qa-and-test-evidence/behavioral/cases.md) and [comparison guidance](plugins/demir-bot-pilot/skills/qa-and-test-evidence/references/demir-bot-evaluation.md) describe distinct evidence methods. Their presence does not authorize execution, and the accepted manual scope does not require rerunning the larger prepared suite.
 
 ## Sources and licensing
 
