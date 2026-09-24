@@ -34,7 +34,7 @@ for block in (base/'demir-bot-master-roadmap.md').read_text().split('\n\n'):
  if block.startswith('# '):
   lines=block.split('\n',1);story.append(Paragraph(clean(lines[0][2:]),styles['TitleRoad']))
   if len(lines)>1:story.append(Paragraph(clean(lines[1]),styles['BodyRoad']))
-  story.append(Paragraph('Stable IDs. Useful capabilities first. Evidence before release.',styles['BodyRoad']))
+  story.append(Paragraph('Current capabilities. Future work in implementation order.',styles['BodyRoad']))
   story.append(PageBreak());story.append(Paragraph('Contents',styles['SectionRoad']))
   toc=TableOfContents();toc.levelStyles=[ParagraphStyle(name='toc0',fontName='Helvetica-Bold',fontSize=10,leading=15,spaceBefore=8),ParagraphStyle(name='toc1',fontName='Helvetica',fontSize=8,leading=11,leftIndent=12)]
   story.append(toc)

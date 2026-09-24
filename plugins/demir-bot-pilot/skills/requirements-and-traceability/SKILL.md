@@ -1,6 +1,6 @@
 ---
 name: requirements-and-traceability
-description: Turn project ideas, assignment criteria and change requests into measurable requirements and acceptance criteria; audit ambiguity, scope, bidirectional traceability and change impact. Use for substantial unclear features, requirements documents, requirement-to-test mappings or conflicting specifications. Skip routine self-contained fixes and unrelated coding tasks.
+description: Turn project ideas, user jobs and change requests into capability maps, MVP scope, ownership and measurable acceptance criteria. Use for product discovery, substantial unclear features, assignment requirements, traceability or conflicting specifications. Skip routine self-contained fixes and unrelated coding tasks.
 ---
 
 Plugin pilot routing: select bundled siblings as `demir-bot-pilot:<skill-name>` from the active catalogue. Resolve file references relative to this skill directory; paths beginning with a bundled skill name are relative to the parent `skills/` directory. External provider skills remain optional and retain their own names. Do not fall back to a duplicate standalone copy silently.
@@ -17,6 +17,8 @@ Read the user request, relevant current requirements/rubric and project conventi
 Separate confirmed requirements, proposed criteria, assumptions and unresolved conflicts. Never invent stakeholder approval, numeric targets or legal obligations. Ask only material blocking questions; draft useful non-blocked sections meanwhile. For minor unambiguous work, brief acceptance criteria suffice—no compulsory specification file or approval ceremony.
 
 ## Specify
+
+For requested product discovery or delivery scoping, use [product discovery and delivery](references/requirements.md#product-discovery-and-delivery). This skill owns user outcomes, capability scope, MVP cuts and acceptance; architecture-review owns technical feasibility, boundaries and dependencies. Reuse existing owners rather than adding a product coordinator. A request such as “choose the smallest useful first version” activates this guidance; a supplied one-line correction or straightforward implementation with settled criteria does not require a discovery exercise.
 
 1. Decompose independently testable capabilities when the request genuinely bundles them. Keep stable IDs, responsibilities, dependencies and boundary contracts. Do not equate a logical capability with a deployment service. A dependency cycle calls for investigation, not automatic module merging.
 2. Follow existing requirement IDs, formats and locations. Preserve IDs across edits, do not recycle retired ones, and track meaningful revisions. For a new scheme use simple unique IDs. Distinguish need/requirement, implementation task and architectural decision.

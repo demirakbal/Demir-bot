@@ -1,0 +1,125 @@
+{
+  "B086-001": {
+    "packet_sha256": "f6fb58d672764243071ef3187f1e869d0e03308049a3add42f33dd0449f6bc7f",
+    "instruction_sources": {},
+    "mode": "manual text-only; selected source excerpts; not native routing"
+  },
+  "B086-002": {
+    "packet_sha256": "526d3f39652f91bee93ae929c7df81e232eadb53eb96d48ed2cdf81d47c3ec81",
+    "instruction_sources": {
+      "skills/demir-bot/SKILL.md": "ed4436919b46aeb9fbe5246818c88ef56a5aa2967541d0b9d0f9ec7b6927fdb8"
+    },
+    "mode": "manual text-only; selected source excerpts; not native routing"
+  },
+  "B086-003": {
+    "packet_sha256": "160cc95235c95fbbf51b92f8b385dc5020c753a44f21fe537e570819085cce62",
+    "instruction_sources": {
+      "skills/deep-research-and-idea-validation/SKILL.md": "e3559201c26e518b173a3a60671680fbd67a0e66f00cc02a26f87707c62a7a02",
+      "skills/deep-research-and-idea-validation/references/academic-review.md": "b01a24e636da240f321212b3ffaf5960e5c22a6db4a8eebc2ca77919c101fc73"
+    },
+    "mode": "manual text-only; selected source excerpts; not native routing"
+  },
+  "B086-004": {
+    "packet_sha256": "0a7111efe9037ed86827fb272740b2c1034e20a145406ead41b5f4d0343074dd",
+    "instruction_sources": {
+      "skills/demir-linkedin/SKILL.md": "90a0cd45edfaa9d25d04ec3a408d32839f76db0747439cfde9975843dd76b1dd",
+      "skills/demir-linkedin/references/actions.md": "b34e6259a20656cb4afe896261411a37907dd0d74cf43fc0a254563eac295f00"
+    },
+    "mode": "manual text-only; selected source excerpts; not native routing"
+  },
+  "B086-005": {
+    "packet_sha256": "0736178d29f28c017713393836053cfe952820feae5f8048f1b5d4b25254ce79",
+    "instruction_sources": {
+      "skills/demir-linkedin/SKILL.md": "90a0cd45edfaa9d25d04ec3a408d32839f76db0747439cfde9975843dd76b1dd",
+      "skills/demir-linkedin/references/actions.md": "b34e6259a20656cb4afe896261411a37907dd0d74cf43fc0a254563eac295f00"
+    },
+    "mode": "manual text-only; selected source excerpts; not native routing"
+  },
+  "B086-006": {
+    "packet_sha256": "44930908f93fe26f5f25b43bc02a31e5039cf79d3cfb1783d56c96260d4ce0c4",
+    "instruction_sources": {
+      "skills/personal-writing/SKILL.md": "dc76d857183174bb20f6d77dcf8f0df3113db7ddbb6a6f3fa55bda25da4d5f2f",
+      "skills/personal-writing/references/content-repurposing.md": "79a845f1439d2c4f33a6587ee96ed5ee454e637385001170ea727e9ee1cd1711"
+    },
+    "mode": "manual text-only; selected source excerpts; not native routing"
+  },
+  "B086-007": {
+    "packet_sha256": "2ea3e07a984e4fb0890b22abbb578f4176b30e7c303adb4b2f9300e9c9f47e60",
+    "instruction_sources": {
+      "skills/deep-research-and-idea-validation/SKILL.md": "e3559201c26e518b173a3a60671680fbd67a0e66f00cc02a26f87707c62a7a02"
+    },
+    "mode": "manual text-only; selected source excerpts; not native routing"
+  },
+  "B086-008": {
+    "packet_sha256": "c15c3505cffecfc31a390dcb10318a805422084e6c5ddcb3ae2c883846302204",
+    "instruction_sources": {
+      "skills/personal-writing/SKILL.md": "dc76d857183174bb20f6d77dcf8f0df3113db7ddbb6a6f3fa55bda25da4d5f2f",
+      "skills/email-tone/SKILL.md": "b003e298fb19eac2ac4396ecbaeec54de4c088739ccd58db39a81c4c6a7ed5cb"
+    },
+    "mode": "manual text-only; selected source excerpts; not native routing"
+  },
+  "B086-009": {
+    "packet_sha256": "9d5c6a4753cc7bcbdc764438346a58cbf31c2e9f8796e91c24fe8ad04b1222d6",
+    "instruction_sources": {
+      "skills/git-and-github-workflow/SKILL.md": "ad05fa866579bec91cda428412a562a1af4c3755c6b299dcc1e25953afb7ed68",
+      "skills/git-and-github-workflow/references/github-operations.md": "f1e2c9a1f859888f087b0a335b5ccd1a4aa65ed94c4f68ff332690f75746f32b"
+    },
+    "mode": "manual text-only; selected source excerpts; not native routing"
+  },
+  "B086-010": {
+    "packet_sha256": "970aef146ee33f7d23cb1a1a10a615c01be4cb1f2c70a0f349b5ae3bf6f4f8cf",
+    "instruction_sources": {
+      "skills/context-efficiency/SKILL.md": "00b52828f5e351b2fa03b07d8c18c7997db6c2c3fb4feec5954ff806da2df3df",
+      "skills/context-efficiency/references/runtime-options.md": "63ba23bea2d123428c360782bba53cc016db0956ff077b7a95de55512b613f15"
+    },
+    "mode": "manual text-only; selected source excerpts; not native routing"
+  },
+  "B086-011": {
+    "packet_sha256": "0dea9a9fa1b554de622386996f1a0b5be8d1f67133482af9427e9d9b85217a77",
+    "instruction_sources": {
+      "skills/context-efficiency/SKILL.md": "00b52828f5e351b2fa03b07d8c18c7997db6c2c3fb4feec5954ff806da2df3df",
+      "skills/context-efficiency/references/source-reuse.md": "4e01296b7aa4660156b2d26568c434efda4e3a034d8c8735023efc3edc8dca8d"
+    },
+    "mode": "manual text-only; selected source excerpts; not native routing"
+  },
+  "B086-012": {
+    "packet_sha256": "d7e4b78d6dd7f1b68be9e685ee319913e2fc0a755436c046f290ee9d57ba052f",
+    "instruction_sources": {
+      "skills/context-efficiency/SKILL.md": "00b52828f5e351b2fa03b07d8c18c7997db6c2c3fb4feec5954ff806da2df3df",
+      "skills/context-efficiency/references/runtime-options.md": "63ba23bea2d123428c360782bba53cc016db0956ff077b7a95de55512b613f15"
+    },
+    "mode": "manual text-only; selected source excerpts; not native routing"
+  },
+  "B086-013": {
+    "packet_sha256": "49dc0cd3b7bf7298574ae63c9cdf4b94d93cae68eeb7f89513a98af5263e6efe",
+    "instruction_sources": {
+      "skills/context-efficiency/SKILL.md": "00b52828f5e351b2fa03b07d8c18c7997db6c2c3fb4feec5954ff806da2df3df",
+      "skills/context-efficiency/references/runtime-options.md": "63ba23bea2d123428c360782bba53cc016db0956ff077b7a95de55512b613f15"
+    },
+    "mode": "manual text-only; selected source excerpts; not native routing"
+  },
+  "B086-014": {
+    "packet_sha256": "370167035bde7bbd89688bfbdd1ec71db176395bd34a3179f044780ecf891239",
+    "instruction_sources": {
+      "skills/demir-bot/SKILL.md": "ed4436919b46aeb9fbe5246818c88ef56a5aa2967541d0b9d0f9ec7b6927fdb8",
+      "skills/demir-bot/references/delivery.md": "0055b0d72d41f14734b932edb59a7df278564a81eb94206e01b1f3f06e2d7410"
+    },
+    "mode": "manual text-only; selected source excerpts; not native routing"
+  },
+  "B086-015": {
+    "packet_sha256": "1c1b440578573be6ec67d4b197894920ba7dee6ee43b38680a86ff2fc81aa17b",
+    "instruction_sources": {
+      "skills/demir-bot/SKILL.md": "ed4436919b46aeb9fbe5246818c88ef56a5aa2967541d0b9d0f9ec7b6927fdb8",
+      "skills/demir-bot/references/capability-maintenance.md": "a3470bbd5db7797053c046ca9c5c2d12390d6ea1798c934295fe67b544abbb4b"
+    },
+    "mode": "manual text-only; selected source excerpts; not native routing"
+  },
+  "B086-016": {
+    "packet_sha256": "2693fae9fa1df2531f085baea74fc63e4d166d3595833d1d312911245cd537d5",
+    "instruction_sources": {
+      "skills/demir-bot/SKILL.md": "ed4436919b46aeb9fbe5246818c88ef56a5aa2967541d0b9d0f9ec7b6927fdb8",
+      "skills/demir-bot/references/capability-maintenance.md": "a3470bbd5db7797053c046ca9c5c2d12390d6ea1798c934295fe67b544abbb4b"
+    },
+    "mode": "manual text-only; selected source excerpts; not native routing"
+  }
+}

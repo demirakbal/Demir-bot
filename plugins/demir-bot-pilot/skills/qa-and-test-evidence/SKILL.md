@@ -20,3 +20,5 @@ A focused adaptation of test-automator with Demir's course evidence practices. S
 Use requirements-and-traceability for substantial criterion ambiguity and documentation-and-adrs for separate document maintenance. Do not recursively invoke Demir Bot or load all specialists. Refactoring remains conditional on a concrete benefit. If no additional test provides meaningful confidence, explain that rather than adding implementation-mirroring tests.
 
 For explicitly requested Demir Bot routing or workflow evaluation, read references/demir-bot-evaluation.md. No evaluation is triggered by skill installation or ordinary coding work.
+
+For explicitly requested plugin structural checks, use [the scoped repository suite](checks/README.md). It covers the local manifest contract, metadata, names, explicit local links, routing targets and inventory with synthetic negative cases. Writing or installing this suite does not authorize executing it; it is not host-schema certification or behavioral evidence.

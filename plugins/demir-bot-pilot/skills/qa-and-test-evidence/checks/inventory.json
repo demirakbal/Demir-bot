@@ -1,0 +1,13 @@
+{
+  "plugin": "demir-bot-pilot",
+  "skills": [
+    "agent-configuration-review", "architecture-review", "clarify-and-execute",
+    "code-refactoring-refactor-clean", "context-efficiency", "deep-research-and-idea-validation",
+    "demir-bot", "demir-linkedin", "documentation-and-adrs", "email-tone",
+    "frontend-quality-and-accessibility", "git-and-github-workflow",
+    "jurisdiction-specific-legal-feasibility", "linkedin-tone", "ml-training-specialist",
+    "personal-writing", "privacy-review", "qa-and-test-evidence",
+    "release-readiness-and-observability", "requirements-and-traceability",
+    "swiftui-performance-and-concurrency", "youtube-learning"
+  ]
+}

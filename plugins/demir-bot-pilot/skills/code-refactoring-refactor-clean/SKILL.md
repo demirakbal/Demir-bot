@@ -33,6 +33,8 @@ For tiny edits this main workflow suffices. A full audit considers every quality
 
 ## Targeted error and type review
 
+For a requested error/type review or a concrete risk in the touched behavior, use [error, type and recovery contracts](references/contracts-and-documentation.md#error-type-and-recovery-contracts). “This operation reports success after a failed save” or “review whether these states permit an invalid transition” are positive triggers. A cosmetic edit or a settled small change does not require an extra review pass. Use the relevant ECC-derived questions as review perspectives within the current agent, not separate worker roles; no automatic delegation or executable checks.
+
 For relevant code reviews, examine swallowed errors, empty successful-looking fallbacks, lost error context, unawaited work and unsafe retries. Distinguish intentional cancellation/optional absence from genuine failure; do not demand noisy logging or expose sensitive payloads. Trace the actual caller/user impact before reporting a finding.
 
 When domain invariants matter, inspect construction and mutation paths, encapsulation, validation at untrusted boundaries and whether types prevent actual invalid states. Prefer a small meaningful type change over elaborate wrappers or speculative restrictions. No numeric type-quality scores, mandatory agent pass or automatic repository-wide audit. Report location, evidence, impact, confidence and smallest useful change; fixes and tests stay within authorization.

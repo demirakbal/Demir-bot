@@ -1,0 +1,10 @@
+# Exact direct dependencies; installation is a separately authorized operation.
+PyYAML==6.0.2
+jsonschema==4.23.0
+attrs==24.3.0
+jsonschema-specifications==2024.10.1
+referencing==0.36.2
+typing_extensions==4.12.2
+rpds-py==0.22.3
+markdown-it-py==3.0.0
+mdurl==0.1.2

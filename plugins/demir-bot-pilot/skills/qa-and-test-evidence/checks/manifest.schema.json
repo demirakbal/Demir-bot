@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Demir Bot local skills-only package contract; not official host schema",
+  "type": "object",
+  "required": ["name", "version", "description", "author", "skills", "interface"],
+  "additionalProperties": false,
+  "properties": {
+    "name": {"const": "demir-bot-pilot"},
+    "version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+(?:[-+][0-9A-Za-z.+-]+)?$"},
+    "description": {"type": "string", "minLength": 1},
+    "author": {"type": "object", "required": ["name"], "additionalProperties": false, "properties": {"name": {"type": "string", "minLength": 1}}},
+    "skills": {"const": "./skills/"},
+    "interface": {
+      "type": "object",
+      "required": ["displayName", "shortDescription", "longDescription", "developerName", "category", "capabilities", "defaultPrompt"],
+      "additionalProperties": false,
+      "properties": {
+        "displayName": {"const": "Demir Bot — Private Pilot"},
+        "shortDescription": {"type": "string", "minLength": 1},
+        "longDescription": {"type": "string", "minLength": 1},
+        "developerName": {"type": "string", "minLength": 1},
+        "category": {"type": "string", "minLength": 1},
+        "capabilities": {"const": []},
+        "defaultPrompt": {"type": "string", "minLength": 1}
+      }
+    }
+  }
+}
