@@ -21,4 +21,16 @@ Use requirements-and-traceability for substantial criterion ambiguity and docume
 
 For explicitly requested Demir Bot routing or workflow evaluation, read references/demir-bot-evaluation.md. No evaluation is triggered by skill installation or ordinary coding work.
 
+For a demonstrated gap in a project's testing practice, use [stack-specific recipe selection](references/test-design.md#stack-specific-recipe-selection). Reuse existing QA and applicable Superpowers workflows before adding pytest, JavaScript/TypeScript or React detail. No new recipe is warranted solely by a roadmap label or desired coverage percentage.
+
+For requested project E2E or accessibility testing, reuse [project E2E and accessibility scope](references/test-design.md#project-e2e-and-accessibility-scope) and the frontend specialist. Establish actual browser access and selected user/error flows; neither tooling availability nor automated findings establish complete accessibility coverage.
+
+For explicitly requested XCTest guidance or authorised XCTest work, use [XCTest patterns](references/xctest-patterns.md) for fixture ownership, async completion and meaningful assertions. Instruction maintenance does not authorise writing fixtures/tests or executing them.
+
+For Swift Testing guidance or authorised work in a supported project, use [Swift Testing patterns](references/swift-testing-patterns.md) for parameterisation, traits and concurrency. Reuse existing XCTest principles without requiring a framework migration.
+
+For focused iOS UI-testing guidance, use [UI test patterns](references/ui-test-patterns.md) for stable identifiers, observable asynchronous states and process/data isolation. Reuse XCTest and accessibility guidance; instruction work does not authorise test creation or app launches.
+
+For a concrete visual regression risk, use [Snapshot-testing guidance](references/snapshot-testing.md) for controlled rendering conditions, comparison limits and explicit baseline approval. Guidance maintenance does not authorise captures, test creation or baseline updates.
+
 For explicitly requested plugin structural checks, use [the scoped repository suite](checks/README.md). It covers the local manifest contract, metadata, names, explicit local links, routing targets and inventory with synthetic negative cases. Writing or installing this suite does not authorize executing it; it is not host-schema certification or behavioral evidence.

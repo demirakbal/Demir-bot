@@ -12,6 +12,8 @@ Add the privacy questions not covered by a vulnerability scan. A system may prev
 
 ## Choose the right workflow
 
+For Apple app/SDK privacy declarations, use [privacy manifests](references/privacy-manifests.md) with the existing SwiftUI specialist for target/resource ownership. Keep declaration evidence separate from runtime verification, platform acceptance and legal compliance.
+
 - For a repository vulnerability audit, use the available `codex-security:security-scan`; for a PR or patch use `codex-security:security-diff-scan`. Use their own instructions and actual prerequisites. Do not recreate their scanning, threat-modeling, severity or finding-validation pipelines here.
 - For an existing finding, choose Codex Security triage, fix or verification only when that specific action is requested. An ordinary code fix does not authorize tests. If a specialist workflow requires unrequested execution or reports, provide a bounded source review or implementation within scope and explain the coverage limit; never silently claim the full scan completed.
 - For privacy-only reviews, stay here. For combined reviews, reuse the existing security evidence and add only privacy gaps. An overlapping leak or access-control finding gets one explanation with both impacts, not duplicate findings.

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Automated Assignment Completer"
+  short_description: "Complete authorized assignment stages in order"
+  default_prompt: "Use $demir-bot-pilot:automated-assignment-completer to complete the authorized assignment stages and perform the final deliverables review."

@@ -23,6 +23,16 @@ For requested repository onboarding, use [repository onboarding](references/revi
 
 ## Specialist boundaries
 
+For typed connector or App Store Connect work, reuse the [connector operation contract](references/backend-api-contracts.md#typed-connector-operation-contract). Require the named operation, official SDK/API contract and supported access before authenticated implementation; separate reads, edits, uploads and submission.
+
+For database work, use the existing checklist's [database provider handoff](references/review-checklist.md#database-provider-handoff) to establish the named database, compatibility and recovery assumptions. Reuse available Supabase/Postgres skills for applicable schema, migration, RLS and query work; provider availability is not access or execution evidence.
+
+For requested backend/API boundary work, use [Backend and API contracts](references/backend-api-contracts.md) to connect concrete consumers, observable acceptance and the relevant existing review dimensions. Reuse requirements and actual stack/provider expertise; Superpowers supplies methodology, not guaranteed backend expertise.
+
+For iOS state/data boundaries or modularity decisions, use [iOS architecture patterns](references/ios-architecture-patterns.md) with the existing SwiftUI specialist. Select a pattern from the actual requirements and affected flow; skip this reference for routine view edits with settled ownership.
+
+For iOS service construction, lifetime or replacement decisions, use its [dependency-injection guidance](references/ios-architecture-patterns.md#dependency-injection-and-service-lifetime); preserve project conventions without introducing a framework by default.
+
 For product discovery and MVP delivery, reuse requirements-and-traceability's [product scope contract](../requirements-and-traceability/references/requirements.md#product-discovery-and-delivery). Take its selected user outcome, constraints and acceptance criteria as inputs; assess actual technical feasibility, dependencies, implementation/data ownership, reversible slices and simpler alternatives. Return risks and missing project/tool evidence without silently changing product priorities or promising delivery dates. Requirements owns capability maps, user jobs, MVP cuts and product acceptance; architecture owns technical trade-offs. This collaboration uses existing skills, not a second coordinator or automatic delegation. A requested MVP with uncertain persistence boundaries benefits from this review; a settled small feature does not require another planning pass.
 
 Use requirements-and-traceability for substantial requirement conflicts, documentation-and-adrs for significant decision records and document maintenance, qa-and-test-evidence for meaningful verification work, and code-refactoring-refactor-clean for justified code restructuring. Load only the specialist that adds necessary capability; do not recursively invoke Demir Bot or all specialists.

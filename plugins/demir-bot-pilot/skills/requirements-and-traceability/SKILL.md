@@ -18,6 +18,12 @@ Separate confirmed requirements, proposed criteria, assumptions and unresolved c
 
 ## Specify
 
+For typed connector requirements, use architecture's [operation contract](../architecture-review/references/backend-api-contracts.md#typed-connector-operation-contract) to name the target, caller, read/write effects and observable completion. Missing provider/SDK/access facts stay explicit; a capability label is not an authenticated operation specification.
+
+For database requirements, reuse architecture's [database provider handoff](../architecture-review/references/review-checklist.md#database-provider-handoff). Establish actual consumers, data invariants, compatibility and approved recovery expectations; do not turn an assumed backup or installed provider into evidence of restore safety.
+
+For backend/API requirements, reuse architecture's [Backend and API contracts](../architecture-review/references/backend-api-contracts.md). Identify concrete consumers and observable success/failure criteria; requirements owns intended behavior and architecture owns implementation trade-offs. Do not invent a stack, client or service contract from a roadmap label.
+
 For requested product discovery or delivery scoping, use [product discovery and delivery](references/requirements.md#product-discovery-and-delivery). This skill owns user outcomes, capability scope, MVP cuts and acceptance; architecture-review owns technical feasibility, boundaries and dependencies. Reuse existing owners rather than adding a product coordinator. A request such as “choose the smallest useful first version” activates this guidance; a supplied one-line correction or straightforward implementation with settled criteria does not require a discovery exercise.
 
 1. Decompose independently testable capabilities when the request genuinely bundles them. Keep stable IDs, responsibilities, dependencies and boundary contracts. Do not equate a logical capability with a deployment service. A dependency cycle calls for investigation, not automatic module merging.

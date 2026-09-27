@@ -2,6 +2,7 @@
 import json
 import tempfile
 import unittest
+from unittest.mock import patch
 from pathlib import Path
 
 from structural import inspect
@@ -147,6 +148,37 @@ class StructuralContracts(unittest.TestCase):
         before = inspect(self.root, self.inventory)["snapshot"]
         self.write("skills/alpha/references/source.md", "# Changed\n")
         self.assertNotEqual(before, inspect(self.root, self.inventory)["snapshot"])
+
+    def test_invalid_utf8_link_target_reports_failure(self):
+        (self.root / "skills/alpha/references/source.md").write_bytes(b"\xff")
+        self.append("\n[source](references/source.md#evidence)\n")
+        self.rejects("unreadable-link-target")
+
+    def test_url_parser_failure_reports_finding(self):
+        self.append("\n[source](references/source.md)\n")
+        with patch("structural.urlsplit", side_effect=ValueError("synthetic malformed URL")):
+            self.rejects("invalid-link")
+
+    def test_unreadable_directory_reports_failure(self):
+        original = Path.iterdir
+        blocked = (self.root / "skills/alpha/references").resolve()
+        def guarded(path):
+            if path == blocked:
+                raise PermissionError("synthetic denied directory")
+            return original(path)
+        with patch.object(Path, "iterdir", guarded):
+            self.rejects("unreadable")
+
+    def test_symlink_cycle_link_reports_failure(self):
+        loop = self.root / "skills/alpha/references/loop.md"
+        loop.symlink_to("loop.md")
+        self.append("\n[loop](references/loop.md#heading)\n")
+        self.rejects("local-link-resolution")
+
+    def test_colliding_generated_heading_anchors(self):
+        self.write("skills/alpha/references/source.md", "# Evidence\n# Evidence-1\n# Evidence\n")
+        self.append("\n[third](references/source.md#evidence-2)\n")
+        self.assertEqual([], self.errors())
 
 
 class CurrentSource(unittest.TestCase):

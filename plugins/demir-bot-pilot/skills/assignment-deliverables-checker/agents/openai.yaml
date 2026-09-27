@@ -1,0 +1,4 @@
+interface:
+  display_name: "Assignment Deliverables Checker"
+  short_description: "Review final deliverables against assignment criteria"
+  default_prompt: "Use $demir-bot-pilot:assignment-deliverables-checker to review the final assignment deliverables and identify gaps and extras without changing files."

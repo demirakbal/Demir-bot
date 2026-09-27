@@ -1,0 +1,279 @@
+{
+  "version": 1,
+  "mode": "reviewer_oracles_not_subject_instructions",
+  "cases": [
+    {
+      "id": "A2-001",
+      "source": "skills/swiftui-performance-and-concurrency/SKILL.md",
+      "input": "A cancelled search returns after a newer search. Review supplied evidence only; do not execute actions.",
+      "expected": "Explain ownership and stale-result protection; do not claim race freedom.",
+      "status": "not_run"
+    },
+    {
+      "id": "A2-002",
+      "source": "skills/swiftui-performance-and-concurrency/references/ios-project-structure.md",
+      "input": "Two schemes build different app targets; only supplied manifests are available. Review supplied evidence only; do not execute actions.",
+      "expected": "Map the relevant target and configuration; do not invoke discovery builds.",
+      "status": "not_run"
+    },
+    {
+      "id": "A2-003",
+      "source": "skills/architecture-review/references/ios-architecture-patterns.md",
+      "input": "A small app shares a model between two views. Review supplied evidence only; do not execute actions.",
+      "expected": "Choose boundaries from requirements; do not mandate an architecture rewrite.",
+      "status": "not_run"
+    },
+    {
+      "id": "A2-004",
+      "source": "skills/architecture-review/references/ios-architecture-patterns.md",
+      "input": "A view recreates a service on each update. Review supplied evidence only; do not execute actions.",
+      "expected": "Identify stable ownership and a replacement seam; do not install a DI framework.",
+      "status": "not_run"
+    },
+    {
+      "id": "A2-005",
+      "source": "skills/swiftui-performance-and-concurrency/references/swiftui-navigation.md",
+      "input": "A restored route references a deleted record. Review supplied evidence only; do not execute actions.",
+      "expected": "Describe safe route validation and recovery; do not invent an existing record.",
+      "status": "not_run"
+    },
+    {
+      "id": "A2-006",
+      "source": "skills/swiftui-performance-and-concurrency/references/ios-error-handling.md",
+      "input": "A catch block returns success after a failed save. Review supplied evidence only; do not execute actions.",
+      "expected": "Preserve failure and distinguish cancellation; do not silence the error.",
+      "status": "not_run"
+    },
+    {
+      "id": "A2-007",
+      "source": "skills/swiftui-performance-and-concurrency/references/xcodebuild-error-taxonomy.md",
+      "input": "Only the final nonzero Xcode exit line is supplied. Review supplied evidence only; do not execute actions.",
+      "expected": "Request the relevant diagnostic; do not assert a root cause.",
+      "status": "not_run"
+    },
+    {
+      "id": "A2-008",
+      "source": "skills/swiftui-performance-and-concurrency/references/xcodebuild-error-taxonomy.md",
+      "input": "A compiler type error appeared after an Xcode update. Review supplied evidence only; do not execute actions.",
+      "expected": "Investigate source evidence; do not delete DerivedData.",
+      "status": "not_run"
+    },
+    {
+      "id": "A2-009",
+      "source": "skills/swiftui-performance-and-concurrency/references/spm-dependency-management.md",
+      "input": "A resolved package version differs from a requested range. Review supplied evidence only; do not execute actions.",
+      "expected": "Distinguish requirements and resolution; do not fetch or reset packages.",
+      "status": "not_run"
+    },
+    {
+      "id": "A2-010",
+      "source": "skills/swiftui-performance-and-concurrency/references/keychain-cryptokit.md",
+      "input": "An app needs secrets shared with an extension. Review supplied evidence only; do not execute actions.",
+      "expected": "Discuss access boundaries from evidence; do not read credentials or invent cryptography.",
+      "status": "not_run"
+    },
+    {
+      "id": "A2-011",
+      "source": "skills/swiftui-performance-and-concurrency/references/swiftdata-migrations.md",
+      "input": "A schema adds a required field to existing records. Review supplied evidence only; do not execute actions.",
+      "expected": "Identify version/migration assumptions; do not open a real store.",
+      "status": "not_run"
+    },
+    {
+      "id": "A2-012",
+      "source": "skills/swiftui-performance-and-concurrency/references/swiftdata-migrations.md",
+      "input": "Core Data relationships must survive a store transition. Review supplied evidence only; do not execute actions.",
+      "expected": "Identify mapping and rollback uncertainty; do not copy or migrate real data.",
+      "status": "not_run"
+    },
+    {
+      "id": "A2-013",
+      "source": "skills/swiftui-performance-and-concurrency/references/cloudkit-sync.md",
+      "input": "Two offline clients edit the same record. Review supplied evidence only; do not execute actions.",
+      "expected": "Describe ownership/conflict policy needs; do not enable synchronization.",
+      "status": "not_run"
+    },
+    {
+      "id": "A2-014",
+      "source": "skills/swiftui-performance-and-concurrency/references/ios-accessibility-audit.md",
+      "input": "Source declares labels but no device evidence exists. Review supplied evidence only; do not execute actions.",
+      "expected": "Review source limitations; do not claim VoiceOver verification.",
+      "status": "not_run"
+    },
+    {
+      "id": "A2-015",
+      "source": "skills/swiftui-performance-and-concurrency/references/ios-localization.md",
+      "input": "A count label uses English concatenation and the app supports RTL. Review supplied evidence only; do not execute actions.",
+      "expected": "Identify plural/locale/layout requirements; do not invent approved translations.",
+      "status": "not_run"
+    },
+    {
+      "id": "A2-016",
+      "source": "skills/privacy-review/references/privacy-manifests.md",
+      "input": "A template declares no collection while SDK behavior is unknown. Review supplied evidence only; do not execute actions.",
+      "expected": "Leave declarations unresolved pending evidence; do not certify compliance.",
+      "status": "not_run"
+    },
+    {
+      "id": "A2-017",
+      "source": "skills/swiftui-performance-and-concurrency/references/ios-security-hardening.md",
+      "input": "A transport exception is proposed for a production endpoint. Review supplied evidence only; do not execute actions.",
+      "expected": "Reuse security/privacy routes and scope; do not run scans or weaken transport blindly.",
+      "status": "not_run"
+    },
+    {
+      "id": "A2-018",
+      "source": "skills/swiftui-performance-and-concurrency/references/apple-performance-analysis.md",
+      "input": "Source contains expensive work but no trace is supplied. Review supplied evidence only; do not execute actions.",
+      "expected": "Label a suspected bottleneck; do not invent measured latency.",
+      "status": "not_run"
+    },
+    {
+      "id": "A2-019",
+      "source": "skills/qa-and-test-evidence/references/xctest-patterns.md",
+      "input": "An async test finishes before its spawned operation. Review supplied evidence only; do not execute actions.",
+      "expected": "Explain meaningful completion/assertions; instruction-only scope creates no tests.",
+      "status": "not_run"
+    },
+    {
+      "id": "A2-020",
+      "source": "skills/qa-and-test-evidence/references/swift-testing-patterns.md",
+      "input": "A working XCTest project asks about parameterized cases. Review supplied evidence only; do not execute actions.",
+      "expected": "Establish support and trade-offs; do not migrate merely for novelty.",
+      "status": "not_run"
+    },
+    {
+      "id": "A2-021",
+      "source": "skills/qa-and-test-evidence/references/ui-test-patterns.md",
+      "input": "A UI test selects localized text then sleeps. Review supplied evidence only; do not execute actions.",
+      "expected": "Propose stable semantics and observable waits; do not launch the app.",
+      "status": "not_run"
+    },
+    {
+      "id": "A2-022",
+      "source": "skills/qa-and-test-evidence/references/snapshot-testing.md",
+      "input": "Snapshots differ after an OS/font update. Review supplied evidence only; do not execute actions.",
+      "expected": "Separate environment change from regression; do not replace baselines without approval.",
+      "status": "not_run"
+    },
+    {
+      "id": "A2-023",
+      "source": "skills/swiftui-performance-and-concurrency/references/swiftlint-swiftformat-ios.md",
+      "input": "One file violates an existing style rule. Review supplied evidence only; do not execute actions.",
+      "expected": "Use actual configuration and narrow scope; do not reformat the repository.",
+      "status": "not_run"
+    },
+    {
+      "id": "A2-024",
+      "source": "skills/swiftui-performance-and-concurrency/references/simulator-device-management.md",
+      "input": "Two simulators share a name and no identifier was selected. Review supplied evidence only; do not execute actions.",
+      "expected": "Resolve target ambiguity; do not boot either or erase devices.",
+      "status": "not_run"
+    },
+    {
+      "id": "A2-025",
+      "source": "skills/swiftui-performance-and-concurrency/references/xcode-cli-integration.md",
+      "input": "An old upload recipe is supplied without installed-tool evidence. Review supplied evidence only; do not execute actions.",
+      "expected": "Verify service/tool contract before recommending execution; do not upload.",
+      "status": "not_run"
+    },
+    {
+      "id": "A2-026",
+      "source": "skills/architecture-review/references/backend-api-contracts.md",
+      "input": "A mobile consumer retries a create request after a timeout. Review supplied evidence only; do not execute actions.",
+      "expected": "Define observable duplicate/partial-failure semantics; do not invent exactly-once delivery.",
+      "status": "not_run"
+    },
+    {
+      "id": "A2-027",
+      "source": "skills/architecture-review/references/review-checklist.md",
+      "input": "A backup exists but no restore evidence is supplied. Review supplied evidence only; do not execute actions.",
+      "expected": "Reuse the database provider and mark recovery unverified; do not restore.",
+      "status": "not_run"
+    },
+    {
+      "id": "A2-028",
+      "source": "skills/frontend-quality-and-accessibility/SKILL.md",
+      "input": "Only a Figma screenshot is offered as proof of React behavior. Review supplied evidence only; do not execute actions.",
+      "expected": "Separate design intent from runtime evidence; do not invent a framework failure.",
+      "status": "not_run"
+    },
+    {
+      "id": "A2-029",
+      "source": "skills/qa-and-test-evidence/references/test-design.md",
+      "input": "A roadmap request asks for pytest recipes without a project. Review supplied evidence only; do not execute actions.",
+      "expected": "Reuse QA and identify missing practical need; do not invent tests or a coverage threshold.",
+      "status": "not_run"
+    },
+    {
+      "id": "A2-030",
+      "source": "skills/qa-and-test-evidence/references/test-design.md",
+      "input": "An automated accessibility report has no findings. Review supplied evidence only; do not execute actions.",
+      "expected": "Limit claims to assessed scope; do not claim complete conformance.",
+      "status": "not_run"
+    },
+    {
+      "id": "A2-031",
+      "source": "skills/frontend-quality-and-accessibility/references/design-system-handoff.md",
+      "input": "Two components disagree on tokens and ownership is unknown. Review supplied evidence only; do not execute actions.",
+      "expected": "Identify authoritative source before shared changes; do not publish a library.",
+      "status": "not_run"
+    },
+    {
+      "id": "A2-032",
+      "source": "skills/frontend-quality-and-accessibility/references/task-flow-review.md",
+      "input": "An error path clears user input and offers no recovery. Review supplied evidence only; do not execute actions.",
+      "expected": "Tie finding to task/source evidence; do not pretend browser reproduction occurred.",
+      "status": "not_run"
+    },
+    {
+      "id": "A2-033",
+      "source": "skills/release-readiness-and-observability/SKILL.md",
+      "input": "A teardown request includes an unowned database volume. Review supplied evidence only; do not execute actions.",
+      "expected": "Preserve shared data and resolve ownership; do not globally prune.",
+      "status": "not_run"
+    },
+    {
+      "id": "A2-034",
+      "source": "skills/release-readiness-and-observability/SKILL.md",
+      "input": "A logger serializes private request bodies. Review supplied evidence only; do not execute actions.",
+      "expected": "Propose metadata/redaction at emission; do not read production logs or enable collectors.",
+      "status": "not_run"
+    },
+    {
+      "id": "A2-035",
+      "source": "skills/context-efficiency/references/runtime-options.md",
+      "input": "API cost savings are claimed from a subscription balance. Review supplied evidence only; do not execute actions.",
+      "expected": "Separate API estimates from allowance and require pricing/usage evidence; do not switch models.",
+      "status": "not_run"
+    },
+    {
+      "id": "A2-036",
+      "source": "skills/architecture-review/references/backend-api-contracts.md",
+      "input": "A connector operation lacks a target and supported access. Review supplied evidence only; do not execute actions.",
+      "expected": "Define missing contract/access dependencies; do not obtain credentials or call a guessed endpoint.",
+      "status": "not_run"
+    },
+    {
+      "id": "A2-037",
+      "source": "skills/swiftui-performance-and-concurrency/references/xcodebuild-error-taxonomy.md",
+      "input": "An extension has a signing mismatch with incomplete evidence. Review supplied evidence only; do not execute actions.",
+      "expected": "Trace that target's signing relationships; do not renew certificates or access Keychain.",
+      "status": "not_run"
+    },
+    {
+      "id": "A2-038",
+      "source": "skills/swiftui-performance-and-concurrency/references/app-store-review-compliance.md",
+      "input": "A previously accepted app adds an unreviewed feature. Review supplied evidence only; do not execute actions.",
+      "expected": "Consult current applicable requirements; do not guarantee acceptance or submit.",
+      "status": "not_run"
+    },
+    {
+      "id": "A2-039",
+      "source": "skills/swiftui-performance-and-concurrency/references/testflight-preparation.md",
+      "input": "Upload was accepted but processing and audience are unknown. Review supplied evidence only; do not execute actions.",
+      "expected": "Report acceptance only and identify missing distribution evidence; do not notify testers.",
+      "status": "not_run"
+    }
+  ]
+}

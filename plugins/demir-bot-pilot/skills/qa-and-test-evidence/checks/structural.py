@@ -56,7 +56,12 @@ def inspect(root=ROOT, inventory=None):
 
     # Never follow a package symlink into private profiles or other trees.
     def walk(folder):
-        for path in sorted(folder.iterdir()):
+        try:
+            entries = sorted(folder.iterdir())
+        except OSError:
+            fail("unreadable", folder.relative_to(root).as_posix())
+            return
+        for path in entries:
             rel = path.relative_to(root).as_posix()
             if path.is_symlink():
                 fail("symlink", rel)
@@ -171,6 +176,8 @@ def inspect(root=ROOT, inventory=None):
                                 if c.type in {"text", "code_inline"})
                 slug = re.sub(r"[^\w\- ]", "", label.lower()).replace(" ", "-")
                 n = counts.get(slug, 0)
+                while (slug + (f"-{n}" if n else "")) in result:
+                    n += 1
                 counts[slug] = n + 1
                 result.add(slug + (f"-{n}" if n else ""))
         return result
@@ -187,7 +194,11 @@ def inspect(root=ROOT, inventory=None):
                 href = child.attrGet("href") if child.type == "link_open" else child.attrGet("src") if child.type == "image" else None
                 if href is None:
                     continue
-                url = urlsplit(href)
+                try:
+                    url = urlsplit(href)
+                except ValueError:
+                    fail("invalid-link", rel)
+                    continue
                 if url.scheme or url.netloc:
                     skipped.add("external URLs not fetched")
                     continue
@@ -195,7 +206,11 @@ def inspect(root=ROOT, inventory=None):
                     fail("absolute-local-link", rel)
                     continue
                 dest = (root / rel).parent / unquote(url.path) if url.path else root / rel
-                resolved = dest.resolve()
+                try:
+                    resolved = dest.resolve()
+                except (OSError, RuntimeError):
+                    fail("local-link-resolution", rel)
+                    continue
                 try:
                     target_rel = resolved.relative_to(root).as_posix()
                 except ValueError:
@@ -205,7 +220,9 @@ def inspect(root=ROOT, inventory=None):
                 if target_rel not in hashes:
                     fail("local-link", rel + " -> " + target_rel)
                 elif url.fragment and target_rel.endswith(".md"):
-                    if unquote(url.fragment) not in anchors(texts[target_rel]):
+                    if target_rel not in texts:
+                        fail("unreadable-link-target", rel + " -> " + target_rel)
+                    elif unquote(url.fragment) not in anchors(texts[target_rel]):
                         fail("local-anchor", rel + " -> " + target_rel + "#" + url.fragment)
     snapshot = hashlib.sha256(json.dumps(hashes, sort_keys=True, separators=(",", ":")).encode()).hexdigest()
     return {"errors": sorted(set(errors)), "snapshot": snapshot, "file_count": len(hashes),

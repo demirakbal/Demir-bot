@@ -14,6 +14,28 @@ Read relevant components, styles, design tokens, package metadata and repository
 
 Apply the relevant principles while implementing the requested component. Do not turn every UI change into a repository-wide accessibility audit. Review requests are read-only unless fixes are authorized. Native apps require their platform-specific guidance rather than mechanically translating HTML/ARIA.
 
+## React/frontend depth: establish the actual gap
+
+Roadmap item 028. For requested React work, identify the named project, actual React/framework/router versions, rendering environment, relevant components and supplied requirements or failure evidence. Distinguish client rendering, server rendering and framework-specific server/client boundaries from actual source/configuration; do not infer them from a design screenshot or a package name alone. Installation of a provider does not prove account access, project compatibility or runtime behavior.
+
+Reuse the existing forms, interface-state and accessibility guidance below first. For an unresolved framework concern, record the concrete trigger, affected consumer/user outcome, source evidence and what current guidance lacks. Investigate only the relevant dimension:
+
+- State: ownership, lifetime, derived versus stored values and intended preservation/reset behavior across the actual component/navigation boundary.
+- Data fetching: the project's existing loading/cache mechanism, request ownership, stale responses, error/retry behavior and mutation confirmation.
+- Rendering: actual server/client responsibilities, identity and hydration evidence, without assuming a framework feature or changing rendering modes by default.
+- Forms: existing form/validation conventions, submission ownership, pending/error behavior and preservation of user input, retaining accessible labels, focus and feedback.
+- Performance: a named interaction and supplied measurements or source-based suspicion; separate a suspected bottleneck from a measured result and avoid blanket memoization or new caching layers.
+
+These are scoped investigation prompts, not new runtime prescriptions or a requirement to review every dimension. Use current official React and actual framework/version documentation before recommending version-sensitive APIs or behavior. Preserve project conventions and dependencies; do not add a state manager, fetching library, form framework, compiler configuration or rendering migration merely to fill a category. Reuse architecture-review for a substantial boundary decision, requirements-and-traceability for unresolved outcomes and qa-and-test-evidence only within authorised QA scope.
+
+For relevant Figma work, follow the available Figma skill and prerequisites; for requested site creation in the chosen environment, follow applicable Sites guidance. Design translation and hosting capabilities do not substitute for framework knowledge or demonstrate runtime correctness. Use applicable Superpowers methodology for an actual planning, implementation or debugging task, without treating it as guaranteed React expertise or authority for tests, delegation or execution. Do not activate design, hosting or debugging workflows merely to maintain this guidance.
+
+Add a narrow React reference only when a real project need or concrete failure exposes an uncovered concern after this reuse. Record the gap and supporting source basis rather than creating one reference per topic automatically. With no named project, versions or supplied runtime evidence, save independent routing/instruction improvements and state missing dependencies; do not invent a React defect, consumer or compatibility result.
+
+Acceptance examples (prose only): a supplied component loses entered data after a recoverable submission failure, so trace its actual state/submission ownership and apply the existing accessible feedback guidance before adding framework-specific advice. If no component or failure evidence exists, do not invent a fix or launch a browser. A Figma screenshot can support layout intent, but cannot establish fetching, hydration, keyboard or performance behavior. For roadmap maintenance alone, update guidance without creating app code, fixtures, checks or a speculative React reference library.
+
+Report saved instructions separately from source observations and unverified project behavior. This guidance does not authorise tests, builds, evaluations, benchmarks, delegation, installs, publication, commits/push, spending, account changes or private-data modification. Keep the coordinator minimal, installed caches and QMD indexes unchanged, and cloud synchronization, university RAG, training and background automation inactive.
+
 ## Semantics and perceivable content
 
 - Use native buttons for actions, anchors with destinations for navigation, and appropriate form elements, lists, tables, landmarks and logically structured headings. Styling should not erase meaning. Give non-submit buttons their explicit type where needed.
@@ -45,6 +67,10 @@ Apply the relevant principles while implementing the requested component. Do not
 - Respect prefers-reduced-motion for nonessential animation; favor CSS support where suitable and avoid an initial unnecessary animation before a client-side preference check. Keep information available when motion is removed. Avoid forced autoplay, flashing or animation as the sole status cue; provide relevant pause/stop controls.
 
 ## Reuse available providers appropriately
+
+For a requested complete interaction or click-path review, use [task-flow review](references/task-flow-review.md). Connect existing state, keyboard and responsive guidance to an actual user outcome; distinguish source-based concerns from observed failures and keep browser execution within scope.
+
+For requested token/component consistency or design-system work, use [design-system handoff](references/design-system-handoff.md). Reuse Figma's existing library/design capabilities for actual Figma work; preserve project token ownership and accessibility rather than introducing a competing design system.
 
 For an actual Figma design task or supplied Figma reference, use the relevant available Figma skill and its prerequisites; for complete site creation use Sites when appropriate to the user's chosen environment. Neither provider is required for a local component fix. Do not migrate a project, create a Figma file, publish a site or connect an account merely because the capability exists. Keep previews/deployments within explicit authorization. A design screenshot alone does not establish interactive accessibility.
 

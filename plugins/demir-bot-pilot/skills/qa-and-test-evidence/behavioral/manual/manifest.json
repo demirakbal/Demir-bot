@@ -5,121 +5,151 @@
     "mode": "manual text-only; selected source excerpts; not native routing"
   },
   "B086-002": {
-    "packet_sha256": "526d3f39652f91bee93ae929c7df81e232eadb53eb96d48ed2cdf81d47c3ec81",
+    "packet_sha256": "0b2dd37573ad545a4b0de89414385d1fe6e530d0803e42e952107b050b012515",
     "instruction_sources": {
       "skills/demir-bot/SKILL.md": "ed4436919b46aeb9fbe5246818c88ef56a5aa2967541d0b9d0f9ec7b6927fdb8"
     },
-    "mode": "manual text-only; selected source excerpts; not native routing"
+    "mode": "manual text-only; selected source excerpts; not native routing",
+    "previous_packet_sha256": "526d3f39652f91bee93ae929c7df81e232eadb53eb96d48ed2cdf81d47c3ec81",
+    "format_revision": "manual-1.0.1: verbatim candidate excerpts fenced; source text and source hashes unchanged"
   },
   "B086-003": {
-    "packet_sha256": "160cc95235c95fbbf51b92f8b385dc5020c753a44f21fe537e570819085cce62",
+    "packet_sha256": "89f76f83d8f22b022022951c98be5206976221f10d1bbde9008fb064838f08bb",
     "instruction_sources": {
       "skills/deep-research-and-idea-validation/SKILL.md": "e3559201c26e518b173a3a60671680fbd67a0e66f00cc02a26f87707c62a7a02",
       "skills/deep-research-and-idea-validation/references/academic-review.md": "b01a24e636da240f321212b3ffaf5960e5c22a6db4a8eebc2ca77919c101fc73"
     },
-    "mode": "manual text-only; selected source excerpts; not native routing"
+    "mode": "manual text-only; selected source excerpts; not native routing",
+    "previous_packet_sha256": "160cc95235c95fbbf51b92f8b385dc5020c753a44f21fe537e570819085cce62",
+    "format_revision": "manual-1.0.1: verbatim candidate excerpts fenced; source text and source hashes unchanged"
   },
   "B086-004": {
-    "packet_sha256": "0a7111efe9037ed86827fb272740b2c1034e20a145406ead41b5f4d0343074dd",
+    "packet_sha256": "1c7b649c4c89836190ee93217009b198d3fd004704de925116ab0f85eb0b43cd",
     "instruction_sources": {
       "skills/demir-linkedin/SKILL.md": "90a0cd45edfaa9d25d04ec3a408d32839f76db0747439cfde9975843dd76b1dd",
       "skills/demir-linkedin/references/actions.md": "b34e6259a20656cb4afe896261411a37907dd0d74cf43fc0a254563eac295f00"
     },
-    "mode": "manual text-only; selected source excerpts; not native routing"
+    "mode": "manual text-only; selected source excerpts; not native routing",
+    "previous_packet_sha256": "0a7111efe9037ed86827fb272740b2c1034e20a145406ead41b5f4d0343074dd",
+    "format_revision": "manual-1.0.1: verbatim candidate excerpts fenced; source text and source hashes unchanged"
   },
   "B086-005": {
-    "packet_sha256": "0736178d29f28c017713393836053cfe952820feae5f8048f1b5d4b25254ce79",
+    "packet_sha256": "6663c3fc6a2a92acf5c6e08517c8e3bb9a530ee37baadb94f1197d7d41b65d95",
     "instruction_sources": {
       "skills/demir-linkedin/SKILL.md": "90a0cd45edfaa9d25d04ec3a408d32839f76db0747439cfde9975843dd76b1dd",
       "skills/demir-linkedin/references/actions.md": "b34e6259a20656cb4afe896261411a37907dd0d74cf43fc0a254563eac295f00"
     },
-    "mode": "manual text-only; selected source excerpts; not native routing"
+    "mode": "manual text-only; selected source excerpts; not native routing",
+    "previous_packet_sha256": "0736178d29f28c017713393836053cfe952820feae5f8048f1b5d4b25254ce79",
+    "format_revision": "manual-1.0.1: verbatim candidate excerpts fenced; source text and source hashes unchanged"
   },
   "B086-006": {
-    "packet_sha256": "44930908f93fe26f5f25b43bc02a31e5039cf79d3cfb1783d56c96260d4ce0c4",
+    "packet_sha256": "8b61966a9b2f8b53eed90e7f242a5631f38dc570fda10a5ce1dc7fb8cec4e4a7",
     "instruction_sources": {
       "skills/personal-writing/SKILL.md": "dc76d857183174bb20f6d77dcf8f0df3113db7ddbb6a6f3fa55bda25da4d5f2f",
       "skills/personal-writing/references/content-repurposing.md": "79a845f1439d2c4f33a6587ee96ed5ee454e637385001170ea727e9ee1cd1711"
     },
-    "mode": "manual text-only; selected source excerpts; not native routing"
+    "mode": "manual text-only; selected source excerpts; not native routing",
+    "previous_packet_sha256": "44930908f93fe26f5f25b43bc02a31e5039cf79d3cfb1783d56c96260d4ce0c4",
+    "format_revision": "manual-1.0.1: verbatim candidate excerpts fenced; source text and source hashes unchanged"
   },
   "B086-007": {
-    "packet_sha256": "2ea3e07a984e4fb0890b22abbb578f4176b30e7c303adb4b2f9300e9c9f47e60",
+    "packet_sha256": "aa0c2b0d5a78d0da9c5619e1699c9245c7057538001a85cd35eea717d65bbbe5",
     "instruction_sources": {
       "skills/deep-research-and-idea-validation/SKILL.md": "e3559201c26e518b173a3a60671680fbd67a0e66f00cc02a26f87707c62a7a02"
     },
-    "mode": "manual text-only; selected source excerpts; not native routing"
+    "mode": "manual text-only; selected source excerpts; not native routing",
+    "previous_packet_sha256": "2ea3e07a984e4fb0890b22abbb578f4176b30e7c303adb4b2f9300e9c9f47e60",
+    "format_revision": "manual-1.0.1: verbatim candidate excerpts fenced; source text and source hashes unchanged"
   },
   "B086-008": {
-    "packet_sha256": "c15c3505cffecfc31a390dcb10318a805422084e6c5ddcb3ae2c883846302204",
+    "packet_sha256": "7d5a042a2d36b83794ea03fd11c357a27f638f558e70d43f0551b1f7f7370fbc",
     "instruction_sources": {
       "skills/personal-writing/SKILL.md": "dc76d857183174bb20f6d77dcf8f0df3113db7ddbb6a6f3fa55bda25da4d5f2f",
       "skills/email-tone/SKILL.md": "b003e298fb19eac2ac4396ecbaeec54de4c088739ccd58db39a81c4c6a7ed5cb"
     },
-    "mode": "manual text-only; selected source excerpts; not native routing"
+    "mode": "manual text-only; selected source excerpts; not native routing",
+    "previous_packet_sha256": "c15c3505cffecfc31a390dcb10318a805422084e6c5ddcb3ae2c883846302204",
+    "format_revision": "manual-1.0.1: verbatim candidate excerpts fenced; source text and source hashes unchanged"
   },
   "B086-009": {
-    "packet_sha256": "9d5c6a4753cc7bcbdc764438346a58cbf31c2e9f8796e91c24fe8ad04b1222d6",
+    "packet_sha256": "9d345b26e59c21ee7bcc09f9b96d5476cccf3efa5813cd24710cc8dc3a8e9368",
     "instruction_sources": {
       "skills/git-and-github-workflow/SKILL.md": "ad05fa866579bec91cda428412a562a1af4c3755c6b299dcc1e25953afb7ed68",
       "skills/git-and-github-workflow/references/github-operations.md": "f1e2c9a1f859888f087b0a335b5ccd1a4aa65ed94c4f68ff332690f75746f32b"
     },
-    "mode": "manual text-only; selected source excerpts; not native routing"
+    "mode": "manual text-only; selected source excerpts; not native routing",
+    "previous_packet_sha256": "9d5c6a4753cc7bcbdc764438346a58cbf31c2e9f8796e91c24fe8ad04b1222d6",
+    "format_revision": "manual-1.0.1: verbatim candidate excerpts fenced; source text and source hashes unchanged"
   },
   "B086-010": {
-    "packet_sha256": "970aef146ee33f7d23cb1a1a10a615c01be4cb1f2c70a0f349b5ae3bf6f4f8cf",
+    "packet_sha256": "e92059a625158a712c1587d18cd17e9478bb5c4b61f604f3fe702e3c78e565d0",
     "instruction_sources": {
       "skills/context-efficiency/SKILL.md": "00b52828f5e351b2fa03b07d8c18c7997db6c2c3fb4feec5954ff806da2df3df",
       "skills/context-efficiency/references/runtime-options.md": "63ba23bea2d123428c360782bba53cc016db0956ff077b7a95de55512b613f15"
     },
-    "mode": "manual text-only; selected source excerpts; not native routing"
+    "mode": "manual text-only; selected source excerpts; not native routing",
+    "previous_packet_sha256": "970aef146ee33f7d23cb1a1a10a615c01be4cb1f2c70a0f349b5ae3bf6f4f8cf",
+    "format_revision": "manual-1.0.1: verbatim candidate excerpts fenced; source text and source hashes unchanged"
   },
   "B086-011": {
-    "packet_sha256": "0dea9a9fa1b554de622386996f1a0b5be8d1f67133482af9427e9d9b85217a77",
+    "packet_sha256": "4ff9c4f83e744d1629d1a2b5576b8bc31ad4b6c52d9bfc73504d663f497cea2c",
     "instruction_sources": {
       "skills/context-efficiency/SKILL.md": "00b52828f5e351b2fa03b07d8c18c7997db6c2c3fb4feec5954ff806da2df3df",
       "skills/context-efficiency/references/source-reuse.md": "4e01296b7aa4660156b2d26568c434efda4e3a034d8c8735023efc3edc8dca8d"
     },
-    "mode": "manual text-only; selected source excerpts; not native routing"
+    "mode": "manual text-only; selected source excerpts; not native routing",
+    "previous_packet_sha256": "0dea9a9fa1b554de622386996f1a0b5be8d1f67133482af9427e9d9b85217a77",
+    "format_revision": "manual-1.0.1: verbatim candidate excerpts fenced; source text and source hashes unchanged"
   },
   "B086-012": {
-    "packet_sha256": "d7e4b78d6dd7f1b68be9e685ee319913e2fc0a755436c046f290ee9d57ba052f",
+    "packet_sha256": "5d88bb383be6623f3afe71d9fa8a1ebc7623e30d1e62a11a4a88065956c1ba62",
     "instruction_sources": {
       "skills/context-efficiency/SKILL.md": "00b52828f5e351b2fa03b07d8c18c7997db6c2c3fb4feec5954ff806da2df3df",
       "skills/context-efficiency/references/runtime-options.md": "63ba23bea2d123428c360782bba53cc016db0956ff077b7a95de55512b613f15"
     },
-    "mode": "manual text-only; selected source excerpts; not native routing"
+    "mode": "manual text-only; selected source excerpts; not native routing",
+    "previous_packet_sha256": "d7e4b78d6dd7f1b68be9e685ee319913e2fc0a755436c046f290ee9d57ba052f",
+    "format_revision": "manual-1.0.1: verbatim candidate excerpts fenced; source text and source hashes unchanged"
   },
   "B086-013": {
-    "packet_sha256": "49dc0cd3b7bf7298574ae63c9cdf4b94d93cae68eeb7f89513a98af5263e6efe",
+    "packet_sha256": "6133d9a1844d8d775cd49d997182aa041775e84e855126fb4aa747f1b26c5be0",
     "instruction_sources": {
       "skills/context-efficiency/SKILL.md": "00b52828f5e351b2fa03b07d8c18c7997db6c2c3fb4feec5954ff806da2df3df",
       "skills/context-efficiency/references/runtime-options.md": "63ba23bea2d123428c360782bba53cc016db0956ff077b7a95de55512b613f15"
     },
-    "mode": "manual text-only; selected source excerpts; not native routing"
+    "mode": "manual text-only; selected source excerpts; not native routing",
+    "previous_packet_sha256": "49dc0cd3b7bf7298574ae63c9cdf4b94d93cae68eeb7f89513a98af5263e6efe",
+    "format_revision": "manual-1.0.1: verbatim candidate excerpts fenced; source text and source hashes unchanged"
   },
   "B086-014": {
-    "packet_sha256": "370167035bde7bbd89688bfbdd1ec71db176395bd34a3179f044780ecf891239",
+    "packet_sha256": "f1e3d605daf304f1cbc32f64785d521ec74d757cf5e7049dc2f2889e449b55dc",
     "instruction_sources": {
       "skills/demir-bot/SKILL.md": "ed4436919b46aeb9fbe5246818c88ef56a5aa2967541d0b9d0f9ec7b6927fdb8",
       "skills/demir-bot/references/delivery.md": "0055b0d72d41f14734b932edb59a7df278564a81eb94206e01b1f3f06e2d7410"
     },
-    "mode": "manual text-only; selected source excerpts; not native routing"
+    "mode": "manual text-only; selected source excerpts; not native routing",
+    "previous_packet_sha256": "370167035bde7bbd89688bfbdd1ec71db176395bd34a3179f044780ecf891239",
+    "format_revision": "manual-1.0.1: verbatim candidate excerpts fenced; source text and source hashes unchanged"
   },
   "B086-015": {
-    "packet_sha256": "1c1b440578573be6ec67d4b197894920ba7dee6ee43b38680a86ff2fc81aa17b",
+    "packet_sha256": "18ce1863ad75a1ef3bae982aa30e6cf089bdac9dcf9e8f22b065e3207d2e4d10",
     "instruction_sources": {
       "skills/demir-bot/SKILL.md": "ed4436919b46aeb9fbe5246818c88ef56a5aa2967541d0b9d0f9ec7b6927fdb8",
       "skills/demir-bot/references/capability-maintenance.md": "a3470bbd5db7797053c046ca9c5c2d12390d6ea1798c934295fe67b544abbb4b"
     },
-    "mode": "manual text-only; selected source excerpts; not native routing"
+    "mode": "manual text-only; selected source excerpts; not native routing",
+    "previous_packet_sha256": "1c1b440578573be6ec67d4b197894920ba7dee6ee43b38680a86ff2fc81aa17b",
+    "format_revision": "manual-1.0.1: verbatim candidate excerpts fenced; source text and source hashes unchanged"
   },
   "B086-016": {
-    "packet_sha256": "2693fae9fa1df2531f085baea74fc63e4d166d3595833d1d312911245cd537d5",
+    "packet_sha256": "276c4328bdba1a207841429168280b4fffe7414ecc2597021721f10c2680fd5f",
     "instruction_sources": {
       "skills/demir-bot/SKILL.md": "ed4436919b46aeb9fbe5246818c88ef56a5aa2967541d0b9d0f9ec7b6927fdb8",
       "skills/demir-bot/references/capability-maintenance.md": "a3470bbd5db7797053c046ca9c5c2d12390d6ea1798c934295fe67b544abbb4b"
     },
-    "mode": "manual text-only; selected source excerpts; not native routing"
+    "mode": "manual text-only; selected source excerpts; not native routing",
+    "previous_packet_sha256": "2693fae9fa1df2531f085baea74fc63e4d166d3595833d1d312911245cd537d5",
+    "format_revision": "manual-1.0.1: verbatim candidate excerpts fenced; source text and source hashes unchanged"
   }
 }

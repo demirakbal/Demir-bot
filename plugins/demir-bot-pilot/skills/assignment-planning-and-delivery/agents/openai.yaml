@@ -1,0 +1,4 @@
+interface:
+  display_name: "Assignment Planning and Delivery"
+  short_description: "Plan assignments around your preferred workflow"
+  default_prompt: "Use $demir-bot-pilot:assignment-planning-and-delivery to plan this assignment around my preferred delivery mode."

@@ -14,6 +14,23 @@ When materially different workflows could satisfy the request, use the [cost-ben
 
 For an explicit task budget or budget-related stop/resume request, follow [user-set budgets](references/runtime-options.md#user-set-budgets-stop-and-resume). Use supported host controls within their actual scope, distinguish soft estimates from enforcement, and checkpoint partial work honestly. Do not impose default caps or start usage polling.
 
+## Focused reads for consecutive implementation tasks
+
+Apply these concrete reading rules when working through roadmap items or making repeated edits in the same source package:
+
+- Before each read, identify the missing fact and smallest source section that can supply it. Reuse unchanged instructions already in context. Re-read when evidence is stale, missing after compaction or affected by intervening edits; do not rely on uncertain memory.
+- For a roadmap entry, select its title, status, scope, prerequisites and acceptance requirements. Stop before its ready-to-copy prompt when that prompt repeats the current request. Do not reload neighbouring entries or historical implementation records without a relevant question.
+- Locate relevant headings first, then read the complete affected section and necessary surrounding context. Do not concatenate several long skills/references into one output simply because their paths are known. First-time required skill reads remain complete; these rules do not bypass governing instructions.
+- Select output at the source rather than relying on a small output-token cap. Estimate the size of a requested excerpt and split independent sections when necessary. If output is truncated, treat the omitted material as unread: retrieve only the missing relevant passage, not the same full payload with a larger cap.
+- After an edit, inspect the focused diff and read back changed passages plus enough context to assess links and integration. Do not print an entire reference that was just supplied in a patch unless broader review has a concrete reason. Preserve tool errors and unsuccessful operations; filtered output is not proof that omitted checks passed.
+- Keep the working context conversational: affected files, loaded guidance, restrictions and unresolved evidence. Do not create a tracking file, index, extra agent or recurring process merely to save tokens. Report saved changes and limitations concisely; do not claim measured savings without a comparable authorised measurement.
+
+Acceptance example (instruction only): a request for the next roadmap item should reuse already loaded scope rules, read only that item's non-repeated requirements and relevant existing coverage, then inspect only the resulting changes. A truncated combined read should lead to a narrower retrieval, not another full-file dump. This guidance is not an enforced tool interceptor or a guarantee of future compliance.
+
+## General context-efficiency workflow
+
+For requested cost control in a custom API application, reuse [API applications under our control](references/runtime-options.md#api-applications-under-our-control). Establish dated provider pricing, explicit budget scope and actual retry/cache/routing behavior; preserve the user's selected model and separate API estimates from subscription allowance.
+
 1. **Reuse available evidence.** Identify the outcome and what is already known. Reuse sufficiently current passages and instructions already present; do not reload every skill or source each turn. Search filenames, symbols or headings before broad reads. Read exact affected code and necessary dependencies before editing; summaries and signature maps are navigation, not substitutes for implementation.
 2. **Track only useful reusable state.** For recurring or long tasks, reuse a compact source ledger or project map with locators, versions, coverage, findings and open questions. Create persistent ledgers, summaries or handoff documents only when requested; otherwise keep useful state in the conversation. Read [source-reuse.md](references/source-reuse.md) when managing freshness or cross-session evidence. Skip bookkeeping when it costs more than rereading a small source.
 3. **Invalidate precisely.** Recheck affected evidence when content, branch, dependencies, permissions, requirements or task scope change. Follow current verification requirements for unstable facts. Fetch missing passages and original wording for precise quotations, disputed claims and consequential edits.

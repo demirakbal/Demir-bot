@@ -64,9 +64,33 @@ Saving this contract does not establish that a host or RTK path follows it. Repo
 
 ## API applications under our control
 
+Roadmap item 035 extends this existing section for a named custom API application, not ChatGPT/Codex subscription management. Reuse [architecture review](../../architecture-review/SKILL.md) for request boundaries, cache ownership and reliability trade-offs, the user-set budget section below for authority/enforcement, and Measurement for cost attribution. Use available provider expertise for the actual stack; do not introduce another cost coordinator.
+
+Establish the project, SDK/runtime and provider/model versions, selected endpoint/service mode, relevant request path, supplied usage and operation-specific access. No project or access is implied by the plugin. Preserve the user's selected model and settings; routing advice is a proposal, not permission to change them. Do not install a provider, inspect account history, obtain credentials or make paid calls to fill evidence gaps.
+
+### Pricing and explicit budgets
+
+Before giving monetary figures, consult current official pricing for the exact provider/model/service mode. Record the source URL, retrieval date, currency, billing unit and covered categories: applicable input/output, cache reads/writes, tools, storage or other metered services. Identify applicable contract/region/tier facts only from supplied evidence; public list rates do not establish a private account's actual bill. Do not hard-code remembered prices or infer one provider's billing behavior from another.
+
+Label forecasts as estimates with workload assumptions, covered attempts, cache-hit assumptions and omitted charges. Use the Measurement contract to avoid counting overlapping usage fields twice. Include failed/abandoned calls, retries, routing and external tool overhead. A lower per-token price or shorter response does not alone show lower completed-task cost. No rate lookup is needed merely to maintain this prose; no current numeric price or savings claim is made here.
+
+Reuse the user's explicit budget amount, unit, period and scope; do not invent caps or equate a subscription allowance with an API budget. Distinguish advisory estimates, provider alerts and actual enforcement. For separately authorised implementation, examine how concurrent requests reserve/reconcile budget, account for in-flight and unknown charges, and stop new work when the established limit cannot safely accommodate it. Do not claim a hard ceiling without a supported enforcing mechanism and evidence of its scope. Budget authority is not authority to spend, buy credits, change billing or switch accounts.
+
+### Narrow retries and routing trade-offs
+
+Use the actual provider's documented error/retry contract and the application's operation semantics. Identify retryable conditions, bounded attempts/time, backoff and any supported retry guidance. Respect the user's budget across all attempts. Distinguish transport uncertainty from a known failure: a timeout can leave remote work running or charged, and repeating a tool-bearing operation can duplicate side effects. Do not retry authentication/configuration failures indefinitely or silently escalate to a more expensive model. Cancellation is not proof of cancellation of billing or downstream work.
+
+When a routing change is requested, compare the required task quality, latency, context/tool support, privacy and total cost using actual requirements. Keep the selected model unless a change is explicitly authorised. A proposed fallback must name its trigger, permitted destination, budget implications and user-visible failure behavior; no hidden model substitution or automatic provider switch. Do not run evaluations, benchmarks or delegation to justify the proposal under instruction-only scope.
+
 Consult current provider documentation. Keep stable prefixes and tool definitions stable where useful, append changing task data, and measure actual cache-read/write usage. Support, retention, billing and routing vary by model/provider. Caching can reduce processing cost and latency while the input still occupies context; it does not change ChatGPT subscription allowance.
 
+Distinguish provider prompt caching from an application response cache. For a proposed response cache, establish correctness-sensitive keys, tenant/authorization boundaries, model/configuration/source versions, freshness, invalidation, retention and sensitive-content exclusions. A cached result must not bypass current authorization or replay a side effect. Do not weaken mandatory instructions or expose private prefixes merely to improve cache hits. Treat cache savings as estimated until comparable usage supports them; cold misses, writes and invalidation also have costs. Do not enable storage or retain private requests automatically.
+
 Implement observation masking or compaction only in runtimes we control. Retain originals and constraints; evaluate quality, retries, latency and total cost. Do not assume this host's existing history can be rewritten.
+
+Acceptance examples (prose only): for supplied usage from a named API app, estimate only with dated applicable pricing and explicit uncertainty; absent pricing/usage means cost unavailable, not zero. For repeated timeout evidence, inspect documented retry semantics and in-flight cost/side-effect risks instead of launching another request. For a requested cheaper routing proposal, preserve the active model and explain the quality/budget trade-off without changing configuration. With no actual project, save guidance without inventing traffic, cache hits or savings.
+
+Report saved instructions, supplied/observed usage, estimated versus billed cost, actual model/configuration changes and unverified benefit separately. This roadmap request supplies no named API app, versions, usage or access. It creates no budget controller, request code, checks or fixtures and performs no API calls, evaluations, benchmarks or spending. No tests, builds, delegation, commits/push, installations, publication, account changes or private-data modification. Preserve unrelated work and coordinator routes; keep installed caches/QMD indexes unchanged and cloud synchronization, university RAG, training and background automation inactive.
 
 ## Cost-benefit decision rule
 

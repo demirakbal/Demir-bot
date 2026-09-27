@@ -1,0 +1,6 @@
+interface:
+  display_name: "Execution Details"
+  short_description: "Explain recorded actions, outcomes and mistakes"
+  default_prompt: "Use $demir-bot-pilot:execution-details to explain the actions and results for the response I specify, identifying evidence gaps and any supported mistakes."
+policy:
+  allow_implicit_invocation: false

@@ -1,6 +1,6 @@
 # Demir Bot
 
-Demir Bot is an instruction-based personal assistant workflow for Codex. It selects relevant skills and available tools for coding, university work, research, writing and LinkedIn. The plugin bundles 22 skills: one coordinator and 21 specialists. This repository is the development source, with opt-in QA assets and a maintained roadmap.
+Demir Bot is an instruction-based personal assistant workflow for Codex. It selects relevant skills and available tools for coding, university work, research, writing and LinkedIn. The development plugin bundles 26 skills: one coordinator and 25 specialists. This repository is the development source, with opt-in QA assets and a maintained roadmap.
 
 It is not an always-running service, a trained model, or an account-access mechanism. Installing it does not install Gmail, Firecrawl, Higgsfield or other external plugins, authenticate accounts, or grant permission to send or publish.
 
@@ -31,7 +31,11 @@ Most of the source is Markdown and YAML. The QA skill also includes opt-in Pytho
 | [git-and-github-workflow](plugins/demir-bot-pilot/skills/git-and-github-workflow/SKILL.md) | Inspect Git state, make scoped commits/PRs and recover safely within authorization. |
 | [context-efficiency](plugins/demir-bot-pilot/skills/context-efficiency/SKILL.md) | Reuse evidence, read selectively and keep tool output focused. |
 | [clarify-and-execute](plugins/demir-bot-pilot/skills/clarify-and-execute/SKILL.md) | Resolve material ambiguity through useful choices, then execute. |
+| [execution-details](plugins/demir-bot-pilot/skills/execution-details/SKILL.md) | On explicit request, explain recorded actions and results, assess mistakes and propose scoped lessons. Installed-cache refresh pending. |
 | [requirements-and-traceability](plugins/demir-bot-pilot/skills/requirements-and-traceability/SKILL.md) | Map user jobs, MVP scope, ownership, acceptance criteria and evidence links. |
+| [assignment-planning-and-delivery](plugins/demir-bot-pilot/skills/assignment-planning-and-delivery/SKILL.md) | Break down assignments and adapt delivery to staged prompts, guided explanations or authorized implementation. Available in development source; installed-cache refresh pending. |
+| [automated-assignment-completer](plugins/demir-bot-pilot/skills/automated-assignment-completer/SKILL.md) | Execute authorized assignment stages sequentially, followed by final deliverables review. Installed-cache refresh pending. |
+| [assignment-deliverables-checker](plugins/demir-bot-pilot/skills/assignment-deliverables-checker/SKILL.md) | Review final work against assignment sources and rubrics; flag gaps and extras for user decisions. Installed-cache refresh pending. |
 | [architecture-review](plugins/demir-bot-pilot/skills/architecture-review/SKILL.md) | Orient to repositories and examine boundaries, dependencies and architectural trade-offs. |
 | [code-refactoring-refactor-clean](plugins/demir-bot-pilot/skills/code-refactoring-refactor-clean/SKILL.md) | Perform requested or concretely justified behavior-preserving refactoring. |
 | [documentation-and-adrs](plugins/demir-bot-pilot/skills/documentation-and-adrs/SKILL.md) | Maintain requested documentation and architectural decisions. |
@@ -90,7 +94,7 @@ Status recorded on 24 September 2026:
 - **QA evidence:** the recorded structural campaign passed 24/24 cases on its historical source snapshot. Behavioral regression is completed under the user's accepted ten-case manual scope. Neither result establishes universal reliability or measured improvement.
 - **Remaining limits:** no before/after effectiveness or cost result is established. Provider operations, full lifecycle coverage and redistribution compatibility remain separately assessed work. No CI, cloud synchronization, university RAG, training or background service is activated by this repository.
 
-See the [current specification and roadmap](docs/roadmap/demir-bot-master-roadmap.md) or its [PDF](docs/roadmap/demir-bot-master-roadmap.pdf) for scoped evidence and the 113 remaining entries. Completed capabilities are recorded separately from future work. Use each entry's current number and title together; older skill references may retain historical identifiers.
+See the [current specification and roadmap](docs/roadmap/demir-bot-master-roadmap.md) or its [PDF](docs/roadmap/demir-bot-master-roadmap.pdf) for scoped evidence and the 119 remaining entries. Completed capabilities are recorded separately from future work. Use each entry's current number and title together; older skill references may retain historical identifiers.
 
 The [structural-check guide](plugins/demir-bot-pilot/skills/qa-and-test-evidence/checks/README.md), [behavioral cases](plugins/demir-bot-pilot/skills/qa-and-test-evidence/behavioral/cases.md) and [comparison guidance](plugins/demir-bot-pilot/skills/qa-and-test-evidence/references/demir-bot-evaluation.md) describe distinct evidence methods. Their presence does not authorize execution, and the accepted manual scope does not require rerunning the larger prepared suite.
 

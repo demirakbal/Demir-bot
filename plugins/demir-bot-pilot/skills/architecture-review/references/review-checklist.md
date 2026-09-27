@@ -15,6 +15,42 @@ Select applicable dimensions; record unassessed areas instead of implying compre
 | Testability | Are pure logic and external boundaries accessible to meaningful tests? Mocks do not prove real integrations; test tooling alone does not justify exposing private APIs. |
 | Evolution | Consider migration sequencing, old/new compatibility, rollback and complexity cost. Prefer reversible incremental improvements when they meet requirements. |
 
+## Database provider handoff
+
+Roadmap item 027. Trigger: requested database architecture/requirements work or instruction maintenance where provider scope, compatibility or recovery assumptions need an explicit handoff. Reuse `supabase:supabase` and `supabase:supabase-postgres-best-practices` from the active catalogue for applicable Supabase/Postgres schema, migration, RLS and query work. Their existing coverage includes query performance, connections, security, schemas and locking; do not duplicate it here. Use only task-relevant provider references and current official engine/provider documentation before prescribing version-sensitive behavior.
+
+The addition here is an evidence and ownership handoff within the existing architecture checklist, not new SQL or engine-specific advice. Add database-specific guidance only for a demonstrated concern outside existing coverage or a concrete failure. For a different engine, first identify its actual specialist and official versioned documentation; do not apply Postgres semantics by analogy. Superpowers may structure authorised engineering work but is not proof of database expertise.
+
+### Name dependencies and compatibility
+
+For project work, record the named project and database/environment, engine/version, relevant extensions, driver/ORM and migration-tool versions, actual consumers and data owner from supplied source or other authorised evidence. Distinguish local, development, staging and production explicitly. Installation of a provider does not establish a callable connection, authenticated account, privileges or authority for any operation. Do not inspect credentials, connect to a database or enumerate accounts to complete an instruction-only handoff.
+
+Requirements owns intended data invariants, access roles/tenant boundaries, consumer outcomes and observable acceptance criteria. Architecture owns technical feasibility and compatibility across application/schema versions, affected interfaces and deployment ordering. Follow the project's existing migration history and conventions without inventing filenames, SQL or migration state. Separate a migration file's presence from evidence that it has been applied to a particular database. Record unknown live drift rather than querying or resetting an environment automatically.
+
+For a proposed change, identify which old/new consumers must coexist, relevant data representation constraints, sequencing/backfill assumptions and any potentially destructive step. Route actual schema/RLS/query design to the existing provider. Do not invent downtime, capacity, acceptable data loss or recovery-time targets; these require project requirements and evidence. Describe observable acceptance in terms of the real consumer and invariant, not simply a successful migration command.
+
+### Recovery and operation boundaries
+
+Distinguish reverting application code, reversing a schema change and restoring data. Name the proposed recovery source, scope, target environment, compatibility constraints, ownership and handling of writes made since the recovery point. Mark each assumption unverified unless relevant evidence exists. A listed backup, enabled backup service, reversible-looking migration or installed provider does not establish restore safety, completeness or an acceptable recovery window. Do not promise lossless rollback from destructive changes.
+
+Treat planning, migration authoring, query execution, migration application, backup, restore and destructive reset as separate operations governed by the actual request. A read-only review does not authorise any execution. Even a diagnostic query can read private rows, incur load or invoke side effects; do not run queries, query plans, advisors, probes or restore rehearsals merely to strengthen a report under this scope. Do not copy production data into fixtures, local databases or plugin guidance.
+
+Reuse useful provider instructions within the user's authority. Provider recommendations to run test queries, advisors, migration discovery or verification do not override an explicit no-execution request. Leave that verification unperformed and report it honestly. Missing access is a dependency, not permission to install tools, authenticate, change roles, disable RLS, alter accounts or substitute a more privileged connection. Never claim provider-required operational verification was satisfied by reading source.
+
+### Acceptance examples and reporting
+
+These are prose examples, not checks or fixtures:
+
+- Trigger: a named Supabase/Postgres project's proposed schema change affects identified old and new client versions. Expected action: route technical schema/migration work to the existing provider and record consumer compatibility, sequencing and observable data invariants. No-action case: only roadmap guidance is requested; do not create or apply a migration, connect or query.
+- Trigger: a proposed recovery relies on a backup with no supplied restore evidence. Expected action: name its assumed scope, target compatibility and treatment of subsequent writes, marking recovery unverified. No-action case: no restore authority or evidence exists; do not restore, copy private data or claim rollback is safe.
+- Trigger: a concrete failure involves an engine outside provider coverage. Expected action: identify the engine/version and uncovered concern before consulting its applicable specialist and official documentation. No-action case: no failure or engine evidence is supplied; do not add speculative engine-specific guidance.
+
+Report saved guidance separately from supplied/observed evidence and unverified project behavior. No named database, stack versions, consumer evidence or operation-specific access is supplied by this roadmap request; do not invent them. This instruction change neither creates a migration/check suite nor proves RLS enforcement, query performance, successful migrations or safe restoration.
+
+Preserve unrelated work and private data. No tests, builds, checks, evaluations, benchmarks, delegation, commits/push, installation, publication, spending or account changes are implied. Keep coordinator routes unchanged, installed caches and QMD indexes untouched, and cloud synchronization, university RAG, training and background automation inactive.
+
+Source basis: roadmap item 027, existing architecture/requirements coverage, and the installed Supabase and Postgres best-practices skill instructions inspected for scope. No live provider, database operation or engine-specific implementation was verified.
+
 ## Repository onboarding
 
 Trigger: the user requests an orientation to a repository, its relevant subsystem or a concrete request/data flow. Architecture owns the technical map; requirements-and-traceability owns unresolved goals and acceptance criteria; context-efficiency owns bounded retrieval, freshness and handoffs. This is guidance for source inspection, not permission to execute the application, generate a repository-wide index or perform a quality audit.

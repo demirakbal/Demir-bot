@@ -1,5 +1,13 @@
 # Adaptation provenance
 
+## Item 031 design-system handoff
+
+Consulted on 27 September 2026: [ECC design-system](https://github.com/affaan-m/ECC/blob/main/skills/design-system/SKILL.md), a moving upstream reference, not a pinned revision. Selectively adapted its visual-system categories and consistency concerns into the existing frontend/Figma handoff. Excluded automatic competitor browsing, whole-project audits, numeric aesthetic scores and generated documents/previews. No upstream code, assets or dependencies were imported; existing notices and provenance remain intact. Consultation does not establish redistribution rights for other upstream material.
+
+The referenced ECC interface-polish source could not be retrieved at the expected upstream path during this change. No content from it is represented as inspected or adapted. State/interaction guidance reuses the existing frontend skill. The installed Figma library skill's purpose and prerequisites were inspected to preserve provider ownership; no library was created or modified.
+
+## Existing accessibility adaptation
+
 Adapted 2026-09-21 from the previously Firecrawl-reviewed ECC copy, inspected again for this implementation. Hashes identify reviewed instructions; moving upstream URLs are not version pins or proof of current freshness. No upstream widget code, scripts or dependencies imported.
 
 ## accessibility

@@ -23,7 +23,7 @@ class Doc(SimpleDocTemplate):
 def footer(c,d):
  c.setStrokeColor(colors.HexColor('#b7c8d1'));c.line(44,39,551,39)
  c.setFont('Helvetica',8);c.setFillColor(colors.HexColor('#536674'))
- c.drawString(44,26,'DEMIR BOT | CURRENT SPECIFICATION & ROADMAP | 24 SEP 2026');c.drawRightString(551,26,str(d.page))
+ c.drawString(44,26,'DEMIR BOT | CURRENT SPECIFICATION & ROADMAP | 28 SEP 2026');c.drawRightString(551,26,str(d.page))
 def clean(s):
  for a,b in [('—','-'),('–','-'),('‑','-'),('’',"'"),('“','"'),('”','"'),('→','to')]:s=s.replace(a,b)
  return escape(s)
