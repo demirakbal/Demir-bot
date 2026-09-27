@@ -21,7 +21,7 @@ AGENTS.md                      Instructions for working on this repository
 RESOURCES.md                   Linked inventory of bundled reference resources
 ```
 
-Most of the source is Markdown and YAML. The QA skill also includes opt-in Python structural checks and synthetic tests, while docs/roadmap contains the PDF renderer. The existing local publishing runtime, credentials and user records are deliberately not bundled. The `plugins/` directory can hold additional first-party plugins later; unrelated third-party packages should remain external dependencies.
+Most of the source is Markdown and YAML. The QA skill also includes opt-in Python structural checks, synthetic tests and a manual evaluation runner, while docs/roadmap contains the PDF renderer. The existing local publishing runtime, credentials and user records are deliberately not bundled. The `plugins/` directory can hold additional first-party plugins later; unrelated third-party packages should remain external dependencies.
 
 ## Included skills
 
@@ -31,11 +31,11 @@ Most of the source is Markdown and YAML. The QA skill also includes opt-in Pytho
 | [git-and-github-workflow](plugins/demir-bot-pilot/skills/git-and-github-workflow/SKILL.md) | Inspect Git state, make scoped commits/PRs and recover safely within authorization. |
 | [context-efficiency](plugins/demir-bot-pilot/skills/context-efficiency/SKILL.md) | Reuse evidence, read selectively and keep tool output focused. |
 | [clarify-and-execute](plugins/demir-bot-pilot/skills/clarify-and-execute/SKILL.md) | Resolve material ambiguity through useful choices, then execute. |
-| [execution-details](plugins/demir-bot-pilot/skills/execution-details/SKILL.md) | On explicit request, explain recorded actions and results, assess mistakes and propose scoped lessons. Installed-cache refresh pending. |
+| [execution-details](plugins/demir-bot-pilot/skills/execution-details/SKILL.md) | On explicit request, explain recorded actions and results, assess mistakes and propose scoped lessons. |
 | [requirements-and-traceability](plugins/demir-bot-pilot/skills/requirements-and-traceability/SKILL.md) | Map user jobs, MVP scope, ownership, acceptance criteria and evidence links. |
-| [assignment-planning-and-delivery](plugins/demir-bot-pilot/skills/assignment-planning-and-delivery/SKILL.md) | Break down assignments and adapt delivery to staged prompts, guided explanations or authorized implementation. Available in development source; installed-cache refresh pending. |
-| [automated-assignment-completer](plugins/demir-bot-pilot/skills/automated-assignment-completer/SKILL.md) | Execute authorized assignment stages sequentially, followed by final deliverables review. Installed-cache refresh pending. |
-| [assignment-deliverables-checker](plugins/demir-bot-pilot/skills/assignment-deliverables-checker/SKILL.md) | Review final work against assignment sources and rubrics; flag gaps and extras for user decisions. Installed-cache refresh pending. |
+| [assignment-planning-and-delivery](plugins/demir-bot-pilot/skills/assignment-planning-and-delivery/SKILL.md) | Break down assignments and adapt delivery to staged prompts, guided explanations or authorized implementation. |
+| [automated-assignment-completer](plugins/demir-bot-pilot/skills/automated-assignment-completer/SKILL.md) | Execute authorized assignment stages sequentially, followed by final deliverables review. |
+| [assignment-deliverables-checker](plugins/demir-bot-pilot/skills/assignment-deliverables-checker/SKILL.md) | Review final work against assignment sources and rubrics; flag gaps and extras for user decisions. |
 | [architecture-review](plugins/demir-bot-pilot/skills/architecture-review/SKILL.md) | Orient to repositories and examine boundaries, dependencies and architectural trade-offs. |
 | [code-refactoring-refactor-clean](plugins/demir-bot-pilot/skills/code-refactoring-refactor-clean/SKILL.md) | Perform requested or concretely justified behavior-preserving refactoring. |
 | [documentation-and-adrs](plugins/demir-bot-pilot/skills/documentation-and-adrs/SKILL.md) | Maintain requested documentation and architectural decisions. |
@@ -80,21 +80,23 @@ RTK and QMD are optional local helpers. Neither is included. The plugin contains
 2. Inspect branch, remote, upstream and local edits first. Fetch/integrate only within the requested scope, choosing an explicit strategy after reviewing divergence. Use the bundled Git workflow guidance and a focused branch when appropriate.
 3. Edit `plugins/demir-bot-pilot/skills/<name>/` and relevant references. Keep the plugin ID stable to preserve existing skill names.
 4. Inspect the diff and staged files. Run tests or evaluations only when explicitly requested. Retain upstream notices and provenance.
-5. Commit, push and create or merge pull requests only within the task's authorization. Inspect focused staged changes and the full outgoing range; preserve unrelated work. Ordinary edits do not authorize publication or history rewriting.
+5. Review affected documentation against the outgoing source and evidence, resolving mismatches under the Git skill’s documentation-alignment rule. Commit, push and create or merge pull requests only within the task's authorization. Inspect focused staged changes and the full outgoing range; preserve unrelated work. Ordinary edits do not authorize publication or history rewriting.
 6. Updating repository files does not automatically update an installed plugin cache. Use the current supported plugin installation/update workflow to point the local marketplace at this checkout, then reinstall the local plugin and verify the client catalogue. Do not edit cache files directly or reinstall standalone duplicates.
 
 Resolve the actual marketplace source before refreshing an installation; do not assume that cloning alone changes that pointer. The supported update flow preserves plugin identity, updates the source manifest cachebuster and reinstalls from the confirmed local marketplace. Keep private profile paths outside the checkout and preserve rollback during that transition. QMD collection paths, if used, need an explicit scoped update; do not index private data or Git history.
 
 ## Current status and limitations
 
-Status recorded on 24 September 2026:
+Status recorded on 28 September 2026:
 
-- **Installed:** version `0.1.0+codex.20260924171748`; all 137 package files matched the development source at installation. Later source edits still require an explicit installation update.
-- **Guidance saved:** product discovery, repository onboarding, error/type review, academic review, content repurposing, broader GitHub operations, learning controls, on-demand lesson discovery and bounded improvement comparisons. Lesson proposals stay inactive until their persistence scope is authorized.
-- **QA evidence:** the recorded structural campaign passed 24/24 cases on its historical source snapshot. Behavioral regression is completed under the user's accepted ten-case manual scope. Neither result establishes universal reliability or measured improvement.
-- **Remaining limits:** no before/after effectiveness or cost result is established. Provider operations, full lifecycle coverage and redistribution compatibility remain separately assessed work. No CI, cloud synchronization, university RAG, training or background service is activated by this repository.
+- **Source:** 26 instruction skills, one coordinator and 25 specialists; A2 items 001–039 have saved guidance. The remaining roadmap is renumbered 001–080.
+- **Installed:** version `0.1.0+codex.20260927221915` was installed and enabled; all 178 files matched the source at that installation. The subsequent documentation and pre-push guidance changes are source-only until a separately requested refresh.
+- **QA evidence:** the latest recorded offline run passed 51/51 tests on CPython 3.12. This is a historical tested snapshot; no tests were rerun for these documentation changes. The earlier ten-case manual scope was accepted; the 65 prepared core/A2 behavioral cases remain unrun and deferred.
+- **Evaluation runner:** the free [manual runner](plugins/demir-bot-pilot/skills/qa-and-test-evidence/runner/README.md) manages packets, responses and human grades. It makes no model/API calls and cannot enforce tool isolation or establish full functionality.
+- **Git workflow:** review affected docs before pushing; when a material mismatch exists without authorization to fix it, ask whether to update the docs or push as-is. This is skill guidance, not a Git hook.
+- **Remaining limits:** no full behavioral/live-provider pass or measured cost/reliability gain. CI, cloud synchronization, university RAG, training and background services remain inactive.
 
-See the [current specification and roadmap](docs/roadmap/demir-bot-master-roadmap.md) or its [PDF](docs/roadmap/demir-bot-master-roadmap.pdf) for scoped evidence and the 119 remaining entries. Completed capabilities are recorded separately from future work. Use each entry's current number and title together; older skill references may retain historical identifiers.
+See the [current specification and roadmap](docs/roadmap/demir-bot-master-roadmap.md) or its [PDF](docs/roadmap/demir-bot-master-roadmap.pdf) for scoped evidence and the 80 remaining entries. Completed capabilities are recorded separately from future work. Use each entry's current number and title together; older skill references may retain historical identifiers.
 
 The [structural-check guide](plugins/demir-bot-pilot/skills/qa-and-test-evidence/checks/README.md), [behavioral cases](plugins/demir-bot-pilot/skills/qa-and-test-evidence/behavioral/cases.md) and [comparison guidance](plugins/demir-bot-pilot/skills/qa-and-test-evidence/references/demir-bot-evaluation.md) describe distinct evidence methods. Their presence does not authorize execution, and the accepted manual scope does not require rerunning the larger prepared suite.
 

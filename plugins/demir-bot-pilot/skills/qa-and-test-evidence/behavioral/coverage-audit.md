@@ -1,6 +1,6 @@
-# Coverage audit — 27 September 2026
+# Coverage audit — 27 September 2026; status reconciled 28 September 2026
 
-This audit inventories retained evidence and adds missing regression assets. It is not a claim that every skill or reference has undergone a full semantic/code-smell review. The user authorised creating tests/fixes and then explicitly authorised local offline tests only. No model evaluations, live providers, installation, private-data access, index/cache refresh or background activity is authorised.
+The initial audit inventories retained evidence and adds missing regression assets. It is not a claim that every skill or reference has undergone a full semantic/code-smell review. The user authorised creating tests/fixes and then explicitly authorised local offline tests only. No model evaluations, live providers, installation, private-data access, index/cache refresh or background activity is authorised.
 
 ## What was already tested
 
@@ -36,7 +36,7 @@ Interpreter: bundled CPython 3.12 environment at the host's workspace-dependency
 
 The three validator fixes and full current-package structural acceptance remain execution-unverified because the declared parser/validator dependencies are unavailable in the selected environment. No fallback parser or weakened assertion was introduced to make the suite pass. Use an existing correctly provisioned environment or separately authorise dependency provisioning; installation is not implied by offline-test approval.
 
-## Future behavioral execution protocol — not authorised now
+## Initial proposed behavioral execution protocol — historical
 
 If separately authorised, select a bounded subset of new cases for the affected implementation batch, plus relevant existing B086 negative cases. Declare case IDs, exact source snapshot, model/settings, attempt count, no-retry/stop rules and isolation before execution. Do not automatically run all 65 cases. Provide only the input and appropriate candidate source to the subject; keep expected outcomes in the reviewer context. Use synthetic/no-live-action boundaries. Record criterion evidence and forbidden actions separately; text-only outcomes do not establish tool enforcement. Preserve failures and mark setup issues or missing access inconclusive, not passed.
 
@@ -55,3 +55,11 @@ Code review covered the executable validator and local tests for exception handl
 Behavioral execution remains blocked before any subject attempt: CLI help, generated protocol schemas and feature controls were inspected, but a supported all-tools-disabled evaluation boundary was not established. Read-only execution is not tool-disabled execution; a no-tools prompt is not enforcement. All 65 cases remain not_run. Approval persists for the bounded campaign, but does not authorise weakening isolation, changing the selected model or using a paid external API. A supported isolated evaluator is still required. Live provider/project functionality additionally needs named targets and supported operation-specific access.
 
 Durable local test output and structural JSON were retained outside the distributable plugin in the companion documentation workspace under `validation/2026-09-27`. No installed-cache/index refresh, cloud sync, model subject call, account change or background automation occurred. Current status: local structural and case-integrity pass; scoped executable-code review completed; full behavioral/live functionality pass not established.
+
+## Latest recorded result and later source changes
+
+The free manual runner subsequently added 14 synthetic tests. The combined offline suite passed 51/51 (29 structural, eight case-integrity and 14 runner tests). Runner help succeeded; a separate package inspection found zero findings across 178 files and 26 skills at snapshot `0689fc14ec6bee7ec3a7ffa6ea7703c7d01fd4e8a10a308b0a354f7663988206`. The 51-test output is in the task record; the external durable 37-test report remains the earlier result and must not be relabelled as 51 tests.
+
+All 65 core/A2 behavioral cases remain unrun. The user deferred manual subscription-based evaluation. The runner performs no model/network calls and cannot enforce tools-disabled execution; preparation is not a behavioral pass. The 51/51 result covers the executed offline suite, not full functionality or comprehensive instruction quality.
+
+A later authorized local install of version `0.1.0+codex.20260927221915` matched all 178 source files and was enabled. Subsequent documentation reconciliation and the Git skill's pre-push documentation review are source-only; tests and installed-cache refresh were not rerun for these edits. The initial restrictions and blocked reports above describe their historical stages, not the latest outcome. QMD, cloud synchronization and background activity remain inactive.

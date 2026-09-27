@@ -13,7 +13,7 @@ PYTHONDONTWRITEBYTECODE=1 python -m unittest -v test_structural
 PYTHONDONTWRITEBYTECODE=1 python structural.py
 ```
 
-The first command defines 24 cases: 23 isolated synthetic contracts and one read-only acceptance case against the current package. It uses temporary synthetic directories and cleans them up. The second inspects current source and prints JSON to stdout; it writes no report. Neither command launches agents, subprocesses, network operations or provider calls. No retry loop is configured. Preserve the original failure output and distinguish dependency/import errors from assertion failures. Nonzero exit means failure; never describe an unexecuted case as passed. A rerun or fixes after a run require applicable scope.
+The first command defines 29 cases: 28 isolated synthetic contracts and one read-only acceptance case against the current package. It uses temporary synthetic directories and cleans them up. The second inspects current source and prints JSON to stdout; it writes no report. Neither command launches agents, subprocesses, network operations or provider calls. No retry loop is configured. Preserve the original failure output and distinguish dependency/import errors from assertion failures. Nonzero exit means failure; never describe an unexecuted case as passed. A rerun or fixes after a run require applicable scope.
 
 ## Contract and coverage
 
@@ -33,3 +33,5 @@ The current-source case deliberately may expose existing source defects. An acce
 ## Current A2 coverage assets
 
 `test_a2_coverage.py` is a dependency-free integrity suite for the 39 reviewer cases in `behavioral/a2-cases.json`. From this directory, an authorised offline invocation is `PYTHONDONTWRITEBYTECODE=1 python -m unittest -v test_a2_coverage`. It checks inventory, source reachability and evidence labels; it does not execute subjects or grade behavior. Keep the original structural suite separate so missing third-party dependencies do not hide the limited A2 result. See [current audit](../behavioral/coverage-audit.md) for historical versus current evidence and remaining blockers.
+
+Latest recorded combined offline result: 51/51 on CPython 3.12 (29 structural, eight case-integrity and 14 runner tests). This result predates subsequent documentation edits and is not a fresh pass for every later source snapshot. See [coverage audit](../behavioral/coverage-audit.md) for failed attempts, fixes, dependency provisioning and the unrun 65-case behavioral queue.
