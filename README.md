@@ -52,7 +52,7 @@ Most of the source is Markdown and YAML. The QA skill also includes opt-in Pytho
 | [jurisdiction-specific-legal-feasibility](plugins/demir-bot-pilot/skills/jurisdiction-specific-legal-feasibility/SKILL.md) | Research a defined activity, jurisdiction and date using official sources. |
 | [agent-configuration-review](plugins/demir-bot-pilot/skills/agent-configuration-review/SKILL.md) | Review agent, skill, hook and MCP configuration within requested scope. |
 | [ml-training-specialist](plugins/demir-bot-pilot/skills/ml-training-specialist/SKILL.md) | Assess or implement project-specific ML workflows; distinguish retrieval from training. |
-| [youtube-learning](plugins/demir-bot-pilot/skills/youtube-learning/SKILL.md) | Learn from timestamped transcript and visual evidence without conflating them. |
+| [youtube-learning](plugins/demir-bot-pilot/skills/youtube-learning/SKILL.md) | Learn from transcript and visual evidence; retry transient retrieval failures, then stop and ask before changing sources or producing substitutes. |
 
 ## Working principles
 
@@ -90,7 +90,7 @@ Resolve the actual marketplace source before refreshing an installation; do not 
 Status recorded on 28 September 2026:
 
 - **Source:** 26 instruction skills, one coordinator and 25 specialists; A2 items 001–039 have saved guidance. The remaining roadmap is renumbered 001–080.
-- **Installed:** version `0.1.0+codex.20260927221915` was installed and enabled; all 178 files matched the source at that installation. The subsequent documentation and pre-push guidance changes are source-only until a separately requested refresh.
+- **Installed:** version `0.1.0+codex.20260928130840` was installed from the development source on 28 September 2026; all 178 source files matched the installed copy. This includes bounded transcript recovery and the requirement to ask before substituting sources. Start a new Codex task to load the refreshed plugin; this installation does not establish behavioral test results.
 - **QA evidence:** the latest recorded offline run passed 51/51 tests on CPython 3.12. This is a historical tested snapshot; no tests were rerun for these documentation changes. The earlier ten-case manual scope was accepted; the 65 prepared core/A2 behavioral cases remain unrun and deferred.
 - **Evaluation runner:** the free [manual runner](plugins/demir-bot-pilot/skills/qa-and-test-evidence/runner/README.md) manages packets, responses and human grades. It makes no model/API calls and cannot enforce tool isolation or establish full functionality.
 - **Git workflow:** review affected docs before pushing; when a material mismatch exists without authorization to fix it, ask whether to update the docs or push as-is. This is skill guidance, not a Git hook.
@@ -99,6 +99,10 @@ Status recorded on 28 September 2026:
 See the [current specification and roadmap](docs/roadmap/demir-bot-master-roadmap.md) or its [PDF](docs/roadmap/demir-bot-master-roadmap.pdf) for scoped evidence and the 80 remaining entries. Completed capabilities are recorded separately from future work. Use each entry's current number and title together; older skill references may retain historical identifiers.
 
 The [structural-check guide](plugins/demir-bot-pilot/skills/qa-and-test-evidence/checks/README.md), [behavioral cases](plugins/demir-bot-pilot/skills/qa-and-test-evidence/behavioral/cases.md) and [comparison guidance](plugins/demir-bot-pilot/skills/qa-and-test-evidence/references/demir-bot-evaluation.md) describe distinct evidence methods. Their presence does not authorize execution, and the accepted manual scope does not require rerunning the larger prepared suite.
+
+## Website
+
+The [Demir Bot website](https://demir-bot-fieldnotes.demirakbal.chatgpt.site) presents the skill catalogue and current evidence. Its local `website/` checkout is a separate Sites source repository, excluded from this repository; publishing and access settings are managed through Sites.
 
 ## Sources and licensing
 

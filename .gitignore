@@ -16,3 +16,6 @@ backups/
 .qmd/
 .firecrawl/
 *.log
+
+# Separate Sites source repository; published through its own workflow.
+/website/

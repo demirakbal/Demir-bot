@@ -16,6 +16,8 @@ Validate the source as an actual youtube.com/youtu.be URL or a verified video ID
 
 Use the smallest sufficient supported route in references/providers.md. Reuse available Higgsfield scene-analysis tools for visual questions rather than install a second full agent runtime. Use actual captions/transcript for precise speech when available. A web page title/description, search snippet or third-party summary is not the video's transcript. Provider-generated scene descriptions are model analysis, not personally inspected frames or verbatim speech. State which evidence was actually available and any partial coverage.
 
+For transient or ambiguous transcript failures, follow the bounded recovery procedure in [references/providers.md](references/providers.md#bounded-transcript-recovery). A failed export or loading panel does not establish that the video has no transcript. If the evidence needed for the requested video-based deliverable remains inaccessible, stop producing the deliverable and follow [the blocked-source choice](references/providers.md#blocked-source-choice). Ask what the user wants to do and wait; do not create substitute notes from the description, general knowledge, research or other videos. Labeling an alternative “companion notes” or disclosing its limitations does not authorize that change of scope.
+
 For on-screen code, equations, gestures or UI steps, use relevant visual evidence: returned frames/images that can actually be inspected, or clearly attributed provider analysis. Captions alone cannot support a claim about unseen visuals. If the visual detail is inaccessible, identify the gap and request the relevant frame/clip or use a permitted alternative; never pretend to have watched it.
 
 ## Understand and apply
