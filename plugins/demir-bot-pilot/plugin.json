@@ -2,7 +2,7 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "demir-bot-pilot",
   "version": "0.1.1",
-  "description": "Private skills-only pilot of the Demir Bot coordinator and 25 specialist skills.",
+  "description": "Private skills-only pilot of the Demir Bot coordinator and 26 specialist skills.",
   "author": {
     "name": "Local developer"
   },
@@ -11,7 +11,7 @@
       "interface": {
         "displayName": "Demir Bot \u2014 Private Pilot",
         "shortDescription": "Personal workflow coordinator",
-        "longDescription": "Private local pilot. Includes 26 instruction skills and retained upstream notices. Personal facts, voice calibration, accounts, credentials, private publisher runtime and backups are excluded. Optional local helper and check source is bundled; execution is opt-in. External plugins are optional and require their own installation, access and action authorization. No background service or automatic testing. Not reviewed for public redistribution.",
+        "longDescription": "Private local pilot. Includes 27 instruction skills and retained upstream notices. Personal facts, voice calibration, accounts, credentials, private publisher runtime and backups are excluded. Optional local helper and check source is bundled; execution is opt-in. External plugins are optional and require their own installation, access and action authorization. No background service or automatic testing. Not reviewed for public redistribution.",
         "developerName": "Local developer",
         "category": "Productivity",
         "capabilities": [],

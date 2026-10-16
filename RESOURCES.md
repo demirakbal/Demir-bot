@@ -285,6 +285,12 @@ This inventory links the actual reference files and retained notices. Private pr
 - [references/provenance.md](plugins/demir-bot-pilot/skills/release-readiness-and-observability/references/provenance.md)
 - [references/apple-delivery-automation.md](plugins/demir-bot-pilot/skills/release-readiness-and-observability/references/apple-delivery-automation.md)
 
+## project-requirements-discovery
+
+- [SKILL.md](plugins/demir-bot-pilot/skills/project-requirements-discovery/SKILL.md)
+- [agents/openai.yaml](plugins/demir-bot-pilot/skills/project-requirements-discovery/agents/openai.yaml)
+- [references/interview-and-requirements.md](plugins/demir-bot-pilot/skills/project-requirements-discovery/references/interview-and-requirements.md)
+
 ## requirements-and-traceability
 
 - [LICENSE](plugins/demir-bot-pilot/skills/requirements-and-traceability/LICENSE)

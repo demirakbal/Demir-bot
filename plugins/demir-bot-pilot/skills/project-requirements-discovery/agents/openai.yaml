@@ -1,0 +1,6 @@
+interface:
+  display_name: "Project Requirements Discovery"
+  short_description: "Deep project interviews and verifiable requirements"
+  default_prompt: "Use $demir-bot-pilot:project-requirements-discovery to interview me about this project, challenge my initial assumptions and develop atomic, verifiable requirements."
+policy:
+  allow_implicit_invocation: true
