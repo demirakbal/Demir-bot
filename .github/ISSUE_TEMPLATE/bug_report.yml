@@ -1,0 +1,34 @@
+name: Bug report
+description: Report a reproducible source or workflow problem without private data.
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Read SECURITY.md for the selected private security-reporting contact. Do not report sensitive issues here.
+        Do not include tokens, private profiles, messages, personal paths or third-party data here.
+        This form does not authorize tests, account actions or an automatic repair.
+  - type: input
+    id: version
+    attributes:
+      label: Source/plugin version and host
+      description: Include only known non-sensitive version information; unknown is acceptable.
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected and actual behavior
+      description: Name the affected task and source locator; separate observations from hypotheses.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Minimal sanitized steps or source example
+      description: Use synthetic data. Do not run new checks merely to fill this field.
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Existing evidence and limits
+      description: What was actually inspected or run? Mark unrun tests/builds explicitly. Omit raw private logs.

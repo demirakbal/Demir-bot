@@ -1,2 +1,3 @@
 interface:
+  short_description: "Apply your approved LinkedIn tone"
   display_name: "Linkedin Tone"

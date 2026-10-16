@@ -5,8 +5,6 @@ interface:
     code while preserving behavior and verifying changes.
 policy:
   products:
-  - chatgpt
-  - codex
-  - api
-  - atlas
+  - CHAT
+  - CODEX
   allow_implicit_invocation: true

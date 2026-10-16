@@ -1,0 +1,29 @@
+# Inactive source example. Moving/enabling/running requires separate authority.
+name: Demir Bot selected local checks
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: demir-local-checks-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  selected-local-checks:
+    # Keep false until the exact run/check scope is authorized.
+    if: ${{ false }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - name: Read the selected source revision
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+          fetch-depth: 1
+          submodules: false
+          lfs: false
+      - name: Selected synthetic local-tool checks only
+        working-directory: plugins/demir-bot-pilot/skills/qa-and-test-evidence/checks
+        run: python3 -m unittest -v test_local_tools test_installation_lifecycle

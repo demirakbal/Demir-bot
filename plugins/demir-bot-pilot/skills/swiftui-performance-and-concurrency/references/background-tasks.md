@@ -1,0 +1,13 @@
+# App background tasks
+
+Use for an explicitly requested app feature that must finish or refresh outside foreground execution. Inspect the actual target, permitted background capabilities, SDK/deployment settings, existing task owner and user expectation. This concerns the selected app; it does not enable Demir Bot monitoring, learning or autonomous maintenance.
+
+Choose the mechanism from the real workload. Apple's [background strategy guide](https://developer.apple.com/documentation/backgroundtasks/choosing-background-strategies-for-your-app) distinguishes finishing foreground work, deferred refresh/processing and background transfers. A general asynchronous task does not grant background runtime. The system chooses execution timing for scheduled tasks; an earliest date is not an exact schedule or guaranteed launch. Consult current target-compatible documentation before adopting a newer continued-processing API or a specialist mode.
+
+Define the operation's durable inputs, bounded work, cancellation, restart and commit points. Inspect identifier registration and relevant configuration together; requesting work with an unregistered/mismatched identifier is a different problem from delayed scheduling. Keep authentication, network/power requirements and unavailable protected data explicit. Reuse existing transport/storage owners instead of starting polling or a new persistent worker.
+
+Install expiration/cancellation handling before starting owned work. Apple's [expiration contract](https://developer.apple.com/documentation/backgroundtasks/bgtask/expirationhandler) calls for prompt cancellation and cleanup. Coordinate completion and expiration so the terminal callback occurs once, unfinished work remains recoverable, and an expired task is not reported successful. Make repeated delivery idempotent where the operation needs it, avoid overlapping ownership and preserve partial progress without corrupting the current store. Cancellation of a local task may not cancel a remote mutation; reconcile its outcome.
+
+Acceptance example: a selected app refreshes a bounded set of records, can expire during a fetch without overwriting newer content, and keeps a visible last-updated state if deferred. These are proposed acceptance conditions, not executed checks. No-action case: changing view formatting does not add a background mode or recurring job. Report source/configuration prepared separately from actual scheduling, device behavior and completion. No build, launch, scheduling request, account change or background service is authorized by this guidance maintenance.
+
+Official references reviewed 16 October 2026. App implementation requires the actual feature/target; no runtime timing guarantee is made.

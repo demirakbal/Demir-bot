@@ -23,6 +23,48 @@ For each entry use: capability/type; environment/location/provider; installed; a
 4. Refresh a claim when its dependency/config/account/version changes or the current task needs fresh evidence. No arbitrary global expiry or checks on every prompt. An old success remains historical, not proof of present access.
 5. Update the compact entry after relevant authorized changes or material failures. Preserve unrelated entries. Follow skill-sync.md for changed indexed references; no extra reports or change logs by default.
 
+## Bounded maintenance and monitoring — item 064
+
+This is guidance for a later explicitly activated monitor, not a watcher or scheduler implementation. Existing helpers remain on-demand programs; their installation or this source edit starts nothing. Use a supported host scheduling/event mechanism only when activation is requested for a named responsibility. If no suitable runtime is available, report the dependency; do not create a daemon, cron substitute, worker loop or background promise. Monitoring does not authorize delegation under item 062.
+
+### Select resources and evidence
+
+| Approved resource | Existing source to reuse | Evidence boundary |
+| --- | --- | --- |
+| Selected canonical plugin and installed tree | [Installation doctor](installation-doctor.md), `tools/installation_doctor.py` | Read explicit portable roots and inspect difference fields. Exit 0 can include drift; it is not proof of equality, host discovery or runtime behavior. Missing input and helper failure are not a healthy result. |
+| Local catalogue and approved provider summaries | [Status dashboard](status-dashboard.md), `tools/status_dashboard.py` | Renders supplied state; it does not probe authentication, refresh evidence or detect account changes. Display age is not live access verification. Save/render only to an approved destination. |
+| Explicit already-obtained upstream files | [Upstream review](upstream-review.md), `tools/upstream_fingerprint.py` | Compare selected local bytes. No remote fetching, update installation, authenticity or licence conclusion follows. A file outside the current selection is not deleted. |
+| Existing supplied QMD evidence | Installation doctor's optional evidence input | Compare the supplied snapshot only; live index freshness and collection coverage remain unverified. No retrieval query, indexing or scope expansion is implied. |
+| Approved notification event state | [Notification delivery](notification-delivery.md), `tools/notification_ledger.py` | Deduplicates reservations/outcomes; it does not detect changes, send messages or grant approval. Initializing the ledger writes a database and needs its own authorized private destination. |
+
+Honor each helper's existing file/type/size limits. Never broaden from named roots to home directories, private profiles, credentials, conversation history or adjacent projects. Provider polling needs a separately selected supported read operation and its actual access; none of these helpers supplies it. Do not execute a helper to validate this guidance.
+
+### Define activation before scheduling
+
+Record the task's resource allowlist and exclusions, observation method, baseline and freshness rules, event/cadence and timezone, end/expiry condition, responsible owner, notification destination/payload authority, limits, repair scope and stop/disable path in the existing authorized task or automation record. Reuse an existing matching monitor rather than creating a duplicate. Resolve missing choices before dependent activation; do not invent a cadence or perpetual responsibility. Distinguish prepared, enabled, paused, disabled, expired and blocked from an observed successful run.
+
+If durable monitoring is requested, use an approved private state location outside Git, the plugin and QMD. Keep only necessary resource identifiers, scope revision, successful baseline fingerprints, observation times, actionable transition IDs, failure state and pending/delivered notification references. Agree retention and deletion; hashes can still be sensitive. No store is created by this guidance. Baseline, monitor state and delivery state are separate: notification failure must not lose an actionable event, and a failed observation must not replace the last successful baseline. Changed scope starts a labelled new baseline, not an inferred deletion alert. A first observation establishes a baseline unless an explicitly selected invariant is already violated.
+
+### Meaningful change and notification
+
+Stay quiet for unchanged or non-actionable observations unless periodic summaries were explicitly requested. Meaningful events include newly detected source/cache drift, a relevant selected upstream change, an explicit freshness threshold crossing, recovery from a previously reported failure, or a monitoring failure that requires user action. A new timestamp alone is not a new event; use stable transition identity and coalesce repeated observations. Do not label byte changes as defects or old evidence as a new authentication failure.
+
+Use the current conversation or the specifically authorized notification channel. For external delivery, follow notification-delivery.md's exact destination/content/timing authority and outcome reconciliation; never switch channels after denial. Reuse the existing ledger only if its initialization/use is authorized. Reserved, failed and uncertain entries are not permission to resend, and changing an event ID to defeat deduplication is prohibited. Report delivery only after provider confirmation. A configured monitor without an available delivery channel is not a working notification system.
+
+### Repair permissions and limits
+
+Default to detection and a concise repair recommendation. A monitor cannot grant itself permission to edit source, reinstall, refresh QMD, fetch upstream material, change accounts, run tests or publish. For any preauthorized repair, bind the authority to exact resources, operations, trigger conditions, limits and rollback scope; inspect intervening edits first. Never patch installed caches directly. Unmatched conditions return a proposal rather than broadening the repair. Source/index/install/cloud operations remain separate under skill-sync.md. Item 065 still applies: completed repairs recommend verification without executing it unless that execution was explicitly requested.
+
+Before activation define per-observation resource/runtime limits, permitted frequency/concurrency, retry/backoff limits, expiry and any user-supplied cost cap. Prevent overlapping runs on the same state/resource; skip or coalesce missed ticks instead of accumulating catch-up work. Read retries are bounded and only for plausible transient failures; stop identical failures without new evidence and never turn an ambiguous write/delivery into a blind retry. Use the existing budget contract for units, attribution gaps and unsupported hard caps. If a strict required limit cannot be enforced, do not activate the dependent operation. Budget exhaustion, expiry, revoked access, unsafe inputs or unreconciled state blocks further affected work and produces at most the authorized actionable notice, not repeated alerts.
+
+### Pause, disable and resume
+
+On a user stop/disable request, stop new work and use the supported host control to pause or disable the actual schedule/event subscription. Confirm the returned state. Cancel in-flight work where supported and report uncertain cancellation; disabling a schedule does not prove an already-running operation stopped. Disable monitoring, notifications and repairs together unless the user explicitly selects a narrower control. Muting notifications alone does not stop observation and must not be presented as disabling the monitor.
+
+Preserve necessary pending-operation evidence under the agreed retention rules; do not delete history or reset failed/uncertain delivery state as an automatic cleanup. Resume only with applicable authority after reconciling pending operations, resource/scope changes, remaining limits and expired permissions. Do not replay missed repairs or messages automatically. No time passage, account reset or parent-session restart supplies activation authority.
+
+Report guidance saved, actual runtime configured, successful observations, confirmed notifications and repairs separately. Helper execution, scheduling, persistence, deduplication/concurrency, disable behavior and delivery remain unverified until separately exercised within scope. After this implementation recommend a bounded verification step without running it.
+
 ## Selective skill maintenance
 
 - Resolve current local skills and available plugins first. Prefer a small existing-skill adaptation over a duplicate coordinator. Search upstream only for a genuine gap or relevant update; reuse inspected versions when sufficient.
@@ -37,9 +79,18 @@ For each entry use: capability/type; environment/location/provider; installed; a
 Finish with the roadmap's next eligible unfinished item and a ready-to-copy implementation prompt. This workflow completes capability tracking/maintenance, not every capability listed in the register.
 
 
+For requested upstream version/diff maintenance, use [on-demand upstream review](upstream-review.md). Its optional explicit-file fingerprint helper reads selected local source only; no upstream fetch, automated merge or removal is implied.
+
 ## Bounded feedback-driven improvement
 
+For item 063's on-demand learning/release research and approval-only proposal lifecycle, use [learning-proposals.md](learning-proposals.md). It extends this section's ownership and recovery rules; it does not activate memory collection, a persistent queue or background learning.
+
 Use this on demand for an explicitly requested assistant improvement or a correction whose persistent scope Demir has authorized. Ordinary feedback improves the current response; it is not automatically a saved preference. “Fix this in Demir Bot” authorizes the relevant local edit without another permission round. If persistence is materially ambiguous, prepare the exact proposed rule and ask once before saving it. Do not monitor conversations or initiate an improvement cycle after every task.
+
+### One owner across execution profiles
+
+Coding, Research, University and Career profiles use this same improvement contract; they do not retain separate lessons or silently rewrite a shared rule. A worker returns the relevant correction/provenance and proposed owner to the parent when persistence is outside its explicit assignment. Parent review or agreement among workers is not human reuse permission. Apply task-local feedback immediately, preserve explicit authorized persistence already granted, and write only the selected canonical owner within that authority. Source edits do not refresh installed caches, indexes or cloud copies.
+
 
 ### Sources and diagnosis
 
@@ -278,3 +329,5 @@ Illustrative acceptance: a request to use only email-writing workflows can selec
 ### Evidence and stop boundary
 
 Report the selection decision and source evidence, any saved packaging changes, and installation/reference-closure/activation evidence separately. This item saves assessment and conditional guidance only: **no profiles were built or installed, no manifest was changed, and profile operation and cost benefit remain unverified**. Reassess only when the user supplies a concrete need or relevant evidence; no background packaging, catalogue watcher, cache refresh, cloud sync or new provider is authorized.
+
+For an explicitly requested read-only local source/cache comparison, use [installation doctor](installation-doctor.md). Its source helper does not establish registration, live QMD state, authentication or runtime behavior and never repairs automatically.

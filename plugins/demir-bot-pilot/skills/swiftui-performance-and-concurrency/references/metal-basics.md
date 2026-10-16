@@ -1,0 +1,13 @@
+# Metal workload integration
+
+Use for a requested GPU render/compute workload or supplied Metal failure. Establish its actual input/output, supported devices/GPU families, deployment/SDK settings, pixel/data formats, performance requirement and existing renderer. Keep an adequate CPU/framework implementation as an alternative; a GPU is not automatically faster after transfer, synchronization and setup costs. Reuse the existing graphics architecture rather than adding Metal for an unrelated UI change.
+
+Trace device → pipeline/shader → resource bindings → encoded commands → submission → completion/presentation/readback. Use current [work-submission documentation](https://developer.apple.com/documentation/metal/gpu-devices-and-work-submission) for the API generation actually used. Metal 4 has different command/resource contracts; do not mix its examples with older queue/command-buffer assumptions or migrate the renderer incidentally.
+
+Inspect CPU/shader data layout, sizes/strides/alignment, index bounds, texture dimensions/formats, thread-grid limits and supported pipeline features. Define empty/unsupported input and unavailable device/pipeline states. Keep resource lifetime and in-flight ownership explicit: CPU mutation must not race GPU reads, and readback must wait for the relevant completion. [Resource synchronization](https://developer.apple.com/documentation/metal/resource-synchronization) depends on the API/queue/resource path; automatic hazard tracking is not universal CPU/GPU synchronization. Do not prescribe untracked resources or unsafe lifetime shortcuts without an actual necessity and safety argument.
+
+Bound in-flight work and memory, reuse stable pipeline/resource allocations where appropriate, and avoid blocking the UI thread waiting on the GPU. Separate cancelled UI interest from already-submitted work and release resources only when safe. Report command/pipeline errors with sanitized context. Rendering semantics, output precision/color space and correctness come before performance claims; profiling and GPU captures require their own authorization.
+
+Acceptance example: a selected image kernel defines format/layout and bounds for non-multiple grid sizes, preserves resources through completion and has a supported-device fallback. This is a proposed contract, not rendered output or measured speed. No-action case: changing a SwiftUI label does not create a custom GPU pipeline. Actual implementation needs the app/workload/shader contract; no shader compilation, GPU job, capture, benchmark or build was run.
+
+Official Apple references reviewed 16 October 2026.

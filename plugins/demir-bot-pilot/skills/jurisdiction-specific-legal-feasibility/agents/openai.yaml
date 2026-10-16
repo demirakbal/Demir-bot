@@ -1,2 +1,3 @@
 interface:
+  short_description: "Research legal feasibility by jurisdiction"
   display_name: "Jurisdiction Specific Legal Feasibility"

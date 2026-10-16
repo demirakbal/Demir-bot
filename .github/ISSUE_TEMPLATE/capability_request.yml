@@ -1,0 +1,31 @@
+name: Capability request
+description: Describe a concrete gap and the existing owner/tool considered first.
+title: "[Capability]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use synthetic facts and no credentials or private documents. This request does not authorize implementation,
+        new agents, provider installation, tests/builds, cloud sync or external actions.
+  - type: textarea
+    id: outcome
+    attributes:
+      label: User outcome and concrete missing behavior
+      description: Include an acceptance example and when the capability should not activate.
+    validations:
+      required: true
+  - type: textarea
+    id: reuse
+    attributes:
+      label: Existing skill/provider and remaining gap
+      description: Prefer an existing owner over a duplicate specialist or integration.
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Actual target and dependencies
+      description: Name the app/client/version or service operation if relevant, with access and cost unknowns.
+  - type: textarea
+    id: scope
+    attributes:
+      label: Proposed scope and exclusions
+      description: Distinguish reusable guidance, source code, check writing, execution and publication.

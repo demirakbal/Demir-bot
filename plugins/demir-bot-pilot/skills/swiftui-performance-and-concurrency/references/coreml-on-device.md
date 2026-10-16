@@ -1,0 +1,13 @@
+# Core ML and on-device inference
+
+Use for a selected app prediction feature or supplied model-integration problem. Inspect the actual model artifact/version, license/provenance, target SDK/deployment settings, supported devices, generated/runtime interface and product task. Reuse ML's [data/inference contract](../../ml-training-specialist/references/data-and-inference.md) for lineage, preprocessing, quality and fallback; this reference owns Apple app integration only. Do not infer that a model file supports every device or that on-device inference implies training is requested.
+
+Match feature names, tensor/image shapes, data types, units, normalization, tokenization, orientation/crop and output interpretation to the model's actual contract. Apple's [integration example](https://developer.apple.com/documentation/coreml/integrating-a-core-ml-model-into-your-app) shows model-specific generated interfaces; do not copy its sample types as the user's schema. Preserve missing/invalid input and unavailable-model states rather than returning a plausible fabricated prediction.
+
+Define model loading and lifetime outside repeated view evaluation, bounded concurrent inference, stale-result suppression, cancellation and resource cleanup. Consult supported prediction APIs and isolation semantics for the real model/runtime before transferring model objects across tasks. Keep expensive work away from UI-critical execution using an actual supported boundary, not a blanket detached task.
+
+Treat [compute-unit configuration](https://developer.apple.com/documentation/coreml/mlcomputeunits) as permission to use eligible hardware, not proof of a particular placement, speed or Neural Engine availability. Name cold load/compile, warm prediction, memory and battery concerns; only an authorized measurement on the named device can establish performance. Retain a disclosed usable unavailable/unsupported fallback, without silently uploading inputs to a cloud model. Dynamic model acquisition needs its own trusted source, integrity, size/storage and replacement/recovery plan.
+
+Acceptance example: the selected image classifier uses the supplied orientation/crop and label mapping, rejects unsupported input, and ignores an old prediction after a new image is selected. Those are proposed conditions; no inference was run. No-action case: a UI-only edit does not download weights, convert a model, start training or add Core ML. App-specific code needs the actual model/target; current delivery is reusable guidance. No model download/conversion, training, build, benchmark or device operation is performed.
+
+Official Apple references reviewed 16 October 2026.

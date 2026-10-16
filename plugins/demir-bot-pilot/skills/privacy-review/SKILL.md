@@ -41,3 +41,5 @@ Do not delete records, revoke credentials, change account permissions, notify af
 For legal applicability, mandatory retention, breach deadlines or rights obligations, establish the jurisdiction and processing context, then verify current primary legal or regulator sources. Distinguish technical advice from unresolved legal questions; never certify compliance from a checklist. General privacy engineering can proceed without a legal-research detour when no legal conclusion is needed.
 
 Follow Demir Bot's [proportional delivery guidance](../demir-bot/references/delivery.md#deliver-clearly) when coordinating through it: use visuals only when explicitly requested or materially helpful. Preserve required work versus optional improvements and honest verification status in any format. Read [sources-and-coverage.md](references/sources-and-coverage.md) only for the assessed overlap and adaptation rationale.
+
+For a named outgoing release/package/repository artifact, use [release confidentiality](references/release-confidentiality.md). Keep private exclusions external, inspect the actual outgoing surface and report unassessed history/remote copies separately.

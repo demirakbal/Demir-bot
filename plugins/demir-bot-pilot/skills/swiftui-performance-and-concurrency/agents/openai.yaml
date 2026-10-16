@@ -1,2 +1,3 @@
 interface:
+  short_description: "Improve SwiftUI performance and concurrency"
   display_name: "Swiftui Performance And Concurrency"

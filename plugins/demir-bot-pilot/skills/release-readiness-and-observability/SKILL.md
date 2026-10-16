@@ -26,6 +26,8 @@ For material findings record the affected component/release/environment, source 
 
 Use an evidence-based recommendation such as blocked by named requirements, readiness unconfirmed, or no blockers found within the inspected scope. Avoid numeric readiness scores, invented metrics, blanket production-ready claims and treating green CI as sufficient. Existing CI results may be inspected when authorized/relevant; do not trigger new runs. For an idea with no implementation, explain prerequisites rather than claiming an audit.
 
+For requested Apple delivery automation, use [optional delivery automation](references/apple-delivery-automation.md). Inspect the actual lane/workflow effects and reuse the existing signing, upload and release owners; preparing source never starts the pipeline.
+
 ## Deployment prerequisites and configuration
 
 Identify the intended artifact and source revision, required runtime/dependencies, deploy destination, access, permissions, environment separation, capacity and critical external services. Consider auth, payment, background job and AI boundaries only where present. Distinguish public/demo launch from a high-impact production rollout. An immutable artifact identifier is stronger evidence than a moving branch/tag.

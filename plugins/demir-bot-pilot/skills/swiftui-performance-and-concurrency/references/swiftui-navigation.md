@@ -36,6 +36,16 @@ Specify behavior for cold and already-running entry, duplicate delivery, unresol
 
 App-level parsing and routing do not prove universal-link delivery. When required, identify associated-domain, entitlement, URL registration or server association dependencies from actual configuration. Missing domain access or platform delivery evidence remains explicit. Do not provision domains, change accounts, edit server configuration or launch a device merely to complete this guidance. Deeper domain-association work belongs to the separately scoped universal-links item.
 
+## Universal-link association and delivery
+
+For a requested universal-link feature, establish the actual app identifier, controlled domain/subdomains, supported target and exact URL patterns. Inspect the associated-domain entitlement and the corresponding server association source together. Apple's [associated-domain guide](https://developer.apple.com/documentation/xcode/supporting-associated-domains) requires matching app/site configuration and an HTTPS association file without redirects. Use its current schema for the real target; do not invent a team ID, deployment domain or broad wildcard. Each host and exclusion must reflect intended content ownership.
+
+Reuse Incoming links above for parsing, current authorization, scene choice and duplicate handling. Keep domain association, OS delivery and app route resolution as separate evidence boundaries. A valid association file in source does not prove it is hosted, cached or accepted by a device; successful parsing does not prove OS delivery. Apple's [diagnostic note](https://developer.apple.com/documentation/technotes/tn3155-debugging-universal-links) explains context-sensitive browser behavior and CDN considerations. Use supplied evidence first; do not launch its diagnostic commands or change hosting/developer modes without applicable authority.
+
+Define web fallback for an uninstalled app, excluded URL, unsupported content or unavailable association. Custom URL schemes need separate registration and trust analysis; do not treat them as ownership-verified universal links. Avoid automatic destructive actions, credentials in query strings, arbitrary redirects and forwarding an untrusted URL to privileged operations. Revalidate a pending route after sign-in/account change.
+
+Acceptance example: the selected app and controlled host agree on one record path, the app validates its ID/access, and an unsupported path retains a useful web destination. Record cold/warm delivery and browser fallback as unverified until observed. No-action case: an in-app navigation change does not edit a server association file or domain entitlement. Actual hosting/account changes and device checks remain separate from source preparation. Official references reviewed 16 October 2026.
+
 ## Acceptance and delivery
 
 Illustrative acceptance examples, not executable checks:

@@ -1,0 +1,11 @@
+# App Intents and Shortcuts
+
+Use for a requested app action exposed to Siri, Shortcuts, widgets or another supported system surface. Inspect the real app/extension targets, supported OS/SDK and existing domain operation first. Reuse that operation and its access rules instead of duplicating business logic inside an intent. Consult the target-compatible [AppIntent contract](https://developer.apple.com/documentation/appintents/appintent) before choosing syntax, execution modes or discovery APIs; newer declarations are not automatically available in the project.
+
+Describe one action: localized title/summary, required and optional parameters, stable entity IDs, resolution/disambiguation, allowed execution context and success/failure result. Resolve an entity against current account access; a donated ID or inferred parameter is not authorization. Handle deleted records, unavailable accounts, cancellation and duplicate invocation. Avoid retaining view instances or a full private model as shortcut parameters; apply the parent's actor/lifetime guidance to the actual operation.
+
+Review authentication and locked-device behavior explicitly. Apple's [authenticationPolicy documentation](https://developer.apple.com/documentation/appintents/appintent/authenticationpolicy) identifies a permissive default, so sensitive operations need a deliberate supported policy plus domain authorization. Keep discovery metadata, suggested entities and returned dialogs free of unnecessary private content. Confirmation of a destructive or external effect must match the actual action; discovery alone grants no permission to execute it.
+
+Acceptance example: “open this saved note” resolves a stable ID, checks access, handles a deleted note and produces the intended route without changing the note. A separate edit/send action requires its own operation contract. No-action case: an internal function rename does not add a discoverable shortcut. Report saved source separately from actual discovery, parameter resolution and device invocation; no app, shortcut, donation, build or device operation is created by maintaining this guidance.
+
+Official documentation reviewed 16 October 2026. Actual implementation still requires the app, selected action and target settings.

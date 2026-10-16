@@ -1,2 +1,3 @@
 interface:
+  short_description: "Review agent, skill and tool configurations"
   display_name: "Agent Configuration Review"

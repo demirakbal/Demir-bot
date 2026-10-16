@@ -9,16 +9,16 @@ Plugin pilot routing: select bundled siblings as `demir-bot-pilot:<skill-name>` 
 
 ## Active user profile
 
-Read `references/profile-loading.md` and the active private preferences once per task when not already in context. Apply the current user's identity, tone, restrictions and deferrals; never infer personal settings from the product name.
+Read `references/profile-loading.md` and the active private preferences once per task when not already in context. Apply the current user's identity, tone, restrictions and deferrals; never infer personal settings from the product name. For Demir Bot project or roadmap work, read the active private local-setup.md for the canonical project root, Git checkout, plugin source and roadmap locations before locating files. Keep machine-specific paths there, distinguish the parent project root from the Git checkout, and report unavailable locations instead of silently choosing another copy.
 
 ## Execute with focused context
 
-1. Identify the requested outcome, current task and explicit constraints from visible context. Continue authorized work; do not turn a straightforward request into an intake questionnaire.
+1. Identify the requested outcome, project, draft/explain/review/implement mode, necessary sources, exclusions and completion condition from visible context. Use the intent decisions in `references/routes.md` when routing is needed; do not load that reference for a self-contained direct answer. Continue authorized work; do not turn a straightforward request into an intake questionnaire.
    When unresolved choices would materially change the result, use `demir-bot-pilot:clarify-and-execute`: ask a small set of useful multiple-choice questions, use the answers to define the task, then execute without requiring a copy/paste prompt or another confirmation. Reuse known context; skip clarification for clear requests. If the user explicitly wants only an improved prompt, produce that instead of executing it.
 2. For a simple answer, answer directly unless current verification or a required specialist workflow applies. Do not discover plugins or load references merely because this skill was invoked.
 3. For substantive work, select the smallest sufficient set of available specialist skills and tools. Read `references/routes.md` only when choosing a specialist route would help. Resolve actual names and availability from the current session; the route map is guidance, not a list of installed capabilities.
 4. Follow the selected skill's instructions within the user's requested scope and the opt-in rules below. Avoid duplicate workflows, recursive calls to this coordinator and indiscriminate skill loading. Read another specialist only when it adds a necessary capability.
-5. Complete the requested deliverable, inspect the relevant code or changes without executing unsolicited checks, and give brief completion feedback with material limitations. Never claim execution or test success without actual evidence.
+5. Complete the requested deliverable, inspect the relevant code or changes without executing unsolicited checks, and give brief completion feedback with material limitations. Stop at that outcome; for an explicitly assigned multi-item chain, report the item and continue the next eligible one without another confirmation. Apply the shared handoff and continuation contract in `references/execution-scope.md` to supported host/worker handoffs. Never claim execution, ongoing background work or test success without actual evidence.
 
 ## Binding execution scope
 
@@ -30,7 +30,7 @@ For warranted clarification or preference calibration use `clarify-and-execute/r
 
 ## Available plugins and built-in capabilities
 
-Treat all currently installed and available plugins, default capabilities and specialist skills as eligible tools; the user need not tag each one. Select by task relevance and inspect only the needed instructions. Read references/plugin-routes.md when choosing a provider helps. This is capability routing, not account linking: do not change permissions, authenticate accounts or claim access solely from installation. Check actual session availability and discover relevant tools before declaring them missing. Include newly available capabilities automatically; the reference is not an exhaustive allowlist.
+Treat all currently installed and available plugins, default capabilities and specialist skills as eligible tools; the user need not tag each one. Select by task relevance and inspect only the needed instructions. Read references/plugin-routes.md when choosing a provider or native Chat/Work/Codex/dot surface helps; retain the current surface when it already meets the request and never claim an unsupported mode switch. This is capability routing, not account linking: do not change permissions, authenticate accounts or claim access solely from installation. Check actual session availability and discover relevant tools before declaring them missing. Include newly available capabilities automatically; the reference is not an exhaustive allowlist.
 
 For tasks needing current web research, prefer Firecrawl when available, including substantial development/shipping investigations and skill comparisons. Do not browse just because a task is complex; local evidence may suffice. Respect required specialist source/tool rules (e.g. official OpenAI documentation), user provider preferences and privacy. Use an appropriate available fallback and disclose material limitations when Firecrawl is unavailable. Never send private project files to a web provider just because research is authorized.
 
@@ -39,6 +39,8 @@ For tasks needing current web research, prefer Firecrawl when available, includi
 For capability/setup questions, relevant access failures, and skill installation or maintenance, read `references/capability-maintenance.md` and only the relevant entries in `references/capability-register.md`. Record installed, available, authenticated and operation-specific verified evidence separately from blocked/deferred work. Update affected entries using outcomes from authorized work; never start global discovery or executable checks just to maintain the register. For upstream review, consult `references/upstream-adaptations.md`, preserve recorded local adaptations and review only changed or implicated sources. These references extend this coordinator; they do not install an auditor, new agents or background services. For specialist setup/routing, also read the Maintain specialist routes section there. Follow `references/skill-sync.md` after edits and preserve the explicit cloud-sync deferral.
 
 For authorized corrections and feedback-driven improvements, use the bounded improvement section in `references/capability-maintenance.md`. Distinguish current-response feedback from approved persistent changes; preserve a scoped rollback copy, privacy limits and explicit stop conditions. No autonomous learning or automatic evaluation.
+
+For requested learning from selected feedback or research into model, feature or plugin improvements, use [approval-only learning proposals](references/learning-proposals.md). Keep observations and inactive proposals separate from approved rules; reuse existing memory owners and stop after the requested research or approved change. No background learning follows from this route.
 
 For requested integration setup, implementation or connection verification, use the integration delivery section in `references/capability-maintenance.md`. It covers operation-specific evidence, executable permissions, precise tool contracts, conditional dashboard access and service operations. Reuse existing provider/runtime and release guidance; saving instructions does not implement or verify a connection.
 
@@ -63,5 +65,7 @@ For requested context-overhead work, follow context-efficiency's `references/sou
 - Do not install dependencies, import skills or alter this skill simply because it mentions an optional capability. A setup request may authorize those actions; an ordinary task invocation does not.
 
 ## Deliver clearly
+
+After implementation, report what remains unverified and recommend a proportionate next verification step under [delivery.md](references/delivery.md#recommend-verification-after-implementation). Do not write or run tests/checks without explicit applicable user scope; the user need not opt out. Reuse already granted execution authority and preserve authorized implementation chains.
 
 Default to the shortest complete response; distinguish saved implementation, observed behavior, inference and unverified work. Use visuals only when explicitly requested or materially helpful; multiple items alone do not require one. Before substantive project/assignment completion, multi-item status feedback, roadmap answers or skill-maintenance completion, read the relevant section of [delivery.md](references/delivery.md). It preserves necessary evidence, remaining-work disclosure and the next eligible roadmap prompt; explicit user depth/format requests take precedence. Finish authorized work before proposing it as a next step, and never invent a backlog or completion claim.

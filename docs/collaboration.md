@@ -1,0 +1,9 @@
+# Collaboration preparation
+
+Issue forms and a PR template are saved in `.github/`. They contain no assignees, labels assumed to exist, account permissions, workflow triggers or automatic reviewers. They become repository-facing templates only through a later authorized publication of this source; no GitHub settings or issues/PRs were changed in this batch. Their rendering/host validation is unverified.
+
+Existing ownership is procedural: coordinator owns routing/execution scope, specialists own domain guidance, documentation owner reconciles docs, and the human release owner decides publication/permissions. The project owner confirmed they are the maintainer. No additional team or CODEOWNERS assignment is needed for the current solo scope. A public GitHub handle can be added later if a specific ownership feature needs it; none is invented here. The selected security-reporting address is maintained only in SECURITY.md; delivery remains unverified. Actual branch protection, required reviews, collaborator access and security settings need their own selected scope and operation authority.
+
+Use CONTRIBUTING.md for source, provenance and scoped QA; SECURITY.md for the selected private reporting destination and evidence limits. Triaging an issue is distinct from commenting, assigning, labeling or closing it. A PR template does not authorize commit/push, requests to reviewers, test runs, auto-merge or releases. Prepare a reviewable settings proposal before any later authorized remote change.
+
+Acceptance example: a contributor can describe a concrete synthetic failure and unrun evidence without providing secrets; a maintainer can review the final scoped change without assuming tests passed. No-action case: a local source correction does not notify collaborators or enable an automatic workflow. Current delivery is templates/guidance only; actual owner assignment and remote collaboration settings remain pending.

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demir Bot documentation</title><style>
+:root{color-scheme:light dark;--bg:#f7f8fb;--card:#fff;--ink:#19243a;--muted:#46536a;--line:#ccd3df;--accent:#174bc0}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:1rem/1.6 system-ui,sans-serif}main{max-width:72rem;margin:auto;padding:3rem 1.25rem}a{color:var(--accent);text-underline-offset:.2em}a:focus-visible,input:focus-visible{outline:3px solid var(--accent);outline-offset:4px}h1{font-size:clamp(2.2rem,6vw,3.8rem);line-height:1.12;margin:.5rem 0 1rem}h2{line-height:1.3}header p{max-width:47rem}.eyebrow{font-weight:650;color:var(--muted)}.state{padding:1rem;border:1px solid var(--line);border-radius:.6rem;background:var(--card)}label{display:block;font-weight:650}input{width:100%;max-width:36rem;padding:.75rem;font:inherit;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:.4rem}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,18rem),1fr));gap:1rem;margin-top:1rem}.guide{padding:1.1rem;background:var(--card);border:1px solid var(--line);border-radius:.6rem}.guide h2{font-size:1.2rem;margin:0 0 .5rem}.guide p{margin:0;color:var(--muted)}[hidden]{display:none!important}footer{margin-top:2rem;color:var(--muted)}.skip{position:absolute;top:-5rem;left:1rem;background:var(--card);padding:.5rem}.skip:focus{top:.5rem}
+@media(prefers-color-scheme:dark){:root{--bg:#121923;--card:#1a2432;--ink:#f2f5fb;--muted:#bac7dc;--line:#53647b;--accent:#9dbbff}}
+</style></head><body><a class="skip" href="#guides">Skip to guides</a><main>
+<header><p class="eyebrow">Demir Bot · Private pilot documentation</p><h1>Find the right guide.<br>Keep the scope clear.</h1><p>Use the existing coordinator and specialists for coding, university work, research and writing. Start with the real task and source; keep saved work and observed results separate.</p><p class="state"><strong>Source preparation.</strong> New legacy guidance and optional helper source are saved. Tests/builds and new helper execution remain unrun. Installation, index refresh, runtime acceptance and public release have separate states.</p></header>
+<section aria-labelledby="find"><h2 id="find">Browse the guides</h2><form role="search"><label for="query">Filter by topic</label><input id="query" type="search" placeholder="Try installation, research or privacy" autocomplete="off"><p id="count" role="status" aria-live="polite">All guides shown. Filtering stays in this page.</p></form>
+<div class="grid" id="guides">
+<article class="guide"><h2><a href="installation.md">Install locally</a></h2><p>Source registration, existing selector and fresh-task discovery.</p></article>
+<article class="guide"><h2><a href="usage.md">Everyday use</a></h2><p>Natural requests for coding, assignments, research and writing.</p></article>
+<article class="guide"><h2><a href="cookbook.md">Workflow cookbook</a></h2><p>Inputs, expected results and boundaries for six workflows.</p></article>
+<article class="guide"><h2><a href="../examples/README.md">Synthetic examples</a></h2><p>Written before/after demonstrations, clearly separate from runs.</p></article>
+<article class="guide"><h2><a href="git-recipes.md">Git and GitHub</a></h2><p>Branches, commits, PRs, conflicts and contained recovery.</p></article>
+<article class="guide"><h2><a href="troubleshooting.md">Troubleshooting</a></h2><p>Duplicates, stale copies, missing access and uncertain outcomes.</p></article>
+<article class="guide"><h2><a href="update-and-recovery.md">Update and recovery</a></h2><p>Exact-registration removal, rollback and distinct index state.</p></article>
+<article class="guide"><h2><a href="support-matrix.md">Support and dependencies</a></h2><p>Required versus optional tools, access and compatibility limits.</p></article>
+<article class="guide"><h2><a href="release-management.md">Release management</a></h2><p>Versioning, candidate identity, migration and recovery.</p></article>
+<article class="guide"><h2><a href="licensing.md">Licensing</a></h2><p>Retained notices and pending public redistribution clearance.</p></article>
+<article class="guide"><h2><a href="supply-chain.md">Source records</a></h2><p>Declared dependency pins, provenance and integrity limits.</p></article>
+<article class="guide"><h2><a href="../SECURITY.md">Security reporting</a></h2><p>Selected private security contact and minimal reporting guidance.</p></article>
+<article class="guide"><h2><a href="../CONTRIBUTING.md">Contribute</a></h2><p>Existing owners, scoped changes, provenance and opt-in checks.</p></article>
+<article class="guide"><h2><a href="collaboration.md">Collaboration</a></h2><p>Solo maintainer, issue forms and PR preparation.</p></article>
+<article class="guide"><h2><a href="how-it-works.md">How the workflow fits</a></h2><p>A source-level coordination diagram and evidence boundaries.</p></article>
+<article class="guide"><h2><a href="roadmap/demir-bot-master-roadmap.md">Roadmap and evidence</a></h2><p>Canonical item states, saved files, timings and blockers.</p></article>
+</div><p id="empty" hidden>No matching guide. Try a broader topic or clear the filter.</p></section>
+<footer><p>This local hub is English only. The Markdown guides remain canonical. No analytics, external assets, account access or publishing action is included. The existing Demir Bot website is managed separately; this file has not been deployed or previewed.</p><p><a href="../README.md">Repository overview</a> · <a href="../RESOURCES.md">Resource inventory</a> · <a href="../CHANGELOG.md">Unreleased source notes</a></p></footer></main>
+<script>
+const form=document.querySelector('form');
+const input=document.querySelector('#query');
+const guides=Array.from(document.querySelectorAll('.guide'));
+form.addEventListener('submit',event=>event.preventDefault());
+input.addEventListener('input',()=>{
+  const term=input.value.trim().toLocaleLowerCase('en');
+  let visible=0;
+  guides.forEach(guide=>{guide.hidden=!guide.textContent.toLocaleLowerCase('en').includes(term);if(!guide.hidden)visible++;});
+  document.querySelector('#count').textContent=visible+' of '+guides.length+' guides shown. Filtering stays in this page.';
+  document.querySelector('#empty').hidden=visible!==0;
+});
+</script></body></html>

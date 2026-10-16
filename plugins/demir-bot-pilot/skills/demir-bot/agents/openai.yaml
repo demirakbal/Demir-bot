@@ -5,8 +5,6 @@ interface:
     context.
 policy:
   products:
-  - chatgpt
-  - codex
-  - api
-  - atlas
+  - CHAT
+  - CODEX
   allow_implicit_invocation: true

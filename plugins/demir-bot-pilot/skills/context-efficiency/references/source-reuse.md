@@ -107,6 +107,27 @@ Do not delete originals or earlier user-owned records as automatic cleanup. Do n
 
 Item 002 distinguishes source instructions from observed loading; the same distinction applies here. Report **handoff guidance saved**, an **actual handoff delivered/persisted** only when one was produced in scope, and **resumption behavior unverified** absent observed execution. Compression is not guaranteed lossless. Any efficiency claim still requires item 001's comparable completed-task evidence, including checkpoint creation, recovery reads, retries and coordination.
 
+## Cross-client memory boundaries — legacy item 002
+
+Use for an explicitly requested transfer or recall across clients, not as an automatic history-mining step. Reuse the active profile and governed repository/Project/Page owners before creating storage. Resolve which client can access which actual source; a shared account does not make local files, local QMD or private profile contents available in a cloud task.
+
+| Scope | Owner and allowed content | Transfer boundary |
+| --- | --- | --- |
+| Task | Current goal, decisions, evidence and unfinished work in the compact handoff | Share only necessary authorized context with the intended task/recipient. |
+| Project | Existing project source/instructions and selected decision records | Keep project exceptions scoped; a team/shared copy needs explicit audience and content authority. |
+| User | Existing private preferences/facts/tone files | Do not bundle, index or copy to a cloud service by implication; never turn a project note into a global preference. |
+| Public/team knowledge | Reviewed non-private material in its governed artifact | Record source, revision, audience and limitations; committed content is not automatically trusted. |
+
+For authorized persistence, preserve a stable record locator, scope/owner, minimal fact/decision, source and observation date, correction/supersession state, intended readers and retention/deletion boundary. Reuse the existing owner and reconcile duplicates rather than appending conflicting copies. Recall provides evidence, never action authorization. Correct or withdraw the canonical record within scope, mark known stale copies, and report uninspected indexes/backups/client memories separately; do not claim deletion everywhere or erase source history incidentally. No raw transcript import, automatic persona mutation, watcher or new vault is enabled.
+
+### ECC alternative assessment, 16 October 2026
+
+The [upstream unified-memory guidance](https://github.com/affaan-m/ECC/blob/main/skills/unified-memory/SKILL.md) describes a separately installed ecc-universal runtime, portable Markdown vault records, explicit project/team/user scopes and optional MCP access. Its harness labels filter routing rather than authenticate readers. Adopting it adds executable distribution, storage, per-client configuration, correction/deletion and lifecycle obligations. This task reviewed the moving-main guidance only; no runtime/code audit, version pin, dependency install or operation was performed. It is not treated as installed or production-ready.
+
+Decision for the current Demir Bot source: reuse existing profile, source-ownership and compact handoff mechanisms. A separate cross-client vault needs a concrete unsupported transfer requirement and scoped setup decision; generic desire for continuity does not justify duplicate storage. The procedure here is saved; cross-client runtime transfer remains unimplemented until an actual source/client/recipient is selected.
+
+Expected example, not an execution: an authorized Codex-to-Work handoff carries a non-private requirement locator, current implementation state and remaining action, while private email tone remains local unless its transfer is authorized. No-action case: a self-contained question does not export memory or enumerate other clients' histories.
+
 ## Observable loading and duplication
 
 Use this on request for master item 002 (original IDs 103, 164, 89), not as a recurring audit or mandatory loading ledger. Inspect only the relevant visible context and source files. Reuse item 001's [measurement contract](runtime-options.md#measurement); designing or saving loading instructions does not authorize evaluation runs.

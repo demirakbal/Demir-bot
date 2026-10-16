@@ -1,0 +1,18 @@
+# Source and dependency records
+
+Inspected 16 October 2026 for the private source candidate. This is a bounded record of declared/bundled components, not an executed dependency resolution, vulnerability scan, complete SBOM or public redistribution clearance. Upstream adaptation versions/fingerprints remain in their existing per-skill provenance and the coordinator's upstream-adaptations.md; RESOURCES.md is the file inventory owner.
+
+| Component | Source of truth | Declared dependency/provenance state |
+|---|---|---|
+| 26 instruction skills and metadata | `plugins/demir-bot-pilot/skills/`, both manifests | Source instructions; external providers not vendored. Version 0.1.1 is package metadata, not a guarantee that installed copies match later edits. |
+| Dashboard, notification ledger, upstream fingerprint | Coordinator `tools/` | Locally authored Python source, standard-library imports; NOT RUN. sqlite3/interpreter behavior depends on selected runtime. No downloaded executable/runtime is bundled. |
+| Manual evaluation runner and synthetic local-tool checks | QA `runner/` and `checks/test_local_tools.py` | Python source; no model API client or automatic provider dispatch. Newly written checks NOT RUN. |
+| Structural parser/validator suite | QA `checks/requirements.txt`, `.python-version`, `checks/README.md` | Declared interpreter 3.11.11; nine exact package pins below. Pins are not integrity hashes or installed-environment evidence. Historical results are separately dated. |
+| RTK, QMD, Codex and connected providers | Existing external installations/host | Not bundled or locked by this repository; operation-specific support/access evidence belongs to support-matrix.md and the private capability owner. |
+| Repository PDF renderer | `docs/roadmap/` | Outside installed plugin; PDF generation dependencies are not necessary for ordinary skill use. Not run in this batch. |
+
+Declared QA package pins, copied from the actual requirements source for this dated record: PyYAML 6.0.2; jsonschema 4.23.0; attrs 24.3.0; jsonschema-specifications 2024.10.1; referencing 0.36.2; typing_extensions 4.12.2; rpds-py 0.22.3; markdown-it-py 3.0.0; mdurl 0.1.2. The requirements file owns installation values; update this record only with a relevant dependency change. No wheel provenance, transitive closure, environment resolution, package licence or current security advisory assessment was performed here.
+
+Eight existing upstream notice files were observed: architecture-review/LICENSE, clarify-and-execute/LICENSE.upstream, code-refactoring-refactor-clean/LICENSE, context-efficiency/LICENSE.upstream, documentation-and-adrs/LICENSE, git-and-github-workflow/LICENSE.upstream, qa-and-test-evidence/LICENSE and requirements-and-traceability/LICENSE. Their headers identify MIT notices; preserve their complete contents and original attribution. This does not establish that every adapted passage or third-party dependency has the same licence. See licensing.md for the unresolved distribution decision.
+
+For an authorized update, identify the exact component/version/source and integrity evidence, inspect relevant release/dependency/licence changes, preserve intentional local adaptations, and describe rollback/migration impact before applying it. Use existing package managers/lockfiles for an actual executable project; never add a lockfile/SBOM that falsely describes uninstalled providers or guessed dependencies. Generate a fuller bill of materials only for the actual outgoing artifact and requested evidence scope. No unpinned remote execution, automatic upgrade watcher, provider install or dependency resolution is introduced.

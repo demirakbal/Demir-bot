@@ -5,8 +5,6 @@ interface:
     and check their acceptance criteria, traceability and change impact.
 policy:
   products:
-  - chatgpt
-  - codex
-  - api
-  - atlas
+  - CHAT
+  - CODEX
   allow_implicit_invocation: true

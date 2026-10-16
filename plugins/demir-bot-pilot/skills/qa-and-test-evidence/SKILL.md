@@ -10,6 +10,8 @@ Plugin pilot routing: select bundled siblings as `demir-bot-pilot:<skill-name>` 
 
 A focused adaptation of test-automator with Demir's course evidence practices. See references/sources.md. No scanners, browser helpers or paid test services are bundled or assumed installed.
 
+For implementation completion, follow the coordinator’s [verification recommendation contract](../demir-bot/references/delivery.md#recommend-verification-after-implementation). Recommend relevant verification without starting this QA workflow, writing tests or running checks unless explicitly requested. Reuse existing execution authority when present; a suggestion alone is not permission. The recommendation should explain the useful next check and its purpose, not create an unsolicited test plan.
+
 1. Read relevant requirements, changed behavior, existing tests and configured commands. Search targeted files first. Identify risks, affected dependencies and real versus mocked boundaries. Reuse the project stack; do not automatically install frameworks or rewrite CI.
 2. Choose the smallest sufficient test strategy. Use unit tests for logic, integration/contract tests for boundaries, real persistence/artifact tests for those claims, and system/acceptance checks for user outcomes. Use references/test-design.md for applicable techniques. Derive expected results from requirements and independent reasoning, not merely copying the implementation.
 3. Implement tests when authorized and useful. Assert observable behavior with deterministic, isolated fixtures and cleanup. For meaningful bug fixes demonstrate the regression fails for the right reason before the fix where feasible. Reuse existing TDD/debugging workflows when relevant without duplicating ceremony. Never weaken assertions or delete failing tests just to obtain green results.
@@ -33,4 +35,10 @@ For focused iOS UI-testing guidance, use [UI test patterns](references/ui-test-p
 
 For a concrete visual regression risk, use [Snapshot-testing guidance](references/snapshot-testing.md) for controlled rendering conditions, comparison limits and explicit baseline approval. Guidance maintenance does not authorise captures, test creation or baseline updates.
 
+For selected visual/Windows E2E/fuzz/mutation/load/fault risks, use [advanced modes](references/advanced-modes.md). It owns target/oracle/containment and written-only status; no advanced campaign is activated by a roadmap label.
+
 For explicitly requested plugin structural checks, use [the scoped repository suite](checks/README.md). It covers the local manifest contract, metadata, names, explicit local links, routing targets and inventory with synthetic negative cases. Writing or installing this suite does not authorize executing it; it is not host-schema certification or behavioral evidence.
+
+For an explicitly requested independent source review, use [bounded review](references/bounded-review.md). Define one immutable subject, minimal context and findings-only return; do not delegate or execute checks by default.
+
+For a requested gate strategy or skip decision, use [opt-in gate tiers](references/gate-tiers.md). Select by actual risk, preserve required gates and distinguish not-run/blocked/skipped from passed.

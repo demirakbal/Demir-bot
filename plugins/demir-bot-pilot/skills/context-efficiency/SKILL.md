@@ -14,6 +14,12 @@ When materially different workflows could satisfy the request, use the [cost-ben
 
 For an explicit task budget or budget-related stop/resume request, follow [user-set budgets](references/runtime-options.md#user-set-budgets-stop-and-resume). Use supported host controls within their actual scope, distinguish soft estimates from enforcement, and checkpoint partial work honestly. Do not impose default caps or start usage polling.
 
+## Proportional execution depth
+
+Use lightweight work for a supplied draft, stable answer or narrow explanation: the current facts, applicable tone and smallest adequate tool set. Use standard work for a scoped assignment section, project change or evidence-backed post: the relevant sources and only the specialists filling actual gaps. Use comprehensive work for substantial implementation or research: deeper dependency/source coverage when justified, preserving the same scope boundaries. These are judgment guides, not model assignments, skill-count quotas or permission to delegate. Shift depth when evidence reveals a real requirement, not to fill a checklist.
+
+Preserve source-first teaching: begin at the requested file/function and follow necessary calls outward; respect line-by-line depth and pacing. Reuse current passages before searching again. End with the evidence and known unfinished work that matter to the outcome, not a catalogue of every possible tool or improvement. No promised time, token or subscription savings follow from this routing guide.
+
 ## Focused reads for consecutive implementation tasks
 
 Apply these concrete reading rules when working through roadmap items or making repeated edits in the same source package:

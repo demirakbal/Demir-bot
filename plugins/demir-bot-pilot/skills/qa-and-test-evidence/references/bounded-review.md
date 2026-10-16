@@ -1,0 +1,13 @@
+# Bounded independent review
+
+Use only when an independent/fresh-context review is explicitly requested. Ordinary implementation does not authorize a reviewer agent, another model call, tests or automatic fixes. A plan describing reviewers does not launch them. If fresh-context execution is unsupported, report that limitation; an inline self-review must not be labeled independent.
+
+Choose one bounded scope appropriate to the request: quick review of a small changed flow; focused review of a named risk/interface; or release review of a named immutable candidate against its stated gates. These are depth choices, not automatic stages or a requirement to review every edit. Identify the requested deliverable, changed files/diff, acceptance criteria, relevant surrounding contracts and explicit exclusions. Pin the diff/base or supplied artifact identity so later edits do not silently change the subject.
+
+Use context-efficiency's existing compact handoff format. Supply only the selected diff, independently derived acceptance criteria, necessary source locators and restrictions. Keep secrets, irrelevant history and the implementer's preferred conclusion out of the packet. Give one review assignment and a stop condition; no recursive delegation, reviewer swarm, repeated scoring or consensus loop. A source review does not authorize execution even if a standard reviewer template asks for it.
+
+Return actionable findings with exact file/line or artifact locator, concrete trigger, observed source/evidence, effect, confidence/uncertainty and a minimal correction direction. Distinguish defects from preference and missing execution evidence. “No findings within this scope” does not mean all behavior is correct. Findings are not fixes; the implementer assesses them against the actual contract and changes source only under applicable fix authority. Do not manufacture a defect to justify the reviewer.
+
+Where actual metadata exists, report review setup/context loading, dispatch/wait/review elapsed time, retries and model usage separately from implementation. Do not infer token savings or speed from a shorter review response. Record the inspected version and material limitations in the existing task/roadmap record rather than creating another review database.
+
+Acceptance example: an explicitly requested review of one parser returns source-backed malformed-input findings without editing or running it. No-action case: adding a documentation link does not dispatch a reviewer. This item implements the reusable protocol only; no reviewer was dispatched, no independent review result was produced and no tests/model evaluations ran.

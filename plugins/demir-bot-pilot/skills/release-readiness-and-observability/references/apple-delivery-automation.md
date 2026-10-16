@@ -1,0 +1,25 @@
+# Optional Apple delivery automation
+
+Use only when a named app's requested delivery workflow uses or needs the selected tool. Keep build, checks, archive, signing, upload, processing, tester distribution, review submission and public release as distinct effects. Reuse the SwiftUI specialist's signing, Xcode CLI, TestFlight and App Store review references; automation does not replace their actual target and permission requirements.
+
+## Fastlane
+
+Inspect the existing Fastfile, imported lanes/actions, Gemfile/lockfile, Ruby/tool versions, CI entrypoint and actual app/team/environment. Read scripts/hooks reached by the chosen lane; a lane name such as “verify” or “beta” is not proof of limited effects. Preserve existing pins/configuration rather than running an initializer or dependency update to discover setup.
+
+The [official setup guide](https://docs.fastlane.tools/getting-started/ios/setup/) recommends managed dependencies with Bundler and distinguishes Apple-service authentication from local tooling. Consult the selected action's current official contract before preparing a command or modifying a lane. Keep credentials outside source, artifacts and logs using the project's approved secret mechanism. Do not read Keychain or create signing assets/keys while documenting the workflow.
+
+For an authorized lane change, state exact inputs, target/scheme/configuration, artifact path, side effects, required access and terminal evidence. Keep local artifact preparation independently selectable from upload/distribution/publication. Constrain working paths and cleanup to task-owned outputs. Prevent ambiguous reruns after an uncertain upload or release by reconciling the existing operation/build identifier first; a local timeout does not establish remote failure.
+
+Acceptance example: a selected app's preparation lane emits the intended artifact path while a separately scoped distribution lane requires its own destination/access. A release review traces all invoked actions and identifies any unexpected external step. These are source acceptance examples; no lane was executed. No-action case: ordinary Swift source editing does not install Fastlane or add release automation. Current delivery adds reusable guidance; actual lane implementation needs an app/repository and selected delivery effects.
+
+No dependency install/update, initialization, build, signing, upload, CI run or release was performed. Fastlane official guidance reviewed 16 October 2026; supported versions must be established for the actual app.
+
+## Xcode Cloud
+
+Use only for an actual app with a selected cloud-delivery need. Inspect supplied workflow settings and repository scripts, app/team/product, source-control authorization, dependency availability, Xcode/macOS environment, secret names and intended start conditions. [Apple's workflow reference](https://developer.apple.com/documentation/xcode/xcode-cloud-workflow-reference) separates triggers, actions, post-actions and secret-variable settings. Trace custom scripts and downstream upload/notification effects before preparing a change; an archive action can lead to a separately consequential distribution post-action.
+
+Prefer the smallest requested workflow and explicit branch/path/trigger scope, resource/time limits and cancellation/recovery ownership. Preserve existing workflow requirements without silently disabling gates, while keeping execution unauthorized in this source-only batch. Writing an example does not authorize repository connection, secret creation, automatic branch triggers, paid build minutes or enabling a service. Onboarding may launch a first build under [Apple's setup flow](https://developer.apple.com/documentation/xcode/configuring-your-first-xcode-cloud-workflow), so it cannot be performed here under a no-build instruction.
+
+Keep secret values outside committed scripts and avoid printing expanded environments. Redacted-variable settings do not justify logging transformed secrets or private artifacts. Treat pull-request source and dependency scripts according to their trust boundary; never grant a contributor-controlled script release credentials by convenience. Retain precise source revision/workflow/run/artifact identifiers when actual evidence is provided. Queued, running, built, processed, distributed and publicly released are distinct states; cancellation does not recall an artifact already distributed.
+
+Acceptance example: a selected app's proposed workflow identifies its trigger, build environment, one requested action, secret owners and separately authorized distribution step. A failed supplied run is diagnosed from its actual stage/log evidence without starting another run. No-action case: local source editing does not connect Xcode Cloud or schedule a build. This update saves reusable guidance only; actual workflow configuration needs an app/team/repository and selected effects. No account connection, workflow enablement, secret change, build, notification or release occurred. Official Apple references reviewed 16 October 2026.

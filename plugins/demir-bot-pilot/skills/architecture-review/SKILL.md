@@ -46,3 +46,9 @@ For a narrow question answer directly with evidence and trade-offs. A broad revi
 `finding | evidence | consequence | confidence | recommended action | verification`
 
 Keep proposed decisions clearly proposed. Match existing ADR conventions, preserve history and avoid drafting ADRs for every component. Do not alter external services, publish diagrams containing private data or change permissions from a review request alone.
+
+For an actual additional language/framework target, use [selective framework adapters](references/framework-adapters.md). Choose only the evidenced active stack, preserve existing owners and version boundaries, and report missing target/version access without installing every listed framework.
+
+For a selected Android/React Native/Flutter/Compose or cross-platform mobile feature, use [mobile platform boundaries](references/mobile-platforms.md); retain the existing SwiftUI specialist for Apple-specific implementation and do not claim cross-platform runtime proof from one target.
+
+For a concrete Redis/MySQL/ClickHouse/orchestration/hosting gap, use [workload-specific infrastructure selection](references/infrastructure-selection.md) with the existing database and release owners. No provisioning, credentials, migration or spending follows from guidance maintenance.

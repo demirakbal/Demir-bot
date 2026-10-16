@@ -177,7 +177,7 @@ Report **guidance saved**, **control configured/accepted** only when actually do
 
 ## Cost-aware model delegation
 
-Master item 011 (original IDs 102, 160) applies to explicitly authorized delegation or its requested design. Designing this policy authorizes no workers, model calls or comparison runs. Default to a single agent unless a bounded independent subtask and current delegation authority justify another worker; do not create work merely to use concurrency. Apply item 009's adequacy rule and item 010's explicit budgets without adding default quotas.
+Master item 011 (original IDs 102, 160) applies to explicitly authorized delegation or its requested design. Designing this policy authorizes no workers, model calls or comparison runs. Default to a single agent; use the coordinator's agent-profiles.md admission/transfer procedure for a supported role only when a bounded independent subtask and current human delegation authority justify another worker; do not create work merely to use concurrency. Apply item 009's adequacy rule and item 010's explicit budgets without adding default quotas.
 
 ### Eligible work and exclusions
 

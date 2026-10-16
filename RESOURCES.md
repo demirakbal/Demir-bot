@@ -4,8 +4,39 @@ This inventory links the actual reference files and retained notices. Private pr
 
 ## Project documentation
 
+- [Installation](docs/installation.md)
+- [Everyday usage](docs/usage.md)
+- [Update and recovery](docs/update-and-recovery.md)
+- [Troubleshooting](docs/troubleshooting.md)
+- [Git/GitHub recipes](docs/git-recipes.md)
+- [Workflow cookbook](docs/cookbook.md)
+- [Synthetic examples](examples/README.md)
+- [Contributor/maintainer guide](CONTRIBUTING.md)
+- [Security reporting](SECURITY.md)
+- [Collaboration](docs/collaboration.md)
+- [Community](docs/community.md)
+- [Conduct](CODE_OF_CONDUCT.md)
+- [Inactive CI preparation](docs/ci/README.md)
+- [Local docs hub source](docs/index.html)
+- [Workflow diagram](docs/how-it-works.md)
+- [Release acceptance/recovery](docs/release-acceptance.md)
+- [Pre-freeze source review](docs/source-review.md)
+- [Download and first use](docs/download-and-first-use.md)
+- [Existing website alignment](docs/website-plan.md)
+- [Video scripts/storyboard](docs/video-plan.md)
+- [Adoption/channel drafts](docs/adoption-plan.md)
+- [Preliminary legal preparation](docs/legal-preparation.md)
+
+- [Versioning and release management](docs/release-management.md)
+- [Changelog](CHANGELOG.md)
+
+- [Dependency and support matrix](docs/support-matrix.md)
+- [Source and dependency records](docs/supply-chain.md)
+- [Licensing and redistribution decision](docs/licensing.md)
+
 - [Current specification and roadmap](docs/roadmap/demir-bot-master-roadmap.md)
-- [Roadmap PDF](docs/roadmap/demir-bot-master-roadmap.pdf)
+- [September roadmap PDF snapshot](docs/roadmap/demir-bot-master-roadmap.pdf) — predates the October Markdown revision.
+- Project-scoped native profiles, outside the installed plugin package: [Coding](.codex/agents/demir_coding.toml), [Research](.codex/agents/demir_research.toml), [University](.codex/agents/demir_university.toml), [Career](.codex/agents/demir_career.toml). These are saved definitions; no native discovery or worker run is claimed.
 
 ## agent-configuration-review
 
@@ -13,6 +44,7 @@ This inventory links the actual reference files and retained notices. Private pr
 - [agents/openai.yaml](plugins/demir-bot-pilot/skills/agent-configuration-review/agents/openai.yaml)
 - [references/local-scanner.md](plugins/demir-bot-pilot/skills/agent-configuration-review/references/local-scanner.md)
 - [references/provenance.md](plugins/demir-bot-pilot/skills/agent-configuration-review/references/provenance.md)
+- [references/runtime-diagnostics.md](plugins/demir-bot-pilot/skills/agent-configuration-review/references/runtime-diagnostics.md)
 
 ## architecture-review
 
@@ -23,6 +55,9 @@ This inventory links the actual reference files and retained notices. Private pr
 - [references/ios-architecture-patterns.md](plugins/demir-bot-pilot/skills/architecture-review/references/ios-architecture-patterns.md)
 - [references/review-checklist.md](plugins/demir-bot-pilot/skills/architecture-review/references/review-checklist.md)
 - [references/sources.md](plugins/demir-bot-pilot/skills/architecture-review/references/sources.md)
+- [references/framework-adapters.md](plugins/demir-bot-pilot/skills/architecture-review/references/framework-adapters.md)
+- [references/infrastructure-selection.md](plugins/demir-bot-pilot/skills/architecture-review/references/infrastructure-selection.md)
+- [references/mobile-platforms.md](plugins/demir-bot-pilot/skills/architecture-review/references/mobile-platforms.md)
 
 ## assignment-deliverables-checker
 
@@ -74,11 +109,14 @@ This inventory links the actual reference files and retained notices. Private pr
 - [agents/openai.yaml](plugins/demir-bot-pilot/skills/deep-research-and-idea-validation/agents/openai.yaml)
 - [references/academic-review.md](plugins/demir-bot-pilot/skills/deep-research-and-idea-validation/references/academic-review.md)
 - [references/provenance.md](plugins/demir-bot-pilot/skills/deep-research-and-idea-validation/references/provenance.md)
+- [references/specialized-sources.md](plugins/demir-bot-pilot/skills/deep-research-and-idea-validation/references/specialized-sources.md)
 
 ## demir-bot
 
 - [SKILL.md](plugins/demir-bot-pilot/skills/demir-bot/SKILL.md)
 - [agents/openai.yaml](plugins/demir-bot-pilot/skills/demir-bot/agents/openai.yaml)
+- [references/learning-proposals.md](plugins/demir-bot-pilot/skills/demir-bot/references/learning-proposals.md)
+- [references/agent-profiles.md](plugins/demir-bot-pilot/skills/demir-bot/references/agent-profiles.md)
 - [references/capability-maintenance.md](plugins/demir-bot-pilot/skills/demir-bot/references/capability-maintenance.md)
 - [references/capability-register.md](plugins/demir-bot-pilot/skills/demir-bot/references/capability-register.md)
 - [references/delivery.md](plugins/demir-bot-pilot/skills/demir-bot/references/delivery.md)
@@ -89,6 +127,16 @@ This inventory links the actual reference files and retained notices. Private pr
 - [references/routes.md](plugins/demir-bot-pilot/skills/demir-bot/references/routes.md)
 - [references/skill-sync.md](plugins/demir-bot-pilot/skills/demir-bot/references/skill-sync.md)
 - [references/upstream-adaptations.md](plugins/demir-bot-pilot/skills/demir-bot/references/upstream-adaptations.md)
+- [references/notification-delivery.md](plugins/demir-bot-pilot/skills/demir-bot/references/notification-delivery.md)
+- [references/status-dashboard.md](plugins/demir-bot-pilot/skills/demir-bot/references/status-dashboard.md)
+- [references/upstream-review.md](plugins/demir-bot-pilot/skills/demir-bot/references/upstream-review.md)
+- [references/workspace-connectors.md](plugins/demir-bot-pilot/skills/demir-bot/references/workspace-connectors.md)
+- [tools/notification_ledger.py](plugins/demir-bot-pilot/skills/demir-bot/tools/notification_ledger.py)
+- [tools/status_dashboard.py](plugins/demir-bot-pilot/skills/demir-bot/tools/status_dashboard.py)
+- [tools/upstream_fingerprint.py](plugins/demir-bot-pilot/skills/demir-bot/tools/upstream_fingerprint.py)
+- [references/installation-doctor.md](plugins/demir-bot-pilot/skills/demir-bot/references/installation-doctor.md)
+- [references/profile-onboarding.md](plugins/demir-bot-pilot/skills/demir-bot/references/profile-onboarding.md)
+- [tools/installation_doctor.py](plugins/demir-bot-pilot/skills/demir-bot/tools/installation_doctor.py)
 
 ## demir-linkedin
 
@@ -109,6 +157,7 @@ This inventory links the actual reference files and retained notices. Private pr
 - [references/adr-and-templates.md](plugins/demir-bot-pilot/skills/documentation-and-adrs/references/adr-and-templates.md)
 - [references/consistency-and-evidence.md](plugins/demir-bot-pilot/skills/documentation-and-adrs/references/consistency-and-evidence.md)
 - [references/sources.md](plugins/demir-bot-pilot/skills/documentation-and-adrs/references/sources.md)
+- [references/maintenance.md](plugins/demir-bot-pilot/skills/documentation-and-adrs/references/maintenance.md)
 
 ## email-tone
 
@@ -127,6 +176,7 @@ This inventory links the actual reference files and retained notices. Private pr
 - [references/design-system-handoff.md](plugins/demir-bot-pilot/skills/frontend-quality-and-accessibility/references/design-system-handoff.md)
 - [references/provenance.md](plugins/demir-bot-pilot/skills/frontend-quality-and-accessibility/references/provenance.md)
 - [references/task-flow-review.md](plugins/demir-bot-pilot/skills/frontend-quality-and-accessibility/references/task-flow-review.md)
+- [references/media-motion-delivery.md](plugins/demir-bot-pilot/skills/frontend-quality-and-accessibility/references/media-motion-delivery.md)
 
 ## git-and-github-workflow
 
@@ -153,6 +203,7 @@ This inventory links the actual reference files and retained notices. Private pr
 - [SKILL.md](plugins/demir-bot-pilot/skills/ml-training-specialist/SKILL.md)
 - [agents/openai.yaml](plugins/demir-bot-pilot/skills/ml-training-specialist/agents/openai.yaml)
 - [references/provenance.md](plugins/demir-bot-pilot/skills/ml-training-specialist/references/provenance.md)
+- [references/data-and-inference.md](plugins/demir-bot-pilot/skills/ml-training-specialist/references/data-and-inference.md)
 
 ## personal-writing
 
@@ -160,6 +211,9 @@ This inventory links the actual reference files and retained notices. Private pr
 - [agents/openai.yaml](plugins/demir-bot-pilot/skills/personal-writing/agents/openai.yaml)
 - [references/content-repurposing.md](plugins/demir-bot-pilot/skills/personal-writing/references/content-repurposing.md)
 - [references/facts-and-voice.md](plugins/demir-bot-pilot/skills/personal-writing/references/facts-and-voice.md)
+- [references/business-documents.md](plugins/demir-bot-pilot/skills/personal-writing/references/business-documents.md)
+- [references/channel-delivery.md](plugins/demir-bot-pilot/skills/personal-writing/references/channel-delivery.md)
+- [references/marketing-and-search.md](plugins/demir-bot-pilot/skills/personal-writing/references/marketing-and-search.md)
 
 ## privacy-review
 
@@ -167,6 +221,7 @@ This inventory links the actual reference files and retained notices. Private pr
 - [agents/openai.yaml](plugins/demir-bot-pilot/skills/privacy-review/agents/openai.yaml)
 - [references/privacy-manifests.md](plugins/demir-bot-pilot/skills/privacy-review/references/privacy-manifests.md)
 - [references/sources-and-coverage.md](plugins/demir-bot-pilot/skills/privacy-review/references/sources-and-coverage.md)
+- [references/release-confidentiality.md](plugins/demir-bot-pilot/skills/privacy-review/references/release-confidentiality.md)
 
 ## qa-and-test-evidence
 
@@ -216,12 +271,19 @@ This inventory links the actual reference files and retained notices. Private pr
 - [references/xctest-patterns.md](plugins/demir-bot-pilot/skills/qa-and-test-evidence/references/xctest-patterns.md)
 - [runner/README.md](plugins/demir-bot-pilot/skills/qa-and-test-evidence/runner/README.md)
 - [runner/free_runner.py](plugins/demir-bot-pilot/skills/qa-and-test-evidence/runner/free_runner.py)
+- [checks/test_local_tools.py](plugins/demir-bot-pilot/skills/qa-and-test-evidence/checks/test_local_tools.py)
+- [references/advanced-modes.md](plugins/demir-bot-pilot/skills/qa-and-test-evidence/references/advanced-modes.md)
+- [references/bounded-review.md](plugins/demir-bot-pilot/skills/qa-and-test-evidence/references/bounded-review.md)
+- [references/gate-tiers.md](plugins/demir-bot-pilot/skills/qa-and-test-evidence/references/gate-tiers.md)
+- [checks/lifecycle.md](plugins/demir-bot-pilot/skills/qa-and-test-evidence/checks/lifecycle.md)
+- [checks/test_installation_lifecycle.py](plugins/demir-bot-pilot/skills/qa-and-test-evidence/checks/test_installation_lifecycle.py)
 
 ## release-readiness-and-observability
 
 - [SKILL.md](plugins/demir-bot-pilot/skills/release-readiness-and-observability/SKILL.md)
 - [agents/openai.yaml](plugins/demir-bot-pilot/skills/release-readiness-and-observability/agents/openai.yaml)
 - [references/provenance.md](plugins/demir-bot-pilot/skills/release-readiness-and-observability/references/provenance.md)
+- [references/apple-delivery-automation.md](plugins/demir-bot-pilot/skills/release-readiness-and-observability/references/apple-delivery-automation.md)
 
 ## requirements-and-traceability
 
@@ -254,6 +316,16 @@ This inventory links the actual reference files and retained notices. Private pr
 - [references/testflight-preparation.md](plugins/demir-bot-pilot/skills/swiftui-performance-and-concurrency/references/testflight-preparation.md)
 - [references/xcode-cli-integration.md](plugins/demir-bot-pilot/skills/swiftui-performance-and-concurrency/references/xcode-cli-integration.md)
 - [references/xcodebuild-error-taxonomy.md](plugins/demir-bot-pilot/skills/swiftui-performance-and-concurrency/references/xcodebuild-error-taxonomy.md)
+- [references/app-intents-shortcuts.md](plugins/demir-bot-pilot/skills/swiftui-performance-and-concurrency/references/app-intents-shortcuts.md)
+- [references/avfoundation-media.md](plugins/demir-bot-pilot/skills/swiftui-performance-and-concurrency/references/avfoundation-media.md)
+- [references/background-tasks.md](plugins/demir-bot-pilot/skills/swiftui-performance-and-concurrency/references/background-tasks.md)
+- [references/coreml-on-device.md](plugins/demir-bot-pilot/skills/swiftui-performance-and-concurrency/references/coreml-on-device.md)
+- [references/foundation-models.md](plugins/demir-bot-pilot/skills/swiftui-performance-and-concurrency/references/foundation-models.md)
+- [references/metal-basics.md](plugins/demir-bot-pilot/skills/swiftui-performance-and-concurrency/references/metal-basics.md)
+- [references/push-notifications.md](plugins/demir-bot-pilot/skills/swiftui-performance-and-concurrency/references/push-notifications.md)
+- [references/storekit-subscriptions.md](plugins/demir-bot-pilot/skills/swiftui-performance-and-concurrency/references/storekit-subscriptions.md)
+- [references/vision-speech.md](plugins/demir-bot-pilot/skills/swiftui-performance-and-concurrency/references/vision-speech.md)
+- [references/widgetkit-live-activities.md](plugins/demir-bot-pilot/skills/swiftui-performance-and-concurrency/references/widgetkit-live-activities.md)
 
 ## youtube-learning
 

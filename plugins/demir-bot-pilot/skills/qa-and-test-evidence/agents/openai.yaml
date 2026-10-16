@@ -5,8 +5,6 @@ interface:
     checks and report only supported results.
 policy:
   products:
-  - chatgpt
-  - codex
-  - api
-  - atlas
+  - CHAT
+  - CODEX
   allow_implicit_invocation: true

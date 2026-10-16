@@ -1,2 +1,3 @@
 interface:
+  short_description: "Review deployment readiness and observability"
   display_name: "Release Readiness And Observability"

@@ -1,2 +1,3 @@
 interface:
+  short_description: "Manage scoped Git and GitHub workflows"
   display_name: "Git and GitHub Workflow"

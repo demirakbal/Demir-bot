@@ -1,2 +1,3 @@
 interface:
+  short_description: "Apply your approved email tone"
   display_name: "Email Tone"

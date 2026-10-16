@@ -35,3 +35,7 @@ The current-source case deliberately may expose existing source defects. An acce
 `test_a2_coverage.py` is a dependency-free integrity suite for the 39 reviewer cases in `behavioral/a2-cases.json`. From this directory, an authorised offline invocation is `PYTHONDONTWRITEBYTECODE=1 python -m unittest -v test_a2_coverage`. It checks inventory, source reachability and evidence labels; it does not execute subjects or grade behavior. Keep the original structural suite separate so missing third-party dependencies do not hide the limited A2 result. See [current audit](../behavioral/coverage-audit.md) for historical versus current evidence and remaining blockers.
 
 Latest recorded combined offline result: 51/51 on CPython 3.12 (29 structural, eight case-integrity and 14 runner tests). This result predates subsequent documentation edits and is not a fresh pass for every later source snapshot. See [coverage audit](../behavioral/coverage-audit.md) for failed attempts, fixes, dependency provisioning and the unrun 65-case behavioral queue.
+
+## Legacy local-tool and lifecycle source
+
+`test_local_tools.py` and [installation lifecycle checks](lifecycle.md) were written in the 16 October legacy batch and are **NOT RUN**. They are separate from the historical 51-case result. The lifecycle suite tests synthetic doctor/fingerprint boundaries; real installer/discovery/uninstall/profile scenarios remain pending an authorized isolated host. No suite is invoked automatically.

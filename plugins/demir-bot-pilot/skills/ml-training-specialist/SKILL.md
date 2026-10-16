@@ -28,6 +28,8 @@ For assistant improvement, identify a demonstrated error and an approved, minima
 - Record seeds and environment where relevant without promising exact reproducibility across devices/releases. Resume checkpoints need appropriate model, optimizer, scheduler/scaler, step and RNG/sampler state; do not claim weights alone resume an interrupted run. Use atomic checkpoint replacement and explicit retention within the requested project. Treat downloaded weights and serialized objects as untrusted; inspect loaders and avoid arbitrary pickle/code execution.
 - Performance changes need a concrete bottleneck or supplied evidence. No automatic profiling, benchmarks, hyperparameter sweeps or claims of speedups. Compare alternatives in reasoning when execution is not authorized.
 
+For a pipeline/inference feature, use [data quality, lineage and inference](references/data-and-inference.md) to make split, artifact/preprocessing, failure and performance evidence explicit. Reuse actual project mechanisms; no registry, service, training run or benchmark is activated by that reference.
+
 ## Execution and delivery
 
 Writing training code does not authorize running it. Explicit training requests permit the agreed training run and its normal training-validation steps only within the established dataset/compute/budget scope; they do not authorize unrelated tests, benchmark campaigns, paid resources, uploads or deployment. When the run's scope is unclear, clarify before launching it. Stop on budget exhaustion or meaningful failures rather than silently relaunching.

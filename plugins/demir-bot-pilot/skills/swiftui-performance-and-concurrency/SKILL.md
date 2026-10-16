@@ -22,6 +22,26 @@ For concurrency, state-lifetime or identity work, follow one affected flow throu
 
 Distinguish skill maintenance from app implementation. An explicitly requested reusable workflow improvement can be saved when inspection demonstrates a gap in this skill, even without a named app. Missing project evidence blocks project-specific fixes and version-dependent prescriptions, not an independently supported instruction change. Do not invent an app, diagnostic or observed runtime failure to justify an extension; if no instruction gap is found, explain what is already covered.
 
+For requested widgets or ongoing activity surfaces, use [WidgetKit and Live Activities](references/widgetkit-live-activities.md). Keep timelines, activity lifecycle and shared-data/privacy ownership distinct; select APIs from the actual targets.
+
+For requested system-discoverable app actions, use [App Intents and Shortcuts](references/app-intents-shortcuts.md). Reuse the domain operation, validate parameters/access and review locked-device behavior.
+
+For a requested app background feature, use [background tasks](references/background-tasks.md). Choose a supported workload-specific mechanism with expiration/recovery ownership; do not promise exact scheduling or enable assistant background maintenance.
+
+For a requested push feature or supplied delivery failure, use [push notifications](references/push-notifications.md). Trace permission, registration, provider/APNs and display separately; preserve environment, account and token boundaries.
+
+For requested purchases or subscription entitlement work, use [StoreKit subscriptions](references/storekit-subscriptions.md). Keep verification, access, delivery and transaction completion distinct; commercial/account actions need their actual scope.
+
+For requested on-device model integration, use [Core ML](references/coreml-on-device.md), reusing the ML owner for data/preprocessing/quality. Preserve actual device/model contracts and disclosed fallbacks.
+
+For a requested Apple system-model feature, use [Foundation Models](references/foundation-models.md). Establish actual runtime availability and task limits, retain a useful fallback and validate generated output before actions.
+
+For requested image/text recognition or transcription, use [Vision and Speech](references/vision-speech.md). Select the actual supported API, coordinate/input contract, permissions and on-device/network boundary.
+
+For a requested Metal render/compute workload, use [Metal basics](references/metal-basics.md). Match API generation, data layout, synchronization and resource lifetime to the actual target; measure only when authorized.
+
+For requested capture, playback or export, use [AVFoundation media](references/avfoundation-media.md). Preserve permissions, session/observer lifetime, interruption handling, originals and actual export completion evidence.
+
 ## Establish project context
 
 For a named target's signing/provisioning diagnostics, reuse [code-signing and provisioning](references/xcodebuild-error-taxonomy.md#code-signing-and-provisioning). Distinguish identity, bundle ID, entitlements and profile evidence; no account, certificate or signing-asset changes follow from diagnosis alone.

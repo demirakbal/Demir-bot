@@ -5,8 +5,6 @@ interface:
     while preserving the evidence needed for this task.
 policy:
   products:
-  - chatgpt
-  - codex
-  - api
-  - atlas
+  - CHAT
+  - CODEX
   allow_implicit_invocation: true

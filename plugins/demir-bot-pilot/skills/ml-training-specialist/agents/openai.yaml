@@ -1,2 +1,3 @@
 interface:
+  short_description: "Develop ML training and data workflows"
   display_name: "Ml Training Specialist"

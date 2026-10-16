@@ -1,0 +1,13 @@
+# Widgets and Live Activities
+
+Use for a requested widget or ongoing-activity surface. Establish the app/extension targets, supported OS/device families, SDK/deployment settings, existing data owner and user-visible freshness requirement. Consult version-appropriate [WidgetKit](https://developer.apple.com/documentation/widgetkit) and [ActivityKit](https://developer.apple.com/documentation/activitykit) documentation before choosing concrete APIs. Framework presence does not establish support on every target.
+
+Keep the app's authoritative data separate from the extension's minimal display snapshot. Inspect actual target membership, shared-container configuration and access policy if sharing is required; never add an App Group entitlement or copy a complete private store by default. Define unavailable, signed-out, deleted-record and stale states, including what can appear while locked. Reuse the existing privacy, storage and concurrency owners.
+
+For widgets, define placeholder, snapshot and timeline content, dates and relevant reload policy using the supported provider model. Apple's [reload guidance](https://developer.apple.com/documentation/widgetkit/keeping-a-widget-up-to-date/) describes system-managed budgets: requesting reload does not guarantee an exact refresh time. Avoid per-second polling or treating an extension as a persistent background service. Preserve a useful dated/stale display if a requested update is delayed.
+
+For Live Activities, define immutable identity/attributes, changing content, ownership and start/update/end conditions. Reconcile active activities on relevant app entry; prevent duplicate starts, stale updates and continued display after the underlying task ends. Distinguish ending an activity from its display-dismissal policy. [Apple's lifecycle guidance](https://developer.apple.com/documentation/activitykit/displaying-live-data-with-live-activities) separates app-driven changes from APNs updates; server/token/push capability requires its own actual service and authorization. A timeline refresh is not a Live Activity update.
+
+Acceptance example: a selected delivery-tracking app maps one active order to its activity, defines stale content and terminal state, and describes the supported widget fallback. This is an illustrative contract, not an observed implementation. No-action case: changing an ordinary in-app label does not add an extension or entitlement. App code needs its real targets/settings; this roadmap change saves reusable guidance only. No build, preview, push, device launch, provisioning or runtime evidence is implied.
+
+Official references reviewed 16 October 2026; exact API availability remains target-specific.

@@ -1,2 +1,3 @@
 interface:
+  short_description: "Learn from video transcripts and visual evidence"
   display_name: "Youtube Learning"
